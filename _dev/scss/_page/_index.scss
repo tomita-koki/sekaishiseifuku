@@ -1,0 +1,7 @@
+@use './_base/' as *;
+@use './_foundation/' as *;
+@use './_figma.scss' as *;
+
+.test {
+  color: rgb(85, 95, 127);
+}
