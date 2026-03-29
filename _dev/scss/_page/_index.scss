@@ -1,7 +1,8 @@
-@use './_base/' as *;
-@use './_foundation/' as *;
-@use './_figma.scss' as *;
+@use '../_base/' as *;
+@use '../_foundation/' as *;
 
-.test {
-  color: rgb(85, 95, 127);
+html {
+  font-size: 62.5%; /* = 10px */
 }
+
+

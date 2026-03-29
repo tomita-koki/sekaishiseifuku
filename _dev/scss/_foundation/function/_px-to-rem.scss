@@ -4,6 +4,6 @@
 // @param {Number}  $tempSize - 設定したフォントサイズ（単位なし）
 // @param {Number}  $tempRoot - ルートのフォントサイズ（単位なし）
 // =============================================================================
-@function px-to-rem($tempSize: 16, $tempRoot: 16) {
+@function px-to-rem($tempSize: 10, $tempRoot: 10) {
   @return #{math.div($tempSize, $tempRoot)}rem;
 }
