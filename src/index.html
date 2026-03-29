@@ -4,12 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>世界史解体新書 | 土井昭</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="/asset/css/style.css" />
     <script src="/asset/js/main.js" defer></script>
   </head>
 
   <body class="body">
 
+    <!-- ヘッダー -->
+    <header class="header js-header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/" class="header__logo-link">
+            <p class="header__logo-text">世界史解体新書</p>
+            <p class="header__logo-subtext">SEKAISHI KAITAI SHINSHO</p>
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li><a href="#" class="header__nav-link header__text">NEWS</a></li>
+            <li><a href="#" class="header__nav-link header__text">著書</a></li>
+            <li><a href="#" class="header__nav-link header__text">メディア</a></li>
+            <li><a href="#" class="header__nav-link header__text">YouTube</a></li>
+            <li><a href="#" class="header__nav-link header__text">プロフィール</a></li>
+          </ul>
+          <a href="#" class="header__contact header__text">お問い合わせ</a>
+          <div class="header__social">
+            <a href="#" class="header__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="header__social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </nav>
+        <button class="hamburger" id="hamburger" type="button">
+          <span id="hamburger__btn"></span>
+          <span class="hamburger__caption">メニュー</span>
+        </button>
+      </div>
+      <div class="header__background"></div>
+    </header>
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+      <a href="#" class="sidebar__item sidebar__item--contact">
+        <i class="far fa-envelope"></i>
+        <span>お問い合わせ</span>
+      </a>
+      <a href="#" class="sidebar__item sidebar__item--youtube">
+        <i class="fab fa-youtube"></i>
+        <span>YouTube</span>
+      </a>
+    </aside>
+
+    <!-- メインビジュアル -->
+    <section class="mv">
+      <div class="mv__bg">
+        <img
+          src="/asset/images/index-img-01.png"
+          alt="世界の歴史的な場所の写真コラージュ"
+        />
+      </div>
+      <div class="mv__content">
+        <p class="mv__role">予備校講師 / 著者 / YouTuber</p>
+        <h1 class="mv__name">土井 昭</h1>
+        <p class="mv__name-en">AKIRA DOI</p>
+        <p class="mv__lead">
+          歴史は暗記ではない。<br />
+          点と点の繋がりを知れば、世界はもっと面白くなる。
+        </p>
+        <div class="mv__buttons">
+          <a href="#" class="mv__btn mv__btn--contact">お問い合わせ</a>
+          <a href="#" class="mv__btn mv__btn--youtube">
+            YouTube を見る <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
   </body>
 </html>

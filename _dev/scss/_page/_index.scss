@@ -5,4 +5,421 @@ html {
   font-size: 62.5%; /* = 10px */
 }
 
+// ヘッダー
+// =============================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--color-white);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
 
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: px-to-rem(70);
+    padding: 0 px-to-rem(20);
+
+    @include media-query {
+      padding: 0 px-to-rem(40);
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+
+    &-link {
+      display: block;
+      color: inherit;
+    }
+
+    &-text {
+      font-family: var(--font-family-02);
+      font-size: px-to-rem(15);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+    }
+
+    &-subtext {
+      font-family: var(--font-family-01);
+      font-size: px-to-rem(9);
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-top: px-to-rem(2);
+    }
+  }
+
+  &__nav {
+    @include media-query($_range: below) {
+      position: fixed;
+      top: px-to-rem(70);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: px-to-rem(40);
+      z-index: 99;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    @include media-query {
+      display: flex;
+      align-items: center;
+      gap: px-to-rem(24);
+    }
+  }
+
+  &.active .header__nav {
+    @include media-query($_range: below) {
+      transform: translateX(0);
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-to-rem(24);
+
+    @include media-query {
+      flex-direction: row;
+      gap: px-to-rem(24);
+    }
+  }
+
+  &__nav-link {
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(14);
+    font-weight: 500;
+    color: #333;
+    transition: color 0.2s;
+
+    @include media-query($_range: below) {
+      font-size: px-to-rem(18);
+    }
+
+    @include hover {
+      color: var(--color-red);
+    }
+  }
+
+  &__contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-rem(8) px-to-rem(20);
+    background: var(--color-red);
+    color: var(--color-white);
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(13);
+    font-weight: 500;
+    border-radius: px-to-rem(4);
+    white-space: nowrap;
+    transition: opacity 0.2s;
+
+    @include media-query($_range: below) {
+      font-size: px-to-rem(16);
+      padding: px-to-rem(12) px-to-rem(40);
+    }
+
+    @include hover {
+      opacity: 0.85;
+    }
+  }
+
+  &__social {
+    display: none;
+    align-items: center;
+    gap: px-to-rem(12);
+
+    @include media-query {
+      display: flex;
+    }
+
+    &-link {
+      color: #555;
+      font-size: px-to-rem(18);
+      transition: color 0.2s;
+
+      @include hover {
+        color: var(--color-red);
+      }
+    }
+  }
+
+  &__background {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 98;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+// ハンバーガー
+// =============================================================================
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: px-to-rem(5);
+  padding: px-to-rem(8);
+  position: relative;
+  z-index: 101;
+
+  @include media-query {
+    display: none;
+  }
+
+  #hamburger__btn {
+    position: relative;
+    display: block;
+    width: px-to-rem(24);
+    height: px-to-rem(2);
+    background: #333;
+    transition: background 0.3s;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: px-to-rem(2);
+      background: #333;
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: px-to-rem(-8);
+    }
+
+    &::after {
+      top: px-to-rem(8);
+    }
+  }
+
+  &__caption {
+    font-family: var(--font-family-01);
+    font-size: px-to-rem(9);
+    letter-spacing: 0.05em;
+    color: #333;
+  }
+
+  &.active {
+    #hamburger__btn {
+      background: transparent;
+
+      &::before {
+        transform: translateY(0.8rem) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(-0.8rem) rotate(-45deg);
+      }
+    }
+  }
+}
+
+// サイドバー
+// =============================================================================
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: px-to-rem(40);
+    padding: px-to-rem(18) 0;
+    color: var(--color-white);
+    text-decoration: none;
+    gap: px-to-rem(8);
+    transition: opacity 0.2s;
+
+    i {
+      font-size: px-to-rem(14);
+    }
+
+    span {
+      font-family: var(--font-family-03);
+      font-size: px-to-rem(10);
+      writing-mode: vertical-rl;
+      letter-spacing: 0.05em;
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    &--contact {
+      background: var(--color-red);
+    }
+
+    &--youtube {
+      background: var(--color-blue);
+    }
+  }
+}
+
+// メインビジュアル
+// =============================================================================
+.mv {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: px-to-rem(70) px-to-rem(24) px-to-rem(40);
+    background: rgba(0, 0, 0, 0.45);
+
+    @include media-query {
+      inset: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 45%;
+      padding: px-to-rem(70) px-to-rem(48) px-to-rem(60);
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.5) 70%,
+        transparent 100%
+      );
+    }
+  }
+
+  &__role {
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(12);
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+    margin-bottom: px-to-rem(8);
+
+    @include media-query {
+      font-size: px-to-rem(13);
+      margin-bottom: px-to-rem(12);
+    }
+  }
+
+  &__name {
+    font-family: var(--font-family-02);
+    font-size: px-to-rem(56);
+    color: var(--color-white);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    margin-bottom: px-to-rem(6);
+
+    @include media-query {
+      font-size: px-to-rem(72);
+    }
+  }
+
+  &__name-en {
+    font-family: var(--font-family-01);
+    font-size: px-to-rem(13);
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.2em;
+    margin-bottom: px-to-rem(28);
+
+    @include media-query {
+      font-size: px-to-rem(14);
+      margin-bottom: px-to-rem(36);
+    }
+  }
+
+  &__lead {
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(15);
+    color: var(--color-white);
+    line-height: 2;
+    margin-bottom: px-to-rem(36);
+
+    @include media-query {
+      font-size: px-to-rem(16);
+      margin-bottom: px-to-rem(44);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(16);
+
+    @include media-query {
+      flex-direction: row;
+      gap: px-to-rem(16);
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: px-to-rem(8);
+    padding: px-to-rem(14) px-to-rem(28);
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(14);
+    font-weight: 500;
+    border-radius: px-to-rem(4);
+    transition: opacity 0.2s;
+
+    @include hover {
+      opacity: 0.85;
+    }
+
+    &--contact {
+      background: var(--color-red);
+      color: var(--color-white);
+    }
+
+    &--youtube {
+      background: transparent;
+      color: var(--color-white);
+      border: px-to-rem(2) solid var(--color-white);
+    }
+  }
+}
