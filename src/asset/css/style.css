@@ -216,19 +216,19 @@ html {
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--color-white);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
 }
 .header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 7rem;
-  padding: 0 2rem;
+  padding: 10px 14px;
+  max-width: 350px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .header__inner {
-    padding: 0 4rem;
+    padding: 20px 24px;
+    max-width: 1200px;
   }
 }
 .header__logo {
@@ -236,21 +236,22 @@ html {
 }
 .header__logo-link {
   display: block;
-  color: inherit;
+  color: var(--color-white);
 }
 .header__logo-text {
   font-family: var(--font-family-02);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
+  line-height: 1.84rem;
+  letter-spacing: 0.11rem;
+  margin-bottom: 5px;
 }
 .header__logo-subtext {
   font-family: var(--font-family-01);
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  color: #888;
-  margin-top: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
 }
 @media screen and (max-width: 767px) {
   .header__nav {
@@ -274,7 +275,7 @@ html {
   .header__nav {
     display: flex;
     align-items: center;
-    gap: 2.4rem;
+    gap: 18px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -286,19 +287,20 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.4rem;
+  gap: 4px;
+  padding: 5px 0 14px 5px;
 }
 @media screen and (min-width: 768px) {
   .header__nav-list {
     flex-direction: row;
-    gap: 2.4rem;
+    gap: 3.2rem;
   }
 }
 .header__nav-link {
   font-family: var(--font-family-03);
   font-size: 1.4rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-white);
   transition: color 0.2s;
 }
 @media screen and (max-width: 767px) {
@@ -356,12 +358,14 @@ html {
 @media screen and (min-width: 768px) {
   .header__social {
     display: flex;
+    padding-left: 18px;
   }
 }
 .header__social-link {
-  color: #555;
-  font-size: 1.8rem;
-  transition: color 0.2s;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
 }
 @media (any-hover: hover) {
   .header__social-link:hover {
@@ -522,21 +526,23 @@ html {
     left: 0;
     bottom: 0;
     width: 45%;
-    padding: 7rem 4.8rem 6rem;
+    padding: 0 0 0 144px;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
   }
 }
 .mv__role {
   font-family: var(--font-family-03);
   font-size: 1.2rem;
+  font-weight: 500;
   color: var(--color-white);
-  letter-spacing: 0.05em;
+  line-height: 2.3rem;
+  letter-spacing: 0.32rem;
   margin-bottom: 0.8rem;
 }
 @media screen and (min-width: 768px) {
   .mv__role {
     font-size: 1.3rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
   }
 }
 .mv__name {
@@ -544,39 +550,41 @@ html {
   font-size: 5.6rem;
   color: var(--color-white);
   font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.6rem;
+  line-height: 8.8rem;
+  letter-spacing: 0.4rem;
 }
 @media screen and (min-width: 768px) {
   .mv__name {
-    font-size: 7.2rem;
+    font-size: 8rem;
   }
 }
 .mv__name-en {
   font-family: var(--font-family-01);
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.75);
-  letter-spacing: 0.2em;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.5rem;
   margin-bottom: 2.8rem;
 }
 @media screen and (min-width: 768px) {
   .mv__name-en {
-    font-size: 1.4rem;
-    margin-bottom: 3.6rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
   }
 }
 .mv__lead {
-  font-family: var(--font-family-03);
+  font-family: var(--font-family-02);
   font-size: 1.5rem;
+  font-weight: 400;
   color: var(--color-white);
-  line-height: 2;
+  line-height: 4.1rem;
   margin-bottom: 3.6rem;
 }
 @media screen and (min-width: 768px) {
   .mv__lead {
-    font-size: 1.6rem;
-    margin-bottom: 4.4rem;
+    font-size: 2rem;
+    margin-bottom: 3.6rem;
   }
 }
 .mv__buttons {
@@ -594,11 +602,13 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  padding: 1.4rem 2.8rem;
+  gap: 1.6rem;
+  padding: 1.2rem 2.8rem;
   font-family: var(--font-family-03);
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.7rem;
+  letter-spacing: 0.6rem;
   border-radius: 0.4rem;
   transition: opacity 0.2s;
 }
@@ -618,7 +628,7 @@ html {
   color: var(--color-white);
 }
 .mv__btn--youtube {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.2);
   color: var(--color-white);
   border: 0.2rem solid var(--color-white);
 }

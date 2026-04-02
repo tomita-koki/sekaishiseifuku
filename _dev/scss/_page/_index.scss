@@ -13,18 +13,18 @@ html {
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--color-white);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: px-to-rem(70);
-    padding: 0 px-to-rem(20);
+    padding: 10px 14px;
+    max-width: 350px;
+    margin: 0 auto;
 
     @include media-query {
-      padding: 0 px-to-rem(40);
+      padding: 20px 24px;
+      max-width: 1200px;
     }
   }
 
@@ -33,23 +33,24 @@ html {
 
     &-link {
       display: block;
-      color: inherit;
+      color: var(--color-white);
     }
 
     &-text {
       font-family: var(--font-family-02);
-      font-size: px-to-rem(15);
+      font-size: px-to-rem(20);
       font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: 0.05em;
+      line-height: 1.84rem;
+      letter-spacing: 0.11rem;
+      margin-bottom: 5px;
     }
 
     &-subtext {
       font-family: var(--font-family-01);
-      font-size: px-to-rem(9);
-      letter-spacing: 0.1em;
-      color: #888;
-      margin-top: px-to-rem(2);
+      font-size: px-to-rem(10);
+      font-weight: 400;
+      line-height: 1rem;
+      letter-spacing: 0.2rem;
     }
   }
 
@@ -74,7 +75,7 @@ html {
     @include media-query {
       display: flex;
       align-items: center;
-      gap: px-to-rem(24);
+      gap: 18px;
     }
   }
 
@@ -88,11 +89,12 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: px-to-rem(24);
+    gap: 4px;
+    padding: 5px 0 14px 5px;
 
     @include media-query {
       flex-direction: row;
-      gap: px-to-rem(24);
+      gap: px-to-rem(32);
     }
   }
 
@@ -100,7 +102,7 @@ html {
     font-family: var(--font-family-03);
     font-size: px-to-rem(14);
     font-weight: 500;
-    color: #333;
+    color: var(--color-white);
     transition: color 0.2s;
 
     @include media-query($_range: below) {
@@ -143,12 +145,14 @@ html {
 
     @include media-query {
       display: flex;
+      padding-left: 18px;
     }
 
     &-link {
-      color: #555;
-      font-size: px-to-rem(18);
-      transition: color 0.2s;
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      min-height: 14px;
 
       @include hover {
         color: var(--color-red);
@@ -321,7 +325,7 @@ html {
       left: 0;
       bottom: 0;
       width: 45%;
-      padding: px-to-rem(70) px-to-rem(48) px-to-rem(60);
+      padding: 0 0 0 144px;
       background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65) 0%,
@@ -334,13 +338,15 @@ html {
   &__role {
     font-family: var(--font-family-03);
     font-size: px-to-rem(12);
+    font-weight: 500;
     color: var(--color-white);
-    letter-spacing: 0.05em;
+    line-height: 2.3rem;
+    letter-spacing: 0.32rem;
     margin-bottom: px-to-rem(8);
 
     @include media-query {
       font-size: px-to-rem(13);
-      margin-bottom: px-to-rem(12);
+      margin-bottom: px-to-rem(16);
     }
   }
 
@@ -349,12 +355,11 @@ html {
     font-size: px-to-rem(56);
     color: var(--color-white);
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: 0.05em;
-    margin-bottom: px-to-rem(6);
+    line-height: 8.8rem;
+    letter-spacing: 0.4rem;
 
     @include media-query {
-      font-size: px-to-rem(72);
+      font-size: px-to-rem(80);
     }
   }
 
@@ -362,25 +367,28 @@ html {
     font-family: var(--font-family-01);
     font-size: px-to-rem(13);
     color: rgba(255, 255, 255, 0.75);
-    letter-spacing: 0.2em;
+    font-weight: 400;
+    line-height: 3.0rem;
+    letter-spacing: 0.5rem;
     margin-bottom: px-to-rem(28);
 
     @include media-query {
-      font-size: px-to-rem(14);
-      margin-bottom: px-to-rem(36);
+      font-size: px-to-rem(18);
+      margin-bottom: px-to-rem(16);
     }
   }
 
   &__lead {
-    font-family: var(--font-family-03);
+    font-family: var(--font-family-02);
     font-size: px-to-rem(15);
+    font-weight: 400;
     color: var(--color-white);
-    line-height: 2;
+    line-height: 4.1rem;
     margin-bottom: px-to-rem(36);
 
     @include media-query {
-      font-size: px-to-rem(16);
-      margin-bottom: px-to-rem(44);
+      font-size: px-to-rem(20);
+      margin-bottom: px-to-rem(36);
     }
   }
 
@@ -399,11 +407,13 @@ html {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: px-to-rem(8);
-    padding: px-to-rem(14) px-to-rem(28);
+    gap: px-to-rem(16);
+    padding: px-to-rem(12) px-to-rem(28);
     font-family: var(--font-family-03);
-    font-size: px-to-rem(14);
-    font-weight: 500;
+    font-size: px-to-rem(15);
+    font-weight: 700;
+    line-height: 2.7rem;
+    letter-spacing: 0.6rem;
     border-radius: px-to-rem(4);
     transition: opacity 0.2s;
 
@@ -417,7 +427,7 @@ html {
     }
 
     &--youtube {
-      background: transparent;
+      background: rgba($color: #000000, $alpha: 0.2);
       color: var(--color-white);
       border: px-to-rem(2) solid var(--color-white);
     }
