@@ -64,7 +64,7 @@ html {
 }
 
 .news-category__btn--ls {
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
   padding-right: 15px;
 
   @media (min-width: 769px) {
@@ -73,7 +73,7 @@ html {
 }
 
 .news-category__btn--ls2 {
-  letter-spacing: 1.5px;
+  letter-spacing: 0.15rem;
 }
 
 
@@ -137,21 +137,21 @@ html {
 }
 
 
-/* 日付 */
+/* 日付：記事詳細を共通 */
 
-.article-list__date {
+.article-date {
   font-size: 1.28rem;
   font-weight: 400;
   color: var(--color-black);
   white-space: nowrap;
   margin-top: 6px;
-  letter-spacing: 0.5px;
+  letter-spacing: .05rem;
 }
 
 
-/* カテゴリー共通（メディア） */
+/* カテゴリー共通（メディア）：記事詳細を共通 */
 
-.article-list__category {
+.article-category {
   background-color: var(--color-red);
   border-radius: 2px;
   display: flex;
@@ -162,11 +162,11 @@ html {
   width: 67px;
 }
 
-.article-list__category-text {
+.article-category__text {
   font-size: 1.12rem;
   font-weight: 700;
   line-height: 1.8;
-  letter-spacing: 1.3px;
+  letter-spacing: .13rem;
   color: var(--color-white);
   text-align: center;
 }
@@ -174,31 +174,31 @@ html {
 
 /* 出版情報 */
 
-.article-list__category--print {
+.article-category--print {
   background-color: var(--color-blue2);
 }
 
-.article-list__category-text--print {
-  letter-spacing: .1px;
+.article-category__text--print {
+  letter-spacing: .01rem;
 }
 
 
 /* YouTube */
 
-.article-list__category--youtube {
+.article-category--youtube {
   width: 71px;
   background-color: var(--color-red2);
 }
 
-.article-list__category-text--youtube {
-  letter-spacing: .7px;
+.article-category__text--youtube {
+  letter-spacing: .07rem;
 }
 
 
 /* 講義情報 */
 
-.article-list__category-text--lecture {
-  letter-spacing: .4px;
+.article-category__text--lecture {
+  letter-spacing: .04rem;
 }
 
 
@@ -208,7 +208,7 @@ html {
   font-size: 1.52rem;
   font-weight: 400;
   line-height: 1.8;
-  letter-spacing: 1px;
+  letter-spacing: .01rem;
   color: var(--color-black2);
 }
 
@@ -248,7 +248,9 @@ html {
 }
 
 
-.news-category, 
+/* フェードイン */
+
+.news-category,
 .article-list,
 .news-pagination {
   opacity: 0;
@@ -256,9 +258,118 @@ html {
   transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-.news-category.visible, 
+.news-category.visible,
 .article-list.visible,
 .news-pagination.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+/* 記事詳細 */
+
+.article__wrap {
+  margin-top: 64px;
+  padding-inline: 24px;
+}
+
+/* 記事詳細見出し　配置設定 */
+
+.article-heading__inner {
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-template-rows: auto auto;
+  gap: 15px 12px;
+  border-bottom: 2px solid var(--color-red);
+  padding-bottom: 41px;
+}
+
+.article-heading__date {
+  grid-column: 1;
+  /* 1列目 */
+  grid-row: 1;
+}
+
+.article-heading__category {
+  grid-column: 2;
+  /* 2列目 */
+  grid-row: 1;
+}
+
+.article-heading__title {
+  grid-column: 1 / -1;
+  /* 全列にまたがる */
+  grid-row: 2;
+}
+
+
+/* 記事詳細タイトル（日付とカテゴリーはお知らせと共通） */
+.article-heading__title {
+  font-size: 2.24rem;
+  font-family: var(--font-family-02);
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: .15rem;
+  color: var(--color-black2);
+}
+
+
+/* 記事内容 */
+
+.article__content p,
+.article__main-text p,
+.article__show {
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: .1rem;
+  color: var(--color-black2);
+}
+
+.article__content {
+  margin-block: 31px 19px;
+}
+
+.article__show {
+  margin-block: 19px 32px;
+}
+
+
+/* 記事を読む・お知らせ一覧ボタン */
+
+.article-btn__inner {
+  display: inline-block;
+  font-size: 1.36rem;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: .07rem;
+  color: var(--color-white);
+  border-radius: 4px;
+  background-color: var(--color-red);
+  border: 2px solid var(--color-red);
+  padding: 8px 19px 9px 18px;
+
+  i {
+    margin-left: 6px;
+  }
+}
+
+.article-btn__inner--read {
+  color: var(--color-red);
+  background-color: var(--color-white);
+  padding: 12px 28px 13px 28px;
+
+  i {
+    margin-inline: 0 6px;
+  }
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
