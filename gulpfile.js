@@ -1,6 +1,6 @@
-const path = require("path");
-const { src, dest, watch, series, parallel } = require("gulp");
+const { src, dest, watch, parallel } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const esbuild = require("gulp-esbuild");
 const browserSync = require("browser-sync").create();
 
 // Sassのコンパイルタスク
@@ -8,6 +8,20 @@ function cssSass() {
   return src("_dev/scss/**/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(dest("src/asset/css"))
+    .pipe(browserSync.stream());
+}
+
+// JSのバンドルタスク
+function jsBundle() {
+  return src("_dev/js/main.js")
+    .pipe(
+      esbuild({
+        outfile: "main.js",
+        bundle: true,
+        format: "iife",
+      })
+    )
+    .pipe(dest("src/asset/js"))
     .pipe(browserSync.stream());
 }
 
@@ -35,11 +49,9 @@ function watchTask() {
     browserSync.reload(path);
   });
 
-  // JavaScriptファイルの監視
-  watch("src/**/*.js").on("change", function (path) {
-    browserSync.reload(path);
-  });
+  // JSファイルの監視
+  watch("_dev/js/**/*.js", jsBundle);
 }
 
 // デフォルトタスク
-exports.default = parallel(cssSass, browserSyncTask, watchTask);
+exports.default = parallel(cssSass, jsBundle, browserSyncTask, watchTask);
