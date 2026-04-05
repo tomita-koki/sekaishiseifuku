@@ -223,32 +223,32 @@ html {
   /* = 10px */
 }
 
-.news__wrap {
+.news {
   background-color: var(--color-beige);
   padding-inline: 24px;
   padding-block: 64px;
 }
 @media (min-width: 769px) {
-  .news__wrap {
+  .news {
     padding-inline: clamp(0px, 13.4722222222vw, 194px);
     padding-block: 96px 33px;
   }
 }
 
 @media (min-width: 769px) {
-  .news-container__wrap {
+  .news-container {
     max-width: 2000px;
     margin: 0 auto;
   }
 }
 
-.news-category__wrap {
+.news-category {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 @media (min-width: 769px) {
-  .news-category__wrap {
+  .news-category {
     gap: 9px;
   }
 }

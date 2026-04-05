@@ -9,7 +9,7 @@ html {
 
 
 
-.news__wrap {
+.news {
   background-color: var(--color-beige);
   padding-inline: 24px;
   padding-block: 64px;
@@ -20,14 +20,14 @@ html {
   }
 }
 
-.news-container__wrap {
+.news-container {
   @media (min-width: 769px) {
     max-width: 2000px;
     margin: 0 auto;
   }
 }
 
-.news-category__wrap {
+.news-category {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
