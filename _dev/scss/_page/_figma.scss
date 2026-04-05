@@ -1,2 +1,7 @@
 @use "../_base/" as *;
 @use "../_foundation/" as *;
+
+.page-figma {
+  background-color: var(--color-beige2);
+  padding: 2rem;
+}
