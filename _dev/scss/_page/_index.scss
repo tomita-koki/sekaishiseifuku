@@ -13,8 +13,6 @@ html {
   background-color: var(--color-beige);
   padding-inline: 24px;
   padding-block: 64px;
-  //margin-top: 100px;
-  //margin-bottom: 100px;
 
   @media (min-width: 768px) {
     padding-inline: 170px;
@@ -22,18 +20,17 @@ html {
   }
 }
 
-
 .news-category__wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  //margin-block: 41px;
 
   @media (min-width: 768px) {
     gap: 9px;
     margin-inline: 24px;
   }
 }
+
 
 /* カテゴリーボタン */
 
@@ -63,28 +60,17 @@ html {
 .news-category__btn--ls {
   letter-spacing: 1px;
   padding-right: 15px;
-
-  /* 微調整不要なら削除 */
 }
 
 .news-category__btn--ls2 {
   letter-spacing: 1.5px;
-  /* 微調整不要なら削除 */
 }
 
 
-
-
-
-
 /* グリッドコンテナ */
-/* max-width調整 */
 .article-list__wrap {
   margin-inline: auto;
   margin-top: 41px;
-  //max-width: 900px;
-
-  //list-style: none;
   @media (min-width: 768px) {
     max-width: 2000px;
   }
@@ -93,7 +79,8 @@ html {
 .article-list__box {
   display: grid;
   grid-template-columns: 80px auto auto;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 8px;
   margin-block: 20px 21px;
   padding: 15px 16px 16px 8px;
@@ -119,9 +106,7 @@ html {
 
 .article-list {
   li {
-    //padding: 35px 0 36px;
     border-bottom: 1px solid var(--color-beige2);
-    //transition: background var(--transition);
   }
 
   li:nth-child(1) {
@@ -129,13 +114,17 @@ html {
   }
 }
 
+
 /* 各セル共通 */
+
 .article-list__box>* {
   display: flex;
   align-items: center;
 }
 
+
 /* 日付 */
+
 .article-list__date {
   font-size: 1.28rem;
   font-weight: 400;
@@ -145,7 +134,9 @@ html {
   letter-spacing: 0.5px;
 }
 
+
 /* カテゴリー（メディア） */
+
 .article-list__category {
   background-color: var(--color-red);
   border-radius: 2px;
@@ -168,25 +159,37 @@ html {
 
 
 /* 出版情報 */
+
+.article-list__category--print {
+  background-color: var(--color-blue2);
+}
+
 .article-list__category-text--print {
   letter-spacing: .1px;
 }
 
+
 /* YouTube */
+
 .article-list__category--youtube {
   width: 71px;
+  background-color: var(--color-red2);
 }
 
 .article-list__category-text--youtube {
   letter-spacing: .7px;
 }
 
+
 /* 講義情報 */
+
 .article-list__category-text--lecture {
   letter-spacing: .4px;
 }
 
+
 /* タイトル */
+
 .article-list__title {
   font-size: 1.52rem;
   font-weight: 400;
@@ -211,19 +214,13 @@ html {
   justify-content: center;
   min-width: 40px;
   height: 40px;
-  //padding: 0 12px;
   border: 1px solid var(--color-beige2);
   border-radius: 4px;
   background-color: var(--color-white);
-  //text-decoration: none;
   font-size: 1.41rem;
   font-weight: 700;
   color: var(--color-black);
   transition: all .3s ease;
-  //font-family: 'DM Mono', monospace;
-  //letter-spacing: 0.03em;
-  //background: #fff;
-  //transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
 }
 
 .news-pagination__box--num {

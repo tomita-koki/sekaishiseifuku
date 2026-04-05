@@ -17,6 +17,7 @@
   /* つゆき追加 */
   --color-black: #6B5E52;
   --color-black2: #2C2116;
+  --color-blue2: #1A4E8A;
   /* font-size */
   --font-size: px-to-rem(16);
 }
@@ -274,16 +275,13 @@ html {
 .news-category__btn--ls {
   letter-spacing: 1px;
   padding-right: 15px;
-  /* 微調整不要なら削除 */
 }
 
 .news-category__btn--ls2 {
   letter-spacing: 1.5px;
-  /* 微調整不要なら削除 */
 }
 
 /* グリッドコンテナ */
-/* max-width調整 */
 .article-list__wrap {
   margin-inline: auto;
   margin-top: 41px;
@@ -297,7 +295,8 @@ html {
 .article-list__box {
   display: grid;
   grid-template-columns: 80px auto auto;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 8px;
   margin-block: 20px 21px;
   padding: 15px 16px 16px 8px;
@@ -364,6 +363,10 @@ html {
 }
 
 /* 出版情報 */
+.article-list__category--print {
+  background-color: var(--color-blue2);
+}
+
 .article-list__category-text--print {
   letter-spacing: 0.1px;
 }
@@ -371,6 +374,7 @@ html {
 /* YouTube */
 .article-list__category--youtube {
   width: 71px;
+  background-color: var(--color-red2);
 }
 
 .article-list__category-text--youtube {
