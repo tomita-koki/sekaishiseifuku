@@ -16,6 +16,7 @@
   --color-beige3: #F4F1ED;
   /* つゆき追加 */
   --color-black: #6B5E52;
+  --color-black2: #2C2116;
   /* font-size */
   --font-size: px-to-rem(16);
 }
@@ -230,6 +231,7 @@ html {
 @media (min-width: 768px) {
   .news-container {
     padding-inline: 170px;
+    padding-top: 96px;
   }
 }
 
@@ -237,6 +239,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-block: 41px;
 }
 @media (min-width: 768px) {
   .news-category__wrap {
@@ -264,7 +267,6 @@ html {
   }
 }
 
-.news-category__btn--red,
 .news-category__btn:hover {
   background-color: var(--color-red);
   color: var(--color-white);
@@ -272,9 +274,192 @@ html {
 }
 
 .news-category__btn--ls {
-  letter-spacing: 1px; /* 微調整不要なら削除 */
+  letter-spacing: 1px;
+  /* 微調整不要なら削除 */
 }
 
 .news-category__btn--ls2 {
-  letter-spacing: 1.5px; /* 微調整不要なら削除 */
+  letter-spacing: 1.5px;
+  /* 微調整不要なら削除 */
+}
+
+/* グリッドコンテナ */
+/* max-width調整 */
+.article-list {
+  margin: 0 auto;
+  max-width: 900px;
+}
+@media (min-width: 768px) {
+  .article-list {
+    max-width: 2000px;
+  }
+}
+
+.article-list__box {
+  display: grid;
+  grid-template-columns: 80px 50px auto;
+  align-items: start;
+  gap: 16px;
+  padding: 16px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  .article-list__box {
+    grid-template-columns: 80px 67px auto;
+    padding: 23px 16px;
+  }
+}
+
+.article-list__box:hover {
+  background-color: var(--color-beige3);
+}
+.article-list__box:hover .article-list__title {
+  color: var(--color-red);
+}
+
+/* 境界線 */
+.article-list li {
+  padding: 35px 0 36px;
+  border-bottom: 1px solid var(--color-beige2);
+}
+.article-list li:nth-child(1) {
+  border-top: 1px solid var(--color-beige2);
+}
+
+/* 各セル共通 */
+.article-list__box > * {
+  display: flex;
+  align-items: center;
+}
+
+/* 日付 */
+.article-list__date {
+  font-size: 1.28rem;
+  font-weight: 400;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+/* カテゴリー */
+.article-list__category {
+  background-color: var(--color-red);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5px 10px;
+}
+.article-list__category .article-list__category-text {
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* タイトル */
+.article-list__title {
+  font-size: 1.52rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-black2);
+}
+
+/* ページネーション */
+.news-pagination__wrap {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.news-pagination__box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-beige2);
+  border-radius: 4px;
+  background-color: var(--color-white);
+  font-size: 1.41rem;
+  font-weight: 700;
+  color: var(--color-black);
+  transition: all 0.3s ease;
+}
+
+.news-pagination__box:hover {
+  border-color: var(--color-red);
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  width: 72px;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: "DM Mono", monospace;
+}
+
+.article-list__box:hover .article-list__title {
+  color: var(--accent);
+}
+
+/* アニメーション */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.article-list li:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.article-list li:nth-child(2) {
+  animation-delay: 45ms;
+}
+
+.article-list li:nth-child(3) {
+  animation-delay: 90ms;
+}
+
+.article-list li:nth-child(4) {
+  animation-delay: 135ms;
+}
+
+.article-list li:nth-child(5) {
+  animation-delay: 180ms;
+}
+
+.article-list li:nth-child(6) {
+  animation-delay: 225ms;
+}
+
+.article-list li:nth-child(7) {
+  animation-delay: 270ms;
+}
+
+.article-list li:nth-child(8) {
+  animation-delay: 315ms;
+}
+
+.article-list li:nth-child(9) {
+  animation-delay: 360ms;
+}
+
+.article-list li:nth-child(10) {
+  animation-delay: 405ms;
 }/*# sourceMappingURL=style.css.map */
