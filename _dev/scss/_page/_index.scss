@@ -149,7 +149,7 @@ html {
 }
 
 
-/* カテゴリー（メディア） */
+/* カテゴリー共通（メディア） */
 
 .article-list__category {
   background-color: var(--color-red);
@@ -202,7 +202,7 @@ html {
 }
 
 
-/* タイトル */
+/* 記事タイトル */
 
 .article-list__title {
   font-size: 1.52rem;
@@ -245,4 +245,20 @@ html {
   border-color: var(--color-red);
   background-color: var(--color-red);
   color: var(--color-white);
+}
+
+
+.news-category, 
+.article-list,
+.news-pagination {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.news-category.visible, 
+.article-list.visible,
+.news-pagination.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
