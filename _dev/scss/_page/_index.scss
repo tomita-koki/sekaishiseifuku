@@ -300,6 +300,13 @@ html {
   height: 100vh;
   overflow: hidden;
 
+  &__background {
+    background: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
   &__bg {
     position: absolute;
     inset: 0;
@@ -321,7 +328,6 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     padding: px-to-rem(70) px-to-rem(24) px-to-rem(40);
-    background: rgba(0, 0, 0, 0.45);
     
     @include media-query {
       justify-content: center;
@@ -1019,5 +1025,283 @@ html {
     font-size: px-to-rem(12);
     letter-spacing: 0.03em;
     line-height: 1.5;
+  }
+}
+
+// お問い合わせ
+// =============================================================================
+.contact {
+  background: #0D1B2E;
+  padding: px-to-rem(42) 0 px-to-rem(64);
+  position: relative;
+
+  @include media-query {
+    padding: px-to-rem(80) 0 px-to-rem(100);
+  }
+
+  &__inner {
+    max-width: px-to-rem(900);
+    margin: 0 auto;
+    padding: 0 px-to-rem(24);
+    text-align: center;
+
+    @include media-query {
+      padding: 0 px-to-rem(144);
+    }
+  }
+
+  &__heading {
+    margin-bottom: px-to-rem(20);
+  }
+
+  &__heading-en {
+    font-family: var(--font-family-01);
+    font-size: px-to-rem(12);
+    font-weight: 700;
+    line-height: 2.16rem;
+    letter-spacing: 0.24em;
+    color: var(--color-gold);
+  }
+
+  &__heading-ja {
+    font-family: var(--font-family-02);
+    font-size: px-to-rem(24);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 3rem;
+    letter-spacing: 0.08em;
+
+    @include media-query {
+      font-size: 3.2rem;
+      line-height: 4.58rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  &__heading-bar {
+    display: block;
+    width: px-to-rem(40);
+    height: px-to-rem(3);
+    background: var(--color-red);
+    margin: 15px auto 0;
+
+    @include media-query {
+      margin: 10px auto 0;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(14);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 2;
+    margin-bottom: px-to-rem(22);
+
+    @include media-query {
+      font-size: px-to-rem(15);
+      line-height: 2;
+      margin-bottom: px-to-rem(32);
+    }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-rem(16) px-to-rem(40);
+    background: var(--color-red);
+    color: var(--color-white);
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(15);
+    font-weight: 700;
+    letter-spacing: 0.23em;
+    border-radius: px-to-rem(4);
+    transition: opacity 0.2s;
+
+    @include hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+// フッター
+// =============================================================================
+.footer {
+  background: var(--color-beige);
+  padding: px-to-rem(52) 0 px-to-rem(40);
+
+  @include media-query {
+    padding: px-to-rem(48) 0 px-to-rem(32);
+  }
+
+  &__inner {
+    max-width: px-to-rem(900);
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include media-query {
+      padding: 0 px-to-rem(144);
+    }
+  }
+
+  &__logo {
+    margin-bottom: px-to-rem(18);
+
+    @include media-query {
+      margin-bottom: px-to-rem(12);
+    }
+  }
+
+  &__logo-link {
+    display: block;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  &__logo-text {
+    font-family: var(--font-family-02);
+    font-size: px-to-rem(18);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+
+    @include media-query {
+      font-size: px-to-rem(18);
+    }
+  }
+
+  &__logo-subtext {
+    font-family: var(--font-family-01);
+    font-size: px-to-rem(10);
+    font-weight: 400;
+    color: #888;
+    letter-spacing: 0.2em;
+    line-height: 1.7;
+    margin-top: px-to-rem(4);
+  }
+
+  &__nav {
+    margin-bottom: px-to-rem(48);
+
+    @include media-query {
+      margin-bottom: px-to-rem(36);
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px-to-rem(8) px-to-rem(22);
+    list-style: none;
+
+    @include media-query {
+      gap: px-to-rem(8) px-to-rem(22);
+    }
+  }
+
+  &__nav-link {
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(14);
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+
+    @include hover {
+      color: var(--color-red);
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: px-to-rem(20);
+    margin-bottom: px-to-rem(40);
+
+    @include media-query {
+      margin-bottom: px-to-rem(40);
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: px-to-rem(16);
+    height: px-to-rem(16);
+    transition: opacity 0.2s;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-to-rem(16);
+    margin-bottom: px-to-rem(32);
+
+    @include media-query {
+      margin-bottom: px-to-rem(32);
+    }
+  }
+
+  &__link {
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(13);
+    font-weight: 400;
+    color: #555;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+
+    &--underline {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @include hover {
+      color: var(--color-red);
+    }
+  }
+
+  &__privacy {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: px-to-rem(16);
+    margin-bottom: px-to-rem(12);
+
+    @include media-query {
+      margin-bottom: px-to-rem(16);
+    }
+  }
+
+  &__copy {
+    font-family: var(--font-family-01);
+    font-size: px-to-rem(12);
+    font-weight: 400;
+    color: #888;
+    line-height: 2;
   }
 }
