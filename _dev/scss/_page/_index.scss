@@ -1,6 +1,6 @@
 @use '../_base/' as *;
 @use '../_foundation/' as *;
-@use './_news.scss' as *;
+@use './_article-nav.scss' as *;
 
 html {
   font-size: 62.5%;
@@ -390,6 +390,7 @@ html {
 .article-share__sns-list {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 
@@ -402,7 +403,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 
   i {
     font-size: 1.36rem;
@@ -412,6 +412,7 @@ html {
     background-color: var(--color-blue3);
   }
 }
+
 
 /*  */
 /*  */
