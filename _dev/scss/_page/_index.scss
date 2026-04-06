@@ -1,6 +1,6 @@
 @use '../_base/' as *;
 @use '../_foundation/' as *;
-@use './_article-nav.scss' as *;
+@use './_article-btn.scss' as *;
 
 html {
   font-size: 62.5%;
@@ -271,11 +271,11 @@ html {
 /* 記事詳細 */
 
 .article__wrap {
-  margin-top: 64px;
+  padding-block: 64px;
   padding-inline: 24px;
 }
 
-/* 記事詳細見出し　配置設定 */
+/* 記事詳細見出し 配置設定 */
 
 .article-heading__inner {
   display: grid;
@@ -331,36 +331,6 @@ html {
 
 .article__show {
   margin-block: 19px 36px;
-}
-
-
-/* 記事を読む・お知らせ一覧ボタン */
-
-.article-btn__inner {
-  display: inline-block;
-  font-size: 1.36rem;
-  font-weight: 700;
-  line-height: 2;
-  letter-spacing: .07rem;
-  color: var(--color-white);
-  border-radius: 4px;
-  background-color: var(--color-red);
-  border: 2px solid var(--color-red);
-  padding: 8px 19px 9px 18px;
-
-  i {
-    margin-left: 6px;
-  }
-}
-
-.article-btn__inner--read {
-  color: var(--color-red);
-  background-color: var(--color-white);
-  padding: 12px 28px 13px 28px;
-
-  i {
-    margin-inline: 0 6px;
-  }
 }
 
 
