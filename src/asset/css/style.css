@@ -18,6 +18,8 @@
   --color-black: #6B5E52;
   --color-black2: #2C2116;
   --color-blue2: #1A4E8A;
+  --color-black3: #000000;
+  --color-blue3: #1877F2;
   /* font-size */
   --font-size: px-to-rem(16);
 }
@@ -476,19 +478,16 @@ html {
 
 .article-heading__date {
   grid-column: 1;
-  /* 1列目 */
   grid-row: 1;
 }
 
 .article-heading__category {
   grid-column: 2;
-  /* 2列目 */
   grid-row: 1;
 }
 
 .article-heading__title {
   grid-column: 1/-1;
-  /* 全列にまたがる */
   grid-row: 2;
 }
 
@@ -518,7 +517,7 @@ html {
 }
 
 .article__show {
-  margin-block: 19px 32px;
+  margin-block: 19px 36px;
 }
 
 /* 記事を読む・お知らせ一覧ボタン */
@@ -547,7 +546,49 @@ html {
   margin-inline: 0 6px;
 }
 
-/*  */
+/* 記事をシェア */
+.article-share__wrap {
+  border-top: 1px solid var(--color-beige2);
+  border-bottom: 1px solid var(--color-beige2);
+  display: flex;
+  align-items: center;
+  margin-block: 40px 48px;
+  padding-block: 33px 23px;
+}
+
+.article-share__text {
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.15rem;
+  color: var(--color-black);
+  margin-right: 16px;
+}
+
+/* SNSボタン */
+.article-share__sns-list {
+  display: flex;
+  align-items: center;
+}
+
+.article-share__sns-btn {
+  border-radius: 50%;
+  background-color: var(--color-black3);
+  color: var(--color-white);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.article-share__sns-btn i {
+  font-size: 1.36rem;
+}
+.article-share__sns-btn--fb {
+  background-color: var(--color-blue3);
+}
+
 /*  */
 /*  */
 /*  */
