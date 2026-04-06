@@ -273,6 +273,15 @@ html {
 .article__wrap {
   padding-block: 64px;
   padding-inline: 24px;
+  max-width: 500px;
+  margin: 0 auto;
+
+  @media (min-width: 769px) {
+    padding-inline: 0;
+    padding-block: 92px;
+    width: clamp(650px, calc(100vw/1440*760), 2000px);
+    max-width: 2000px;
+  }
 }
 
 /* 記事詳細見出し 配置設定 */
@@ -284,6 +293,10 @@ html {
   gap: 15px 12px;
   border-bottom: 2px solid var(--color-red);
   padding-bottom: 41px;
+
+  @media (min-width: 769px) {
+    padding-bottom: 16px;
+  }
 }
 
 .article-heading__date {
@@ -310,6 +323,11 @@ html {
   font-weight: 700;
   letter-spacing: .15rem;
   color: var(--color-black2);
+
+  @media (min-width: 769px) {
+    font-size: 3.04rem;
+    letter-spacing: .2rem;
+  }
 }
 
 
@@ -329,8 +347,18 @@ html {
   margin-block: 31px 19px;
 }
 
+.article__main-text p {
+  @media (min-width: 769px) {
+    letter-spacing: 0;
+  }
+}
+
 .article__show {
   margin-block: 19px 36px;
+
+  @media (min-width: 769px) {
+    margin-bottom: 37px;
+  }
 }
 
 
@@ -343,6 +371,10 @@ html {
   align-items: center;
   margin-block: 40px 48px;
   padding-block: 33px 23px;
+
+  @media (min-width: 769px) {
+    margin-block: 17px 24px;
+  }
 }
 
 .article-share__text {

@@ -222,7 +222,9 @@ li {
 
 /* 記事を読む・お知らせ一覧ボタン */
 .article-btn__inner {
-  display: inline-block;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.36rem;
   font-weight: 700;
   line-height: 2;
@@ -243,7 +245,7 @@ li {
   line-height: 1.8;
   letter-spacing: 0.1rem;
   padding: 12px 28px 14px 30px;
-  margin-left: 22.5%;
+  margin: 0 auto;
 }
 .article-btn__inner--read i {
   margin-inline: 0 6px;
@@ -258,6 +260,9 @@ li {
 @media (min-width: 769px) {
   .article-nav__wrap {
     flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
   }
 }
 
@@ -269,6 +274,11 @@ li {
   border-radius: 4px;
   padding-inline: 16px;
   padding-block: 16px 12px;
+}
+@media (min-width: 769px) {
+  .article-nav-btn__wrap {
+    width: clamp(315px, 25.8333333333vw, 372px);
+  }
 }
 .article-nav-btn__wrap--next {
   padding-bottom: 18px;
@@ -546,6 +556,16 @@ html {
 .article__wrap {
   padding-block: 64px;
   padding-inline: 24px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (min-width: 769px) {
+  .article__wrap {
+    padding-inline: 0;
+    padding-block: 92px;
+    width: clamp(650px, 52.7777777778vw, 2000px);
+    max-width: 2000px;
+  }
 }
 
 /* 記事詳細見出し 配置設定 */
@@ -556,6 +576,11 @@ html {
   gap: 15px 12px;
   border-bottom: 2px solid var(--color-red);
   padding-bottom: 41px;
+}
+@media (min-width: 769px) {
+  .article-heading__inner {
+    padding-bottom: 16px;
+  }
 }
 
 .article-heading__date {
@@ -582,6 +607,12 @@ html {
   letter-spacing: 0.15rem;
   color: var(--color-black2);
 }
+@media (min-width: 769px) {
+  .article-heading__title {
+    font-size: 3.04rem;
+    letter-spacing: 0.2rem;
+  }
+}
 
 /* 記事内容 */
 .article__content p,
@@ -598,8 +629,19 @@ html {
   margin-block: 31px 19px;
 }
 
+@media (min-width: 769px) {
+  .article__main-text p {
+    letter-spacing: 0;
+  }
+}
+
 .article__show {
   margin-block: 19px 36px;
+}
+@media (min-width: 769px) {
+  .article__show {
+    margin-bottom: 37px;
+  }
 }
 
 /* 記事をシェア */
@@ -610,6 +652,11 @@ html {
   align-items: center;
   margin-block: 40px 48px;
   padding-block: 33px 23px;
+}
+@media (min-width: 769px) {
+  .article-share__wrap {
+    margin-block: 17px 24px;
+  }
 }
 
 .article-share__text {
