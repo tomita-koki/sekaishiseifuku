@@ -1400,10 +1400,10 @@ li {
 }
 .profile__heading-ja {
   font-family: var(--font-family-02);
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #1a1a1a;
-  line-height: 4rem;
+  line-height: 3.3rem;
   margin-bottom: 1.2rem;
 }
 @media screen and (min-width: 768px) {
@@ -1423,15 +1423,15 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3.2rem;
-  margin-top: 3.2rem;
+  gap: 4.6rem;
+  margin: 4rem 2.4rem 0;
 }
 @media screen and (min-width: 768px) {
   .profile__content {
     flex-direction: row;
     align-items: flex-start;
     gap: 6.4rem;
-    margin-top: 4.8rem;
+    margin: 4.8rem 0 0;
   }
 }
 .profile__img {
@@ -1489,23 +1489,24 @@ li {
   color: #1a1a1a;
   display: flex;
   align-items: baseline;
-  gap: 2rem;
-  margin-bottom: 1.8rem;
+  gap: 2.2rem;
+  margin-bottom: 1.6rem;
 }
 .profile__name span {
   font-family: var(--font-family-01);
   font-size: 1.4rem;
   font-weight: 400;
   color: #666;
+  letter-spacing: 0.06em;
 }
 @media screen and (min-width: 768px) {
   .profile__name {
-    font-size: 3.2rem;
     gap: 2rem;
     margin-bottom: 1.8rem;
   }
   .profile__name span {
     font-size: 1.6rem;
+    letter-spacing: 0em;
   }
 }
 .profile__name-en {
@@ -1513,29 +1514,34 @@ li {
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-red);
-  margin-bottom: 2rem;
-  letter-spacing: 0.01em;
+  margin-bottom: 3rem;
+  letter-spacing: 0.08em;
 }
 @media screen and (min-width: 768px) {
   .profile__name-en {
     font-size: 1.4rem;
-    margin-bottom: 3rem;
+    letter-spacing: 0.01em;
   }
 }
 .profile__text {
   font-size: 1.4rem;
-  line-height: 1.8;
+  line-height: 2.1;
   color: #444;
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.08em;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.1em;
 }
 .profile__text:last-of-type {
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.1rem;
 }
 @media screen and (min-width: 768px) {
   .profile__text {
     font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
     margin-bottom: 2rem;
+  }
+  .profile__text:last-of-type {
+    margin-bottom: 2.4rem;
   }
 }
 .profile__label {
@@ -1586,7 +1592,7 @@ li {
 }
 .career__timeline {
   position: relative;
-  padding-left: 10rem;
+  padding-left: 11rem;
 }
 @media screen and (min-width: 768px) {
   .career__timeline {
@@ -1596,7 +1602,7 @@ li {
 .career__timeline::before {
   content: "";
   position: absolute;
-  left: 8rem;
+  left: 0rem;
   top: 0.8rem;
   bottom: 0.8rem;
   width: 0.3rem;
@@ -1611,7 +1617,7 @@ li {
   position: relative;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 3.6rem;
+  margin-bottom: 5.6rem;
 }
 .career__item:last-child {
   margin-bottom: 0;
@@ -1623,22 +1629,24 @@ li {
 }
 .career__year {
   position: absolute;
-  left: -10rem;
+  left: -8.5rem;
   top: 0.2rem;
-  width: 8.8rem;
-  font-family: var(--font-family-02);
+  width: 5rem;
+  font-family: var(--font-family-01);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-red);
   text-align: right;
-  line-height: 1.4;
+  line-height: 2;
 }
 @media screen and (min-width: 768px) {
   .career__year {
+    top: 0.2rem;
     left: -21.5rem;
     width: 12.8rem;
     font-size: 1.4rem;
     top: 0.4rem;
+    line-height: 1.4;
   }
 }
 .career__dot {
@@ -1646,13 +1654,14 @@ li {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
+  top: 0.5rem;
+  left: -11.8rem;
+  width: 2rem;
+  height: 2rem;
 }
 @media screen and (min-width: 768px) {
   .career__dot {
-    top: 0.5rem;
     left: -23.5rem;
-    width: 2rem;
-    height: 2rem;
   }
 }
 .career__content {
@@ -1660,28 +1669,29 @@ li {
 }
 .career__title {
   font-family: var(--font-family-02);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #1a1a1a;
   line-height: 1.6;
   margin-bottom: 0.6rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
 }
 @media screen and (min-width: 768px) {
   .career__title {
-    font-size: 1.6rem;
+    letter-spacing: 0.02em;
     margin-bottom: 0.8rem;
   }
 }
 .career__text {
   font-size: 1.3rem;
   color: #555;
-  line-height: 1.8;
+  line-height: 2;
   letter-spacing: 0.16em;
 }
 @media screen and (min-width: 768px) {
   .career__text {
     font-size: 1.4rem;
+    line-height: 1.8;
   }
 }
 

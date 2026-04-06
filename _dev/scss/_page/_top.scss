@@ -1205,10 +1205,10 @@
 
   &__heading-ja {
     font-family: var(--font-family-02);
-    font-size: px-to-rem(24);
+    font-size: px-to-rem(25);
     font-weight: 700;
     color: #1a1a1a;
-    line-height: 4rem;
+    line-height: 3.3rem;
     margin-bottom: px-to-rem(12);
 
     @include media-query {
@@ -1229,14 +1229,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: px-to-rem(32);
-    margin-top: px-to-rem(32);
+    gap: px-to-rem(46);
+    margin: px-to-rem(40) px-to-rem(24) 0;
 
     @include media-query {
       flex-direction: row;
       align-items: flex-start;
       gap: px-to-rem(64);
-      margin-top: px-to-rem(48);
+      margin: px-to-rem(48) 0 0;
     }
   }
 
@@ -1299,23 +1299,24 @@
     color: #1a1a1a;
     display: flex;
     align-items: baseline;
-    gap: px-to-rem(20);
-    margin-bottom: px-to-rem(18);
+    gap: px-to-rem(22);
+    margin-bottom: px-to-rem(16);
 
     span {
       font-family: var(--font-family-01);
       font-size: px-to-rem(14);
       font-weight: 400;
       color: #666;
+      letter-spacing: 0.06em;
     }
 
     @include media-query {
-      font-size: px-to-rem(32);
       gap: px-to-rem(20);
       margin-bottom: px-to-rem(18);
 
       span {
         font-size: px-to-rem(16);
+        letter-spacing: 0em;
       }
     }
   }
@@ -1325,29 +1326,35 @@
     font-size: px-to-rem(13);
     font-weight: 600;
     color: var(--color-red);
-    margin-bottom: px-to-rem(20);
-    letter-spacing: 0.01em;
+    margin-bottom: px-to-rem(30);
+    letter-spacing: 0.08em;
 
     @include media-query {
       font-size: px-to-rem(14);
-      margin-bottom: px-to-rem(30);
+      letter-spacing: 0.01em;
     }
   }
 
   &__text {
     font-size: px-to-rem(14);
-    line-height: 1.8;
+    line-height: 2.1;
     color: #444;
-    margin-bottom: px-to-rem(12);
-    letter-spacing: 0.08em;
+    margin-bottom: px-to-rem(18);
+    letter-spacing: 0.1em;
 
     &:last-of-type {
-      margin-bottom: px-to-rem(24);
+      margin-bottom: px-to-rem(21);
     }
 
     @include media-query {
       font-size: px-to-rem(15);
+      line-height: 1.8;
+      letter-spacing: 0.08em;
       margin-bottom: px-to-rem(20);
+
+      &:last-of-type {
+        margin-bottom: px-to-rem(24);
+      }
     }
   }
 
@@ -1414,7 +1421,7 @@
 
   &__timeline {
     position: relative;
-    padding-left: px-to-rem(100);
+    padding-left: px-to-rem(110);
 
     @include media-query {
       padding-left: px-to-rem(225);
@@ -1423,7 +1430,7 @@
     &::before {
       content: "";
       position: absolute;
-      left: px-to-rem(80);
+      left: px-to-rem(0);
       top: px-to-rem(8);
       bottom: px-to-rem(8);
       width: px-to-rem(3);
@@ -1439,7 +1446,7 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-    margin-bottom: px-to-rem(36);
+    margin-bottom: px-to-rem(56);
 
     &:last-child {
       margin-bottom: 0;
@@ -1452,21 +1459,27 @@
 
   &__year {
     position: absolute;
-    left: px-to-rem(-100);
+    left: px-to-rem(-85);
     top: px-to-rem(2);
-    width: px-to-rem(88);
-    font-family: var(--font-family-02);
+    width: px-to-rem(50);
+    font-family: var(--font-family-01);
     font-size: px-to-rem(12);
     font-weight: 700;
     color: var(--color-red);
     text-align: right;
-    line-height: 1.4;
+    line-height: 2;
+
 
     @include media-query {
+      top: px-to-rem(2);
       left: px-to-rem(-215);
       width: px-to-rem(128);
       font-size: px-to-rem(14);
       top: px-to-rem(4);
+      line-height: 1.4;
+    }
+
+    &--sp {
     }
   }
 
@@ -1475,12 +1488,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-
+    top: px-to-rem(5);
+    left: px-to-rem(-118);
+    width: px-to-rem(20);
+    height: px-to-rem(20);
+    
     @include media-query {
-      top: px-to-rem(5);
       left: px-to-rem(-235);
-      width: px-to-rem(20);
-      height: px-to-rem(20);
     }
   }
 
@@ -1490,15 +1504,15 @@
 
   &__title {
     font-family: var(--font-family-02);
-    font-size: px-to-rem(14);
+    font-size: px-to-rem(16);
     font-weight: 700;
     color: #1a1a1a;
     line-height: 1.6;
     margin-bottom: px-to-rem(6);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
 
     @include media-query {
-      font-size: px-to-rem(16);
+      letter-spacing: 0.02em;
       margin-bottom: px-to-rem(8);
     }
   }
@@ -1506,11 +1520,12 @@
   &__text {
     font-size: px-to-rem(13);
     color: #555;
-    line-height: 1.8;
+    line-height: 2;
     letter-spacing: 0.16em;
 
     @include media-query {
       font-size: px-to-rem(14);
+      line-height: 1.8;
     }
   }
 }
