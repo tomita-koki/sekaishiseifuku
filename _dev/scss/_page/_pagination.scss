@@ -1,0 +1,40 @@
+/* ページネーション */
+
+.news-pagination__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-block: 57px 63px;
+}
+
+.news-pagination__box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-beige2);
+    border-radius: 4px;
+    background-color: var(--color-white);
+    font-size: 1.41rem;
+    font-weight: 700;
+    color: var(--color-black);
+    transition: all var(--transition);
+}
+
+.news-pagination__box--num {
+    padding-bottom: 4px;
+}
+
+.news-pagination__box:hover {
+    border-color: var(--color-red);
+    color: var(--color-red);
+}
+
+/* 表示中の hover CSS
+.news-pagination__box:hover {
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+*/

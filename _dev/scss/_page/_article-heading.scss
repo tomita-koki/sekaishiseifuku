@@ -1,0 +1,74 @@
+/* 日付（article.htmlと共通） */
+
+.article-date {
+    font-size: 1.28rem;
+    font-weight: 400;
+    color: var(--color-black);
+    white-space: nowrap;
+    margin-top: 6px;
+    letter-spacing: .05rem;
+}
+
+
+/* カテゴリー共通（メディア）（article.htmlと共通） */
+
+.article-category {
+    background-color: var(--color-red);
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2px;
+    margin-top: 4px;
+    width: 67px;
+}
+
+.article-category__text {
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: .13rem;
+    color: var(--color-white);
+    text-align: center;
+}
+
+
+/* 出版情報 */
+
+.article-category--print {
+    background-color: var(--color-blue2);
+}
+
+.article-category__text--print {
+    letter-spacing: .01rem;
+}
+
+
+/* YouTube */
+
+.article-category--youtube {
+    width: 71px;
+    background-color: var(--color-red2);
+}
+
+.article-category__text--youtube {
+    letter-spacing: .07rem;
+}
+
+
+/* 講義情報 */
+
+.article-category__text--lecture {
+    letter-spacing: .04rem;
+}
+
+
+/* 記事タイトル */
+
+.article-list__title {
+    font-size: 1.52rem;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: .01rem;
+    color: var(--color-black2);
+}
