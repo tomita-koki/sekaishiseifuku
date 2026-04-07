@@ -605,7 +605,7 @@ li {
   border-radius: 4px;
   background-color: var(--color-red);
   border: 2px solid var(--color-red);
-  padding: 8px 19px 9px 18px;
+  padding: 8px 13px 9px 18px;
   transition: all var(--transition);
 }
 .article-btn__inner i {
