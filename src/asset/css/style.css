@@ -402,6 +402,17 @@ li {
   text-decoration: underline;
 }
 
+/* フェードイン */
+.js-fade {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.js-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 html {
   font-size: 62.5%;
   /* = 10px */
@@ -627,22 +638,6 @@ html {
   border-color: var(--color-red);
   background-color: var(--color-red);
   color: var(--color-white);
-}
-
-/* フェードイン */
-.news-category,
-.article-list,
-.news-pagination {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.news-category.visible,
-.article-list.visible,
-.news-pagination.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* 記事詳細 */

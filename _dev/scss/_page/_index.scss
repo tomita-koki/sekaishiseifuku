@@ -2,6 +2,7 @@
 @use '../_foundation/' as *;
 @use './_article-btn.scss' as *;
 @use './_privacy-policy.scss' as *;
+@use './_js-fade.scss' as *;
 
 html {
   font-size: 62.5%;
@@ -249,25 +250,6 @@ html {
   background-color: var(--color-red);
   color: var(--color-white);
 }
-
-
-/* フェードイン */
-
-.news-category,
-.article-list,
-.news-pagination {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.news-category.visible,
-.article-list.visible,
-.news-pagination.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 
 /* 記事詳細 */
