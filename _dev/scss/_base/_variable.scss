@@ -17,12 +17,17 @@ $BREAKPOINT: 768px;
   --color-beige2: #E0D8D0;
   --color-beige3: #F4F1ED;
 
-  /* つゆき追加 */
+  /* つゆき追加 color */
   --color-black: #6B5E52;
   --color-black2: #2C2116;
   --color-blue2: #1A4E8A;
   --color-black3: #000000;
   --color-blue3: #1877F2;
+  --color-red3: #7A0323;
+
+
+  /* つゆき追加 hover */
+  --transition: .3s ease;
 
   /* font-size */
   --font-size: #{px-to-rem(16)};

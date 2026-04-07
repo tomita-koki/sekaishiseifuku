@@ -12,9 +12,17 @@
     background-color: var(--color-red);
     border: 2px solid var(--color-red);
     padding: 8px 19px 9px 18px;
+    transition: all var(--transition);
 
     i {
         margin-left: 6px;
+    }
+
+    &:hover {
+        background: var(--color-red3);
+        border-color: var(--color-red3);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, .12);
     }
 
     &--read {
@@ -28,6 +36,12 @@
 
         i {
             margin-inline: 0 6px;
+        }
+
+        &:hover {
+            background-color: var(--color-red);
+            color: var(--color-white);
+            transform: translateY(0px);
         }
     }
 }
@@ -58,6 +72,12 @@
         border-radius: 4px;
         padding-inline: 16px;
         padding-block: 16px 12px;
+        transition: all var(--transition);
+
+        &:hover {
+            border-color: var(--color-red);
+            background-color: var(--color-white);
+        }
 
         @media (min-width: 769px) {
             width: clamp(315px, calc(100vw/1440*372), 372px);
