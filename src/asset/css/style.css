@@ -315,7 +315,14 @@ li {
 .privacy-policy__wrap {
   padding-block: 64px;
   padding-inline: 24px;
-  background-color: var(--color-beige);
+}
+@media (min-width: 769px) {
+  .privacy-policy__wrap {
+    padding-block: 96px;
+    padding-inline: 0;
+    width: clamp(0px, 52.7777777778vw, 2000px);
+    margin: 0 auto;
+  }
 }
 
 .privacy-policy-container__wrap {
@@ -359,6 +366,12 @@ li {
   border-radius: 50%;
 }
 
+@media (min-width: 769px) {
+  .privacy-policy-container:last-child .privacy-policy-container__wrap {
+    border-bottom: none;
+  }
+}
+
 /* ダミーテキストのレイアウト */
 .privacy-policy-container__list {
   padding-left: 24px;
@@ -394,8 +407,11 @@ html {
   /* = 10px */
 }
 
-.news {
+.section-bg {
   background-color: var(--color-beige);
+}
+
+.news {
   padding-inline: 24px;
   padding-block: 64px;
 }

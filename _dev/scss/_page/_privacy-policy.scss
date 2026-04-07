@@ -1,7 +1,13 @@
 .privacy-policy__wrap {
     padding-block: 64px;
     padding-inline: 24px;
-    background-color: var(--color-beige);
+
+    @media (min-width: 769px) {
+        padding-block: 96px;
+        padding-inline: 0;
+        width: clamp(0px, calc(100vw/1440*760), 2000px);
+        margin: 0 auto;
+    }
 }
 
 .privacy-policy-container {
@@ -52,6 +58,13 @@
     }
 }
 
+.privacy-policy-container:last-child {
+    .privacy-policy-container__wrap {
+        @media (min-width: 769px) {
+                border-bottom: none;
+        }
+    }
+}
 
 
 /* ダミーテキストのレイアウト */

@@ -9,10 +9,11 @@ html {
 }
 
 
-
+.section-bg {
+  background-color: var(--color-beige);
+}
 
 .news {
-  background-color: var(--color-beige);
   padding-inline: 24px;
   padding-block: 64px;
 
