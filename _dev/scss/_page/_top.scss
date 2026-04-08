@@ -189,6 +189,50 @@
   }
 }
 
+.header.header-type2 {
+  background-color:var(--color-beige4);
+
+  .header__logo-link{
+    display: block;
+    color: var(--color-black);
+  }
+
+  .header__nav-link {
+    color: var(--color-black);
+  }
+}
+
+  .header__heading {
+    background-color:var(--color-beige4);
+    padding-top: px-to-rem(128);
+    padding-bottom: px-to-rem(56);
+    text-align: center;
+  }
+
+  .header__heading-en {
+    font-family: var(--font-family-01);
+    font-size: px-to-rem(12);
+    font-weight: 700;
+    line-height: 2.16rem;
+    letter-spacing: 0.24em;
+    color: var(--color-red);
+  }
+
+  .header__heading-ja {
+    font-family: var(--font-family-02);
+    font-size: px-to-rem(24);
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 3rem;
+    letter-spacing: 0.08em;
+
+    @include media-query {
+      font-size: 3.2rem;
+      line-height: 4.58rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+
 // ハンバーガー
 // =============================================================================
 .hamburger {

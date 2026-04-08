@@ -14,6 +14,7 @@
   --color-beige: #FAF9F7;
   --color-beige2: #E0D8D0;
   --color-beige3: #F4F1ED;
+  --color-beige4: #F3EBDB;
   --color-gold: #B8965A;
   --color-black: #000000;
   /* font-size */
@@ -406,6 +407,49 @@ header.scrolled .header__nav-link {
 .header__background.active {
   opacity: 1;
   pointer-events: auto;
+}
+
+.header.header-type2 {
+  background-color: var(--color-beige4);
+}
+.header.header-type2 .header__logo-link {
+  display: block;
+  color: var(--color-black);
+}
+.header.header-type2 .header__nav-link {
+  color: var(--color-black);
+}
+
+.header__heading {
+  background-color: var(--color-beige4);
+  padding-top: 12.8rem;
+  padding-bottom: 5.6rem;
+  text-align: center;
+}
+
+.header__heading-en {
+  font-family: var(--font-family-01);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.16rem;
+  letter-spacing: 0.24em;
+  color: var(--color-red);
+}
+
+.header__heading-ja {
+  font-family: var(--font-family-02);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-black);
+  line-height: 3rem;
+  letter-spacing: 0.08em;
+}
+@media screen and (min-width: 768px) {
+  .header__heading-ja {
+    font-size: 3.2rem;
+    line-height: 4.58rem;
+    letter-spacing: 0.3rem;
+  }
 }
 
 .hamburger {
