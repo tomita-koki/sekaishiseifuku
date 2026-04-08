@@ -9,12 +9,13 @@
   --color-white: #FFFFFF;
   --color-red: #9B042C;
   --color-red2: #CC0000;
-  --color-red3: #FF4444;
+  --color-red3: #F10207;
   --color-blue: #004E8E;
   --color-beige: #FAF9F7;
   --color-beige2: #E0D8D0;
   --color-beige3: #F4F1ED;
   --color-gold: #B8965A;
+  --color-black: #000000;
   /* font-size */
   --font-size: px-to-rem(16);
 }
@@ -234,6 +235,9 @@ li {
   display: block;
   color: var(--color-white);
 }
+header.scrolled .header__logo-link {
+  color: var(--color-black);
+}
 .header__logo-text {
   font-family: var(--font-family-02);
   font-size: 1.8rem;
@@ -304,11 +308,13 @@ li {
   }
 }
 .header__nav-link {
+  display: inline-block;
   font-family: var(--font-family-03);
   font-size: 1.4rem;
   font-weight: 500;
-  color: var(--color-white);
-  transition: color 0.2s;
+  color: rgba(255, 255, 255, 0.85);
+  transform: scale(1);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 @media screen and (max-width: 767px) {
   .header__nav-link {
@@ -317,14 +323,17 @@ li {
 }
 @media (any-hover: hover) {
   .header__nav-link:hover {
-    color: var(--color-red);
+    transform: scale(1.1);
   }
 }
 .header__nav-link:focus-visible {
-  color: var(--color-red);
+  transform: scale(1.1);
 }
 .header__nav-link:active {
-  color: var(--color-red);
+  transform: scale(1.1);
+}
+header.scrolled .header__nav-link {
+  color: var(--color-black);
 }
 .header__contact {
   display: inline-flex;
@@ -546,7 +555,7 @@ li {
   font-family: var(--font-family-03);
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 2.3rem;
   letter-spacing: 0.36rem;
   margin-bottom: 0.8rem;
@@ -576,7 +585,7 @@ li {
 .mv__name-en {
   font-family: var(--font-family-01);
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.55);
   font-weight: 400;
   line-height: 3.8rem;
   letter-spacing: 0.45rem;
@@ -594,7 +603,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 3.2rem;
   margin-bottom: 3.6rem;
 }
@@ -655,7 +664,7 @@ li {
   color: var(--color-white);
 }
 .mv__btn--youtube {
-  background: rgba(0, 0, 0, 0.2);
+  background: #BEC0C1;
   color: var(--color-white);
   border: 0.2rem solid var(--color-white);
   gap: 1rem;
@@ -811,6 +820,7 @@ li {
   letter-spacing: 0.2em;
   transition: background 0.2s, color 0.2s;
   border-radius: 4px;
+  font-weight: 700;
 }
 @media (any-hover: hover) {
   .news__btn:hover {
@@ -1443,6 +1453,8 @@ li {
   width: 100%;
   display: block;
   object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0px 12px 48px rgba(0, 0, 0, 0.18);
 }
 @media screen and (min-width: 768px) {
   .profile__img {
@@ -1451,27 +1463,20 @@ li {
 }
 .profile__social {
   position: absolute;
-  right: -1.8rem;
+  right: -1rem;
   top: 50%;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  background: var(--color-white);
 }
-.profile__social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3.6rem;
-  height: 3.6rem;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-.profile__social-link img {
+.profile__social-link-icon {
   width: 1.8rem;
   height: 1.8rem;
-  object-fit: contain;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .profile__body {
   flex: 1;
@@ -1486,7 +1491,6 @@ li {
   font-family: var(--font-family-02);
   font-size: 3.2rem;
   font-weight: 700;
-  color: #1a1a1a;
   display: flex;
   align-items: baseline;
   gap: 2.2rem;
@@ -1496,7 +1500,6 @@ li {
   font-family: var(--font-family-01);
   font-size: 1.4rem;
   font-weight: 400;
-  color: #666;
   letter-spacing: 0.06em;
 }
 @media screen and (min-width: 768px) {
@@ -1510,7 +1513,7 @@ li {
   }
 }
 .profile__name-en {
-  font-family: var(--font-family-02);
+  font-family: var(--font-family-01);
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-red);
@@ -1550,8 +1553,8 @@ li {
   gap: 0.8rem;
 }
 .profile__label-text {
+  font-weight: 400;
   font-size: 1.2rem;
-  color: #555;
   background: var(--color-beige3);
   border: 1px solid var(--color-beige2);
   border-radius: 5rem;
@@ -1636,13 +1639,12 @@ li {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-red);
-  text-align: right;
   line-height: 2;
 }
 @media screen and (min-width: 768px) {
   .career__year {
     top: 0.2rem;
-    left: -21.5rem;
+    left: -18rem;
     width: 12.8rem;
     font-size: 1.4rem;
     top: 0.4rem;

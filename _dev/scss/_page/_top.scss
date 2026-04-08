@@ -28,6 +28,10 @@
     &-link {
       display: block;
       color: var(--color-white);
+
+      header.scrolled & {
+        color: var(--color-black);
+      }
     }
 
     &-text {
@@ -102,18 +106,24 @@
   }
 
   &__nav-link {
+    display: inline-block;
     font-family: var(--font-family-03);
     font-size: px-to-rem(14);
     font-weight: 500;
-    color: var(--color-white);
-    transition: color 0.2s;
+    color: rgb(255 255 255 / 85%);
+    transform: scale(1);
+    transition: transform 0.3s ease , color 0.3s ease;
 
     @include media-query($_range: below) {
       font-size: px-to-rem(18);
     }
 
     @include hover {
-      color: var(--color-red);
+      transform: scale(1.1);
+    }
+
+    header.scrolled & {
+      color: var(--color-black);
     }
   }
 
@@ -341,7 +351,7 @@
     font-family: var(--font-family-03);
     font-size: px-to-rem(12);
     font-weight: 500;
-    color: var(--color-white);
+    color: rgb(255 255 255 / 70%);
     line-height: 2.3rem;
     letter-spacing: 0.36rem;
     margin-bottom: px-to-rem(8);
@@ -371,7 +381,7 @@
   &__name-en {
     font-family: var(--font-family-01);
     font-size: px-to-rem(13);
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(255 255 255 / 55%);
     font-weight: 400;
     line-height: 3.8rem;
     letter-spacing: 0.45rem;
@@ -389,7 +399,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(15);
     font-weight: 400;
-    color: var(--color-white);
+    color: rgb(255 255 255 / 90%);
     line-height: 3.2rem;
     margin-bottom: px-to-rem(36);
     
@@ -443,7 +453,7 @@
     }
 
     &--youtube {
-      background: rgba($color: #000000, $alpha: 0.2);
+      background: #BEC0C1;
       color: var(--color-white);
       border: px-to-rem(2) solid var(--color-white);
       gap: px-to-rem(10);
@@ -605,6 +615,7 @@
     letter-spacing: 0.2em;
     transition: background 0.2s, color 0.2s;
     border-radius: 4px;
+    font-weight: 700;
 
     @include hover {
       padding: px-to-rem(16) px-to-rem(28);
@@ -1249,6 +1260,8 @@
       width: 100%;
       display: block;
       object-fit: cover;
+      border-radius: px-to-rem(12);
+      box-shadow: 0px 12px 48px rgba(0, 0, 0, 0.18);
     }
 
     @include media-query {
@@ -1258,29 +1271,24 @@
 
   &__social {
     position: absolute;
-    right: px-to-rem(-18);
+    right: px-to-rem(-10);
     top: 50%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: px-to-rem(8);
+    background: var(--color-white);
   }
 
   &__social-link {
-    display: flex;
+  }
+  
+  &__social-link-icon {
+    width: px-to-rem(18);
+    height: px-to-rem(18);
+    border-radius: 4px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: px-to-rem(36);
-    height: px-to-rem(36);
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-
-    img {
-      width: px-to-rem(18);
-      height: px-to-rem(18);
-      object-fit: contain;
-    }
   }
 
   &__body {
@@ -1296,7 +1304,6 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(32);
     font-weight: 700;
-    color: #1a1a1a;
     display: flex;
     align-items: baseline;
     gap: px-to-rem(22);
@@ -1306,7 +1313,6 @@
       font-family: var(--font-family-01);
       font-size: px-to-rem(14);
       font-weight: 400;
-      color: #666;
       letter-spacing: 0.06em;
     }
 
@@ -1322,7 +1328,7 @@
   }
 
   &__name-en {
-    font-family: var(--font-family-02);
+    font-family: var(--font-family-01);
     font-size: px-to-rem(13);
     font-weight: 600;
     color: var(--color-red);
@@ -1365,8 +1371,8 @@
   }
 
   &__label-text {
+    font-weight: 400;
     font-size: px-to-rem(12);
-    color: #555;
     background: var(--color-beige3);
     border: 1px solid var(--color-beige2);
     border-radius: px-to-rem(50);
@@ -1466,13 +1472,12 @@
     font-size: px-to-rem(12);
     font-weight: 700;
     color: var(--color-red);
-    text-align: right;
     line-height: 2;
 
 
     @include media-query {
       top: px-to-rem(2);
-      left: px-to-rem(-215);
+      left: px-to-rem(-180);
       width: px-to-rem(128);
       font-size: px-to-rem(14);
       top: px-to-rem(4);
