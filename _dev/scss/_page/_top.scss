@@ -17,7 +17,15 @@
     padding: 10px 24px;
     max-width: 100%;
 
-    @include media-query {
+    @media screen and (min-width: 768px) {
+      padding: 20px 10px 20px;
+    }
+
+    @media screen and (min-width: 900px) {
+      padding: 20px 100px 20px;
+    }
+    
+    @media screen and (min-width: 1100px) {
       padding: 20px 144px 20px;
     }
   }
@@ -233,6 +241,25 @@
     }
   }
 
+  .x-icon {
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    & i {
+      color: var(--color-white);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    &--type2 {
+      & i {
+        color: var(--color-black);
+      }
+    }
+  }
+
 // ハンバーガー
 // =============================================================================
 .hamburger {
@@ -253,7 +280,7 @@
     display: block;
     width: px-to-rem(24);
     height: px-to-rem(2);
-    background: var(--color-white);
+    background: var(--color-black);
     transition: background 0.3s;
 
     &::before,
@@ -263,7 +290,7 @@
       left: 0;
       width: 100%;
       height: px-to-rem(2);
-      background: var(--color-white);
+      background: var(--color-black);
       transition: transform 0.3s ease;
     }
 
@@ -1321,18 +1348,6 @@
     flex-direction: column;
     gap: px-to-rem(8);
     background: var(--color-white);
-  }
-
-  &__social-link {
-  }
-  
-  &__social-link-icon {
-    width: px-to-rem(18);
-    height: px-to-rem(18);
-    border-radius: 4px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__body {
