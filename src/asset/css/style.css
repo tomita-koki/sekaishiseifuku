@@ -1755,6 +1755,16 @@ header.scrolled .header__social .x-icon i {
   font-size: 18px;
   line-height: 1;
 }
+.header.header-type2 .hamburger #hamburger__btn {
+  background: var(--color-black);
+}
+.header.header-type2 .hamburger #hamburger__btn::before, .header.header-type2 .hamburger #hamburger__btn::after {
+  content: "";
+  background: var(--color-black);
+}
+.header.header-type2 .hamburger.active #hamburger__btn {
+  background: transparent;
+}
 
 .header__heading {
   background-color: var(--color-beige4);
@@ -1796,6 +1806,7 @@ header.scrolled .header__social .x-icon i {
   padding: 0.8rem;
   position: relative;
   z-index: 101;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .hamburger {
@@ -1807,8 +1818,8 @@ header.scrolled .header__social .x-icon i {
   display: block;
   width: 2.4rem;
   height: 0.2rem;
-  background: var(--color-black);
-  transition: background 0.3s;
+  background: var(--color-white);
+  transition: background 0.3s ease;
 }
 .hamburger #hamburger__btn::before, .hamburger #hamburger__btn::after {
   content: "";
@@ -1816,14 +1827,20 @@ header.scrolled .header__social .x-icon i {
   left: 0;
   width: 100%;
   height: 0.2rem;
-  background: var(--color-black);
-  transition: transform 0.3s ease;
+  background: var(--color-white);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 .hamburger #hamburger__btn::before {
   top: -0.8rem;
 }
 .hamburger #hamburger__btn::after {
   top: 0.8rem;
+}
+header.scrolled .hamburger #hamburger__btn {
+  background: var(--color-black);
+}
+header.scrolled .hamburger #hamburger__btn::before, header.scrolled .hamburger #hamburger__btn::after {
+  background: var(--color-black);
 }
 .hamburger.active #hamburger__btn {
   background: transparent;

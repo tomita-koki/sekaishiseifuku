@@ -1,5 +1,6 @@
 // modules
 import "./modules/news";
+import "./modules/hamburger";
 
 // ヘッダー スクロール制御
 const header = document.querySelector('.js-header');
