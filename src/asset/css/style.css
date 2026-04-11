@@ -1568,7 +1568,7 @@ header.scrolled .header__logo-link {
 @media screen and (max-width: 767px) {
   .header__nav {
     position: fixed;
-    top: 7rem;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -1579,8 +1579,9 @@ header.scrolled .header__logo-link {
     align-items: center;
     gap: 4rem;
     z-index: 99;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1592,8 +1593,18 @@ header.scrolled .header__logo-link {
 }
 @media screen and (max-width: 767px) {
   .header.active .header__nav {
-    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    top: 0;
   }
+}
+.header.active .header__logo-link {
+  color: var(--color-black);
+  position: relative;
+  z-index: 100;
+}
+.header.active .header__nav-link {
+  color: var(--color-black);
 }
 .header__nav-list {
   display: flex;
@@ -1847,9 +1858,14 @@ header.scrolled .hamburger #hamburger__btn::before, header.scrolled .hamburger #
 }
 .hamburger.active #hamburger__btn::before {
   transform: translateY(0.8rem) rotate(45deg);
+  background-color: var(--color-black);
 }
 .hamburger.active #hamburger__btn::after {
   transform: translateY(-0.8rem) rotate(-45deg);
+  background-color: var(--color-black);
+}
+header.scrolled .hamburger.active #hamburger__btn {
+  background: transparent;
 }
 
 .sidebar {

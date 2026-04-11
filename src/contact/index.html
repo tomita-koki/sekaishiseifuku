@@ -31,7 +31,7 @@
             <p class="header__logo-subtext">SEKAISHI KAITAI SHINSHO</p>
           </a>
         </div>
-        <nav class="header__nav">
+        <nav class="header__nav" id="header-nav" aria-label="メインナビゲーション">
           <ul class="header__nav-list">
             <li><a href="/#anc01" class="header__nav-link header__text">NEWS</a></li>
             <li><a href="/#anc02" class="header__nav-link header__text">著書</a></li>
@@ -53,8 +53,8 @@
             </a>
           </div>
         </nav>
-        <button class="hamburger" id="hamburger" type="button">
-          <span id="hamburger__btn"></span>
+        <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="header-nav" aria-label="メニューを開く">
+          <span id="hamburger__btn" aria-hidden="true"></span>
         </button>
       </div>
     </header>
