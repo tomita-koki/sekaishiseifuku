@@ -2,7 +2,7 @@
   "name": "gulp-sass",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "script": "index.html",
   "scripts": {
     "start": "npx gulp"
   },

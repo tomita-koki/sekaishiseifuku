@@ -13,10 +13,10 @@ function cssSass() {
 
 // JSのバンドルタスク
 function jsBundle() {
-  return src("_dev/js/main.js")
+  return src("_dev/js/script.js")
     .pipe(
       esbuild({
-        outfile: "main.js",
+        outfile: "script.js",
         bundle: true,
         format: "iife",
       })

@@ -1,5 +1,5 @@
 (() => {
-  // _dev/js/main.js
+  // _dev/js/script.js
 
   // ヘッダースクロール
   var header = document.querySelector(".js-header");
