@@ -1,0 +1,232 @@
+@use "../_base/" as *;
+@use "../_foundation/" as *;
+
+.contact-description {
+  border-top: 2px solid var(--color-beige3);
+  border-bottom: 2px solid var(--color-beige3);
+  background-color: var(--color-beige);
+
+  &__content {
+    margin: 0;
+    padding: 48px 24px 0;
+    max-width: 700px;
+    width: 100%;
+
+    @include media-query {
+      padding: 0;
+      margin: 48px auto 0;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(16);
+    line-height: 1.7;
+    color: var(--color-black2);
+    text-align: center;
+  }
+
+  &__strong {
+    font-weight: bold;
+    color: var(--color-red);
+  }
+
+
+  &__image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    min-width: 84px;
+  }
+
+  &__image {
+    margin: 22px 54px 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    
+    @include media-query {
+      margin: 32px 0 48px;
+      gap: 32px;
+    }
+  }
+
+  &__image-img {
+    width: 32px;
+    height: auto;
+    min-width: 32px;
+    min-height: auto;
+  }
+
+  &__caption {
+    font-family: var(--font-family-03);
+    font-weight: 700;
+    font-size: px-to-rem(13);
+    line-height: 2;
+    color: var(--color-black2);
+    text-align: center;
+    margin-top: 8px;
+  }
+}
+
+.wpcf7 {
+  background-color: var(--color-beige);
+  padding: 68px 24px 80px;
+
+  @include media-query {
+    padding: 96px 24px 80px;
+  }
+
+  .wpcf7-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px 16px;
+    
+    @include media-query {
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 16px;
+    }
+
+    fieldset {
+      display: none;
+    }
+
+    > p {
+      margin: 0;
+
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(13);
+    color: var(--color-black2);
+    font-weight: 700;
+  }
+  label.your-email {
+    letter-spacing: 0.15em;
+    padding-top: 22px;
+
+    @include media-query {
+      padding-top: 0;
+    }
+  }
+
+  .required-mark {
+    color: var(--color-red);
+    margin-left: 4px;
+  }
+
+  .wpcf7-form-control {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 14px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-beige2);
+    border-radius: 4px;
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(14);
+    color: var(--color-black2);
+    box-sizing: border-box;
+    outline: none;
+    letter-spacing: 0.1em;
+
+    &.wpcf7-select {
+      padding: 17px 14px;
+    }
+
+    &:focus {
+      border-color: var(--color-black2);
+    }
+
+    &::placeholder {
+      color: var(--color-beige2);
+    }
+  }
+
+  .wpcf7-textarea {
+    resize: vertical;
+    height: 200px;
+  }
+
+  .wpcf7-select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 36px;
+  }
+
+  .privacy-policy-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(13);
+    color: var(--color-black2);
+    margin-top: -18px;
+    letter-spacing: 0.06em;
+
+    input[type="checkbox"] {
+      width: 14px;
+      height: 14px;
+      accent-color: var(--color-red);
+      cursor: pointer;
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .privacy-policy-link {
+    color: var(--color-red);
+    text-decoration: underline;
+  }
+
+  .wpcf7-submit {
+    display: block;
+    margin: 8px auto 0;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    padding: 16px 30px;
+    font-family: var(--font-family-03);
+    font-size: px-to-rem(16);
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    transition: opacity 0.2s;
+    max-width: 156px;
+    margin-top: 30px;
+
+    @include media-query {
+      margin-top: 0;
+      padding: 16px 56px;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  .wpcf7-response-output {
+    display: none;
+  }
+  }
+}

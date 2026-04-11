@@ -370,6 +370,32 @@
   }
 }
 
+// パンクズ
+// =============================================================================
+.breadcrumbs {
+  border-top: 3px solid var(--color-red);
+  background-color: var(--color-beige3);
+  padding: 10px 0 10px 18px;
+  
+  @include media-query {
+    padding: 10px 0 10px 194px;
+  }
+
+  &__text {
+    font-family: var(--font-family-03);
+    font-weight: 400;
+    font-size: px-to-rem(12);
+    line-height: 2;
+    color: var(--color-black2);
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "/";
+      padding: 0 6px;
+    }
+  }
+}
+
 // メインビジュアル
 // =============================================================================
 .mv {
