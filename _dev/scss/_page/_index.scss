@@ -1,6 +1,8 @@
 @use '../_base/' as *;
 @use '../_foundation/' as *;
 @use './_top.scss' as *;
+@use './_header.scss' as *;
+@use './_footer.scss' as *;
 @use './_contact.scss' as *;
 
 html {
