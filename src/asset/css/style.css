@@ -9,15 +9,19 @@
   --color-white: #FFFFFF;
   --color-red: #9B042C;
   --color-red2: #CC0000;
-  --color-red3: #F10207;
+  --color-red3: #7A0323;
+  --color-red4: #F10207;
   --color-blue: #004E8E;
   --color-beige: #FAF9F7;
   --color-beige2: #E0D8D0;
   --color-beige3: #F4F1ED;
   --color-beige4: #F3EBDB;
   --color-gold: #B8965A;
-  --color-black: #000000;
-  --color-black2: #6B5E52;
+  --color-black: #6B5E52;
+  --color-black2: #2C2116;
+  --color-blue2: #1A4E8A;
+  --color-black3: #000000;
+  --color-blue3: #1877F2;
   /* font-size */
   --font-size: px-to-rem(16);
 }
@@ -311,6 +315,7 @@ li {
   color: rgba(255, 255, 255, 0.9);
   line-height: 3.2rem;
   margin-bottom: 3.6rem;
+  opacity: 0.9;
 }
 @media screen and (min-width: 768px) {
   .mv__lead {
@@ -461,6 +466,7 @@ li {
   line-height: 2.3rem;
   white-space: nowrap;
   margin-left: -3px;
+  width: 69px;
 }
 @media screen and (min-width: 768px) {
   .top-news__date {
@@ -945,19 +951,19 @@ li {
 .media__item-content {
   flex: 1;
   display: flex;
+  gap: 8px;
   flex-direction: column;
 }
 .media__item-title {
   font-family: var(--font-family-01);
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1;
   letter-spacing: 0.04em;
-  margin-bottom: 0.6rem;
 }
 @media screen and (min-width: 768px) {
   .media__item-title {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
   }
 }
 .media__item-date {
@@ -1005,8 +1011,9 @@ li {
   font-weight: 700;
   line-height: 2.16rem;
   letter-spacing: 0.24em;
-  color: var(--color-red3);
+  color: var(--color-red4);
   margin-bottom: -5px;
+  box-shadow: 2, 2, 2, 0;
 }
 @media screen and (min-width: 768px) {
   .youtube__heading-en {
@@ -1032,7 +1039,7 @@ li {
   display: block;
   width: 4rem;
   height: 0.3rem;
-  background: var(--color-red3);
+  background: var(--color-red4);
   margin: 15px auto 0;
 }
 @media screen and (min-width: 768px) {
@@ -1087,7 +1094,7 @@ li {
   align-items: center;
   justify-content: center;
   padding: 2rem 3.6rem;
-  background: var(--color-red3);
+  background: var(--color-red4);
   color: var(--color-white);
   font-family: var(--font-family-03);
   font-size: 1.5rem;
@@ -1210,10 +1217,10 @@ li {
 .profile__social {
   position: absolute;
   right: -8%;
-  top: 28%;
+  top: 34%;
   display: flex;
   flex-direction: column;
-  gap: 2.8rem;
+  gap: 2.4rem;
   background: var(--color-white);
   padding: 16px 12px;
   border-radius: 50px;
@@ -1606,6 +1613,8 @@ header.scrolled .header__logo-link {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1rem;
+  opacity: 0.7;
+  padding-top: 3px;
   letter-spacing: 0.17rem;
 }
 @media screen and (min-width: 768px) {
@@ -1946,6 +1955,7 @@ header.scrolled .hamburger.active #hamburger__btn {
     transform: translateY(-50%);
     flex-direction: column;
     align-items: flex-end;
+    width: 48px;
   }
 }
 .sidebar__item {
@@ -2023,6 +2033,7 @@ header.scrolled .hamburger.active #hamburger__btn {
 .footer {
   background: var(--color-beige);
   padding: 5.7rem 0 4rem;
+  color: var(--color-black);
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -2057,6 +2068,7 @@ header.scrolled .hamburger.active #hamburger__btn {
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.1em;
+  color: var(--color-black);
 }
 @media screen and (min-width: 768px) {
   .footer__logo-text {
@@ -2067,7 +2079,6 @@ header.scrolled .hamburger.active #hamburger__btn {
   font-family: var(--font-family-01);
   font-size: 1rem;
   font-weight: 400;
-  color: #888;
   letter-spacing: 0.15em;
   line-height: 1.7;
   margin-top: 0.4rem;
@@ -2096,9 +2107,9 @@ header.scrolled .hamburger.active #hamburger__btn {
   font-family: var(--font-family-03);
   font-size: 1.4rem;
   font-weight: 500;
-  color: #444;
   letter-spacing: 0.05em;
   transition: color 0.2s;
+  color: var(--color-black);
 }
 @media (any-hover: hover) {
   .footer__nav-link:hover {
@@ -2163,9 +2174,9 @@ header.scrolled .hamburger.active #hamburger__btn {
   font-family: var(--font-family-03);
   font-size: 1.3rem;
   font-weight: 400;
-  color: #555;
   letter-spacing: 0.05em;
   transition: color 0.2s;
+  color: var(--color-black);
 }
 .footer__link--underline {
   text-decoration: underline;
@@ -2189,6 +2200,7 @@ header.scrolled .hamburger.active #hamburger__btn {
   align-items: center;
   gap: 1.6rem;
   margin-bottom: 1.2rem;
+  color: var(--color-black);
 }
 @media screen and (min-width: 768px) {
   .footer__privacy {
@@ -2199,8 +2211,8 @@ header.scrolled .hamburger.active #hamburger__btn {
   font-family: var(--font-family-01);
   font-size: 1.2rem;
   font-weight: 400;
-  color: #888;
   line-height: 2;
+  opacity: 0.5;
 }
 .footer .x-icon {
   border-radius: 4px;

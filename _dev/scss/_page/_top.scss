@@ -106,6 +106,7 @@
     color: rgb(255 255 255 / 90%);
     line-height: 3.2rem;
     margin-bottom: px-to-rem(36);
+    opacity: 0.9;
     
     @include media-query {
       line-height: 4.1rem;
@@ -254,6 +255,7 @@
     line-height: 2.3rem;
     white-space: nowrap;
     margin-left: -3px;
+    width: 69px;
 
     @include media-query {
       margin-left: 0px;
@@ -741,6 +743,7 @@
   &__item-content {
     flex: 1;
     display: flex;
+    gap: 8px;
     flex-direction: column;
   }
 
@@ -748,12 +751,11 @@
     font-family: var(--font-family-01);
     font-size: px-to-rem(15);
     font-weight: 700;
+    line-height: 1;
     letter-spacing: 0.04em;
-    margin-bottom: px-to-rem(6);
 
     @include media-query {
-      font-size: px-to-rem(12);
-      margin-bottom: px-to-rem(10);
+      font-size: px-to-rem(14);
     }
   }
 
@@ -804,8 +806,9 @@
     font-weight: 700;
     line-height: 2.16rem;
     letter-spacing: 0.24em;
-    color: var(--color-red3);
+    color: var(--color-red4);
     margin-bottom: -5px;
+    box-shadow: 2,2,2,0;
 
     @include media-query {
       margin-bottom: 0;
@@ -831,7 +834,7 @@
     display: block;
     width: px-to-rem(40);
     height: px-to-rem(3);
-    background: var(--color-red3);
+    background: var(--color-red4);
     margin: 15px auto 0;
 
     @include media-query {
@@ -889,7 +892,7 @@
     align-items: center;
     justify-content: center;
     padding: px-to-rem(20) px-to-rem(36);
-    background: var(--color-red3);
+    background: var(--color-red4);
     color: var(--color-white);
     font-family: var(--font-family-03);
     font-size: px-to-rem(15);
@@ -1011,10 +1014,10 @@
   &__social {
     position: absolute;
     right: -8%;
-    top: 28%;
+    top: 34%;
     display: flex;
     flex-direction: column;
-    gap: px-to-rem(28);
+    gap: px-to-rem(24);
     background: var(--color-white);
     padding: 16px 12px;
     border-radius: 50px;

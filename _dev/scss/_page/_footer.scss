@@ -6,6 +6,7 @@
 .footer {
   background: var(--color-beige);
   padding: px-to-rem(57) 0 px-to-rem(40);
+  color: var(--color-black);
 
   @include media-query {
     padding: px-to-rem(52) 0 px-to-rem(32);
@@ -41,6 +42,7 @@
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.1em;
+    color: var(--color-black);
 
     @include media-query {
       font-size: px-to-rem(18);
@@ -51,7 +53,6 @@
     font-family: var(--font-family-01);
     font-size: px-to-rem(10);
     font-weight: 400;
-    color: #888;
     letter-spacing: 0.15em;
     line-height: 1.7;
     margin-top: px-to-rem(4);
@@ -81,9 +82,9 @@
     font-family: var(--font-family-03);
     font-size: px-to-rem(14);
     font-weight: 500;
-    color: #444;
     letter-spacing: 0.05em;
     transition: color 0.2s;
+    color: var(--color-black);
 
     @include hover {
       color: var(--color-red);
@@ -137,9 +138,9 @@
     font-family: var(--font-family-03);
     font-size: px-to-rem(13);
     font-weight: 400;
-    color: #555;
     letter-spacing: 0.05em;
     transition: color 0.2s;
+    color: var(--color-black);
 
     &--underline {
       text-decoration: underline;
@@ -158,6 +159,7 @@
     align-items: center;
     gap: px-to-rem(16);
     margin-bottom: px-to-rem(12);
+        color: var(--color-black);
 
     @include media-query {
       margin-bottom: px-to-rem(16);
@@ -168,8 +170,8 @@
     font-family: var(--font-family-01);
     font-size: px-to-rem(12);
     font-weight: 400;
-    color: #888;
     line-height: 2;
+    opacity: .5;
   }
 
   .x-icon {
