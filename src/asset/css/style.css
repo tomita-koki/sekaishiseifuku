@@ -741,7 +741,7 @@ li {
 }
 @media (min-width: 769px) {
   .privacy-policy__wrap {
-    padding-block: 96px;
+    padding-block: 96px 17px;
     padding-inline: 0;
     width: clamp(0px, 52.7777777778vw, 2000px);
     margin: 0 auto;
@@ -752,6 +752,11 @@ li {
   border-bottom: 1px solid var(--color-beige2);
   padding-bottom: 39px;
   margin-bottom: 40px;
+}
+@media (min-width: 769px) {
+  .privacy-policy-container__wrap {
+    padding-bottom: 55px;
+  }
 }
 .privacy-policy-container__title {
   font-size: 1.84rem;
@@ -789,10 +794,8 @@ li {
   border-radius: 50%;
 }
 
-@media (min-width: 769px) {
-  .privacy-policy-container:last-child .privacy-policy-container__wrap {
-    border-bottom: none;
-  }
+.privacy-policy-container:last-child .privacy-policy-container__wrap {
+  border-bottom: none;
 }
 
 /* ダミーテキストのレイアウト */
