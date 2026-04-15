@@ -1,0 +1,149 @@
+<?php get_header(); ?>
+    <!-- ヘッダー -->
+    <header class="header header-type2 js-header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/" class="header__logo-link">
+            <p class="header__logo-text">世界史解体新書</p>
+            <p class="header__logo-subtext">SEKAISHI KAITAI SHINSHO</p>
+          </a>
+        </div>
+        <nav class="header__nav" id="header-nav" aria-label="メインナビゲーション">
+          <ul class="header__nav-list">
+            <li><a href="/#anc01" class="header__nav-link header__text">NEWS</a></li>
+            <li><a href="/#anc02" class="header__nav-link header__text">著書</a></li>
+            <li><a href="/#anc03" class="header__nav-link header__text">メディア</a></li>
+            <li><a href="/#anc04" class="header__nav-link header__text">YouTube</a></li>
+            <li><a href="/#anc05" class="header__nav-link header__text">プロフィール</a></li>
+          </ul>
+          <a href="/contact" class="header__contact header__text">お問い合わせ</a>
+          <div class="header__social">
+            <a href="#" class="header__social-link">
+              <span class="x-icon x-icon--type2">
+                <i class="fa-brands fa-instagram"></i>
+              </span>
+            </a>
+            <a href="#" class="header__social-link">
+              <span class="x-icon x-icon--type2">
+                <i class="fa-brands fa-youtube"></i>
+              </span>
+            </a>
+          </div>
+        </nav>
+        <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="header-nav" aria-label="メニューを開く">
+          <span id="hamburger__btn" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+      <a href="#" class="sidebar__item sidebar__item--contact">
+        <i class="far fa-envelope"></i>
+        <span>お問い合わせ</span>
+      </a>
+      <a href="#" class="sidebar__item sidebar__item--youtube">
+        <i class="fab fa-youtube"></i>
+        <span>オンライン授業</span>
+      </a>
+    </aside>
+
+    <!-- メインエリア -->
+    <div class="header__heading">
+    <p class="header__heading-en">CONTACT</p>
+    <h1 class="header__heading-ja">お問い合わせ</h1>
+    </div>
+    <div class="breadcrumbs">
+      <a href="/" class="breadcrumbs__text">TOP</a>
+      <a href="/contact/" class="breadcrumbs__text">お問い合わせ</a>
+    </div>
+
+    <div class="contact-description">
+      <div class="contact-description__content">
+        <p class="contact-description__text">お仕事のご依頼・YouTube・書籍に関するお問い合わせなど、お気軽にご連絡ください。<br>
+        通常<span class="contact-description__strong">3営業日以内</span>にご返信いたします。</p>
+      </div>
+      <div class="contact-description__image">
+        <div class="contact-description__image-item">
+          <img class="contact-description__image-img" src="/asset/images/contact-icon-01.png" alt="">
+          <p class="contact-description__caption">お仕事の依頼</p>
+        </div>
+        <div class="contact-description__image-item">
+          <img class="contact-description__image-img" src="/asset/images/contact-icon-02.png" alt="">
+          <p class="contact-description__caption">YouTube関連</p>
+        </div>
+        <div class="contact-description__image-item">
+          <img class="contact-description__image-img" src="/asset/images/contact-icon-03.png" alt="">
+          <p class="contact-description__caption">書籍について</p>
+        </div>
+        <div class="contact-description__image-item">
+          <img class="contact-description__image-img" src="/asset/images/contact-icon-04.png" alt="">
+          <p class="contact-description__caption">その他</p>
+        </div>
+      </div>
+    </div>
+    <div class="wpcf7 js" id="wpcf7-f9-p2-o1" lang="ja" dir="ltr" data-wpcf7-id="9">
+    <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+    <form action="/sample-page/#wpcf7-f9-p2-o1" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
+    <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="9"><input type="hidden" name="_wpcf7_version" value="6.1.5"><input type="hidden" name="_wpcf7_locale" value="ja"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f9-p2-o1"><input type="hidden" name="_wpcf7_container_post" value="2"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
+    </fieldset>
+    <p><label>お名前<span class="required-mark">*</span><br>
+    <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text" name="your-name" placeholder="山田 太郎"></span></label>
+    </p>
+    <p><label class="your-email">メールアドレス<span class="required-mark">*</span><br>
+    <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autocomplete="email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email" placeholder="example@email.com"></span></label>
+    </p>
+    <p><label>お問い合わせ種別<span class="required-mark">*</span><br>
+    <span class="wpcf7-form-control-wrap" data-name="select-140"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="select-140"><option value="" disabled selected>選択してください</option><option value="お仕事の依頼">お仕事の依頼</option><option value="YouTube関連">YouTube関連</option><option value="書籍について">書籍について</option><option value="その他">その他</option></select></span></label>
+    </p>
+    <p><label>お問い合わせ内容<span class="required-mark">*</span><br>
+    <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="your-message" placeholder="お問い合わせ内容をご記入ください"></textarea></span></label>
+    </p>
+    <p><label class="privacy-policy-wrap"><input type="checkbox" name="privacy-policy" required><a href="/privacy-policy/" class="privacy-policy-link">プライバシーポリシー</a>に同意する</label>
+    </p>
+    <p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="送信する"><span class="wpcf7-spinner"></span>
+    </p><div class="wpcf7-response-output" aria-hidden="true"></div>
+    </form>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <a href="/" class="footer__logo-link">
+            <p class="footer__logo-text">世界史解体新書</p>
+            <p class="footer__logo-subtext">AKIRA DOI OFFICIAL</p>
+          </a>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="#anc01" class="footer__nav-link">NEWS</a></li>
+            <li><a href="#anc02" class="footer__nav-link">著書</a></li>
+            <li><a href="#anc03" class="footer__nav-link">メディア</a></li>
+            <li><a href="#anc04" class="footer__nav-link">YouTube</a></li>
+            <li><a href="#anc05" class="footer__nav-link">プロフィール</a></li>
+          </ul>
+        </nav>
+        <div class="footer__social">
+            <a href="#">
+              <span class="x-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </span>
+            </a>
+            <a href="#">
+              <span class="x-icon">
+                <i class="fa-brands fa-youtube"></i>
+              </span>
+            </a>
+        </div>
+        <ul class="footer__links">
+          <li><a href="/contact" class="footer__link">お問い合わせ</a></li>
+          <li><a href="/" class="footer__link footer__link--underline">オンライン授業はこちら</a></li>
+        </ul>
+        <ul class="footer__privacy">
+          <li><a href="/privacy-policy" class="footer__link footer__link--underline">プライバシーポリシー</a></li>
+        </ul>
+        <p class="footer__copy">© 2026 Akira Doi. All Rights Reserved.</p>
+      </div>
+    </footer>
+<?php get_footer(); ?>
