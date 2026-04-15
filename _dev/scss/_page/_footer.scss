@@ -149,6 +149,10 @@
 
     @include hover {
       color: var(--color-red);
+
+      &--underline {
+        color: var(--color-red);
+      }
     }
   }
 
@@ -159,7 +163,7 @@
     align-items: center;
     gap: px-to-rem(16);
     margin-bottom: px-to-rem(12);
-        color: var(--color-black);
+    color: var(--color-black);
 
     @include media-query {
       margin-bottom: px-to-rem(16);

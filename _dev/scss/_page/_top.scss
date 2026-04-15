@@ -154,10 +154,14 @@
     }
 
     &--youtube {
-      background: #BEC0C1;
+      background: transparent;
       color: var(--color-white);
       border: px-to-rem(2) solid var(--color-white);
       gap: px-to-rem(10);
+
+      @include media-query {
+        background: #BEC0C1;
+      }
     }
   }
 }
@@ -208,7 +212,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(24);
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 4rem;
     margin-bottom: px-to-rem(10);
 
@@ -250,7 +254,7 @@
     font-family: var(--font-family-01);
     font-size: px-to-rem(13);
     font-weight: 400;
-    color: #666;
+    color: var(--color-black2);
     letter-spacing: 0.02em;
     line-height: 2.3rem;
     white-space: nowrap;
@@ -283,7 +287,7 @@
     font-family: var(--font-family-03);
     font-size: px-to-rem(14);
     font-weight: 400;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 1.7;
     letter-spacing: 0.15em;
     margin-left: -8px;
@@ -373,7 +377,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(24);
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 4rem;
     margin-bottom: px-to-rem(12);
 
@@ -500,7 +504,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(14);
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 2.0;
     letter-spacing: 0.09em;
     margin-top: px-to-rem(0);
@@ -517,7 +521,7 @@
     font-family: var(--font-family-03);
     font-size: px-to-rem(12);
     font-weight: 400;
-    color: #555;
+    color: var(--color-black2);
     flex: 1;
     margin-top: 5px;
     line-height: 2.3;
@@ -599,7 +603,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(24);
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 4rem;
     margin-bottom: px-to-rem(12);
 
@@ -650,7 +654,7 @@
   &__lead {
     font-family: var(--font-family-03);
     font-size: px-to-rem(14);
-    color: #555;
+    color: var(--color-black2);
     letter-spacing: 0.13em;
     font-weight: 400;
     line-height: 2.89;
@@ -912,7 +916,7 @@
       }
 
     @include hover {
-      opacity: 0.85;
+      opacity: 0.8;
     }
   }
 }
@@ -958,7 +962,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(25);
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 3.3rem;
     margin-bottom: px-to-rem(14);
 
@@ -1029,7 +1033,7 @@
       justify-content: center;
 
       & i {
-        color: var(--color-black);
+        color: var(--color-black2);
         font-size: 16px;
         line-height: 1;
       }
@@ -1089,7 +1093,7 @@
   &__text {
     font-size: px-to-rem(14);
     line-height: 2.1;
-    color: #444;
+    color: var(--color-black2);
     margin-bottom: px-to-rem(18);
     letter-spacing: 0.1em;
 
@@ -1148,7 +1152,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(20);
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 4rem;
     margin-bottom: px-to-rem(12);
 
@@ -1249,7 +1253,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(16);
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-black2);
     line-height: 1.6;
     margin-bottom: px-to-rem(6);
     letter-spacing: 0.05em;
@@ -1262,7 +1266,7 @@
 
   &__text {
     font-size: px-to-rem(13);
-    color: #555;
+    color: var(--color-black2);
     line-height: 2;
     letter-spacing: 0.16em;
 
@@ -1279,6 +1283,7 @@
   background: #0D1B2E;
   padding: px-to-rem(42) 0 px-to-rem(64);
   position: relative;
+  margin-top: 64px;
 
   @include media-query {
     padding: px-to-rem(80) 0 px-to-rem(100);

@@ -38,7 +38,7 @@
       color: var(--color-white);
 
       header.scrolled & {
-        color: var(--color-black);
+        color: var(--color-black2);
       }
     }
 
@@ -105,12 +105,12 @@
       }
     }
     .header__logo-link {
-      color: var(--color-black);
+      color: var(--color-black2);
       position: relative;
       z-index: 100;
     }
     .header__nav-link {
-      color: var(--color-black);
+      color: var(--color-black2);
     }
   }
 
@@ -146,7 +146,11 @@
     }
 
     header.scrolled & {
-      color: var(--color-black);
+      color: var(--color-black2);
+
+      @include hover {
+        color: var(--color-red);
+      }
     }
   }
 
@@ -208,12 +212,12 @@
     justify-content: center;
 
     & i {
-      color: var(--color-black);
+      color: var(--color-black2);
       font-size: px-to-rem(36);
       line-height: 1;
 
       header.scrolled & {
-        color: var(--color-black);
+        color: var(--color-black2);
       }
 
       @include media-query {
@@ -245,11 +249,11 @@
 
   .header__logo-link{
     display: block;
-    color: var(--color-black);
+    color: var(--color-black2);
   }
 
   .header__nav-link {
-    color: var(--color-black);
+    color: var(--color-black2);
 
     @include hover {
       color: var(--color-red);
@@ -263,7 +267,7 @@
     justify-content: center;
 
     & i {
-      color: var(--color-black);
+      color: var(--color-black2);
       font-size: 18px;
       line-height: 1;
     }
@@ -271,12 +275,12 @@
 
   .hamburger {
     #hamburger__btn {
-      background: var(--color-black);
+      background: var(--color-black2);
 
       &::before,
       &::after {
         content: '';
-        background: var(--color-black);
+        background: var(--color-black2);
       }
     }
 
@@ -308,7 +312,7 @@
     font-family: var(--font-family-02);
     font-size: px-to-rem(24);
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--color-black2);
     line-height: 3rem;
     letter-spacing: 0.08em;
 
@@ -365,11 +369,11 @@
 
   header.scrolled & {
     #hamburger__btn {
-      background: var(--color-black);
+      background: var(--color-black2);
 
       &::before,
       &::after {
-        background: var(--color-black);
+        background: var(--color-black2);
       }
     }
   }
@@ -380,12 +384,12 @@
 
       &::before {
         transform: translateY(0.8rem) rotate(45deg);
-        background-color: var(--color-black);
+        background-color: var(--color-black2);
       }
 
       &::after {
         transform: translateY(-0.8rem) rotate(-45deg);
-        background-color: var(--color-black);
+        background-color: var(--color-black2);
       }
     }
 
@@ -480,7 +484,7 @@
     font-weight: 400;
     font-size: px-to-rem(12);
     line-height: 2;
-    color: var(--color-black2);
+    color: var(--color-black);
     position: relative;
 
     &:not(:last-child)::after {

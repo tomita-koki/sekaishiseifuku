@@ -370,10 +370,15 @@ li {
   color: var(--color-white);
 }
 .mv__btn--youtube {
-  background: #BEC0C1;
+  background: transparent;
   color: var(--color-white);
   border: 0.2rem solid var(--color-white);
   gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .mv__btn--youtube {
+    background: #BEC0C1;
+  }
 }
 
 .top-news {
@@ -421,7 +426,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 2.4rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 4rem;
   margin-bottom: 1rem;
 }
@@ -461,7 +466,7 @@ li {
   font-family: var(--font-family-01);
   font-size: 1.3rem;
   font-weight: 400;
-  color: #666;
+  color: var(--color-black2);
   letter-spacing: 0.02em;
   line-height: 2.3rem;
   white-space: nowrap;
@@ -493,7 +498,7 @@ li {
   font-family: var(--font-family-03);
   font-size: 1.4rem;
   font-weight: 400;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 1.7;
   letter-spacing: 0.15em;
   margin-left: -8px;
@@ -592,7 +597,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 2.4rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 4rem;
   margin-bottom: 1.2rem;
 }
@@ -714,7 +719,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 1.4rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 2;
   letter-spacing: 0.09em;
   margin-top: 0rem;
@@ -731,7 +736,7 @@ li {
   font-family: var(--font-family-03);
   font-size: 1.2rem;
   font-weight: 400;
-  color: #555;
+  color: var(--color-black2);
   flex: 1;
   margin-top: 5px;
   line-height: 2.3;
@@ -818,7 +823,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 2.4rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 4rem;
   margin-bottom: 1.2rem;
 }
@@ -867,7 +872,7 @@ li {
 .media__lead {
   font-family: var(--font-family-03);
   font-size: 1.4rem;
-  color: #555;
+  color: var(--color-black2);
   letter-spacing: 0.13em;
   font-weight: 400;
   line-height: 2.89;
@@ -1115,14 +1120,14 @@ li {
 }
 @media (any-hover: hover) {
   .youtube__btn:hover {
-    opacity: 0.85;
+    opacity: 0.8;
   }
 }
 .youtube__btn:focus-visible {
-  opacity: 0.85;
+  opacity: 0.8;
 }
 .youtube__btn:active {
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .profile__inner {
@@ -1163,7 +1168,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 3.3rem;
   margin-bottom: 1.4rem;
 }
@@ -1232,7 +1237,7 @@ li {
   justify-content: center;
 }
 .profile__social .x-icon i {
-  color: var(--color-black);
+  color: var(--color-black2);
   font-size: 16px;
   line-height: 1;
 }
@@ -1287,7 +1292,7 @@ li {
 .profile__text {
   font-size: 1.4rem;
   line-height: 2.1;
-  color: #444;
+  color: var(--color-black2);
   margin-bottom: 1.8rem;
   letter-spacing: 0.1em;
 }
@@ -1337,7 +1342,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 2rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 4rem;
   margin-bottom: 1.2rem;
 }
@@ -1427,7 +1432,7 @@ li {
   font-family: var(--font-family-02);
   font-size: 1.6rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-black2);
   line-height: 1.6;
   margin-bottom: 0.6rem;
   letter-spacing: 0.05em;
@@ -1440,7 +1445,7 @@ li {
 }
 .career__text {
   font-size: 1.3rem;
-  color: #555;
+  color: var(--color-black2);
   line-height: 2;
   letter-spacing: 0.16em;
 }
@@ -1455,6 +1460,7 @@ li {
   background: #0D1B2E;
   padding: 4.2rem 0 6.4rem;
   position: relative;
+  margin-top: 64px;
 }
 @media screen and (min-width: 768px) {
   .contact {
@@ -1593,7 +1599,7 @@ li {
   color: var(--color-white);
 }
 header.scrolled .header__logo-link {
-  color: var(--color-black);
+  color: var(--color-black2);
 }
 .header__logo-text {
   font-family: var(--font-family-02);
@@ -1656,12 +1662,12 @@ header.scrolled .header__logo-link {
   }
 }
 .header.active .header__logo-link {
-  color: var(--color-black);
+  color: var(--color-black2);
   position: relative;
   z-index: 100;
 }
 .header.active .header__nav-link {
-  color: var(--color-black);
+  color: var(--color-black2);
 }
 .header__nav-list {
   display: flex;
@@ -1703,7 +1709,18 @@ header.scrolled .header__logo-link {
   color: var(--color-red);
 }
 header.scrolled .header__nav-link {
-  color: var(--color-black);
+  color: var(--color-black2);
+}
+@media (any-hover: hover) {
+  header.scrolled .header__nav-link:hover {
+    color: var(--color-red);
+  }
+}
+header.scrolled .header__nav-link:focus-visible {
+  color: var(--color-red);
+}
+header.scrolled .header__nav-link:active {
+  color: var(--color-red);
 }
 .header__contact {
   display: inline-flex;
@@ -1778,12 +1795,12 @@ header.scrolled .header__nav-link {
   justify-content: center;
 }
 .header__social .x-icon i {
-  color: var(--color-black);
+  color: var(--color-black2);
   font-size: 3.6rem;
   line-height: 1;
 }
 header.scrolled .header__social .x-icon i {
-  color: var(--color-black);
+  color: var(--color-black2);
 }
 @media screen and (min-width: 768px) {
   .header__social .x-icon i {
@@ -1810,10 +1827,10 @@ header.scrolled .header__social .x-icon i {
 }
 .header.header-type2 .header__logo-link {
   display: block;
-  color: var(--color-black);
+  color: var(--color-black2);
 }
 .header.header-type2 .header__nav-link {
-  color: var(--color-black);
+  color: var(--color-black2);
 }
 @media (any-hover: hover) {
   .header.header-type2 .header__nav-link:hover {
@@ -1833,16 +1850,16 @@ header.scrolled .header__social .x-icon i {
   justify-content: center;
 }
 .header.header-type2 .x-icon i {
-  color: var(--color-black);
+  color: var(--color-black2);
   font-size: 18px;
   line-height: 1;
 }
 .header.header-type2 .hamburger #hamburger__btn {
-  background: var(--color-black);
+  background: var(--color-black2);
 }
 .header.header-type2 .hamburger #hamburger__btn::before, .header.header-type2 .hamburger #hamburger__btn::after {
   content: "";
-  background: var(--color-black);
+  background: var(--color-black2);
 }
 .header.header-type2 .hamburger.active #hamburger__btn {
   background: transparent;
@@ -1868,7 +1885,7 @@ header.scrolled .header__social .x-icon i {
   font-family: var(--font-family-02);
   font-size: 2.4rem;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-black2);
   line-height: 3rem;
   letter-spacing: 0.08em;
 }
@@ -1919,21 +1936,21 @@ header.scrolled .header__social .x-icon i {
   top: 0.8rem;
 }
 header.scrolled .hamburger #hamburger__btn {
-  background: var(--color-black);
+  background: var(--color-black2);
 }
 header.scrolled .hamburger #hamburger__btn::before, header.scrolled .hamburger #hamburger__btn::after {
-  background: var(--color-black);
+  background: var(--color-black2);
 }
 .hamburger.active #hamburger__btn {
   background: transparent;
 }
 .hamburger.active #hamburger__btn::before {
   transform: translateY(0.8rem) rotate(45deg);
-  background-color: var(--color-black);
+  background-color: var(--color-black2);
 }
 .hamburger.active #hamburger__btn::after {
   transform: translateY(-0.8rem) rotate(-45deg);
-  background-color: var(--color-black);
+  background-color: var(--color-black2);
 }
 header.scrolled .hamburger.active #hamburger__btn {
   background: transparent;
@@ -2022,7 +2039,7 @@ header.scrolled .hamburger.active #hamburger__btn {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2;
-  color: var(--color-black2);
+  color: var(--color-black);
   position: relative;
 }
 .breadcrumbs__text:not(:last-child)::after {
@@ -2186,11 +2203,20 @@ header.scrolled .hamburger.active #hamburger__btn {
   .footer__link:hover {
     color: var(--color-red);
   }
+  .footer__link:hover--underline {
+    color: var(--color-red);
+  }
 }
 .footer__link:focus-visible {
   color: var(--color-red);
 }
+.footer__link:focus-visible--underline {
+  color: var(--color-red);
+}
 .footer__link:active {
+  color: var(--color-red);
+}
+.footer__link:active--underline {
   color: var(--color-red);
 }
 .footer__privacy {
