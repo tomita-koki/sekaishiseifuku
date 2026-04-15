@@ -5,10 +5,10 @@
 // =============================================================================
 .footer {
   background: var(--color-beige);
-  padding: px-to-rem(52) 0 px-to-rem(40);
+  padding: px-to-rem(57) 0 px-to-rem(40);
 
   @include media-query {
-    padding: px-to-rem(48) 0 px-to-rem(32);
+    padding: px-to-rem(52) 0 px-to-rem(32);
   }
 
   &__inner {
@@ -27,10 +27,6 @@
 
   &__logo {
     margin-bottom: px-to-rem(18);
-
-    @include media-query {
-      margin-bottom: px-to-rem(12);
-    }
   }
 
   &__logo-link {
@@ -56,7 +52,7 @@
     font-size: px-to-rem(10);
     font-weight: 400;
     color: #888;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     line-height: 1.7;
     margin-top: px-to-rem(4);
   }
@@ -73,7 +69,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: px-to-rem(8) px-to-rem(22);
+    gap: px-to-rem(8) px-to-rem(20);
     list-style: none;
 
     @include media-query {
@@ -98,7 +94,7 @@
     display: flex;
     align-items: center;
     gap: px-to-rem(20);
-    margin-bottom: px-to-rem(40);
+    margin-bottom: px-to-rem(35);
 
     @include media-query {
       margin-bottom: px-to-rem(40);

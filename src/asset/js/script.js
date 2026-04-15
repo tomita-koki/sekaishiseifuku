@@ -1,50 +1,66 @@
 (() => {
-  // _dev/js/script.js
-
-  // ヘッダースクロール
+  // _dev/js/modules/hamburger.js
+  var hamburger = document.querySelector(".hamburger");
   var header = document.querySelector(".js-header");
+  var background = document.querySelector(".header__background");
+  var nav = document.querySelector("#header-nav");
+  var navLinks = document.querySelectorAll(".header__nav-link");
+  var openMenu = () => {
+    hamburger.classList.add("active");
+    header.classList.add("active");
+    background.classList.add("active");
+    hamburger.setAttribute("aria-expanded", "true");
+    hamburger.setAttribute("aria-label", "\u30E1\u30CB\u30E5\u30FC\u3092\u9589\u3058\u308B");
+    document.body.style.overflow = "hidden";
+    const firstLink = nav?.querySelector("a, button");
+    firstLink?.focus();
+  };
+  var closeMenu = () => {
+    hamburger.classList.remove("active");
+    header.classList.remove("active");
+    background.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
+    hamburger.setAttribute("aria-label", "\u30E1\u30CB\u30E5\u30FC\u3092\u958B\u304F");
+    document.body.style.overflow = "";
+  };
+  if (hamburger && header && background) {
+    hamburger.addEventListener("click", () => {
+      if (hamburger.classList.contains("active")) {
+        closeMenu();
+        hamburger.focus();
+      } else {
+        openMenu();
+      }
+    });
+    background.addEventListener("click", closeMenu);
+    navLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && hamburger.classList.contains("active")) {
+        closeMenu();
+        hamburger.focus();
+      }
+    });
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    mediaQuery.addEventListener("change", (e) => {
+      if (e.matches) closeMenu();
+    });
+  }
+
+  // _dev/js/script.js
+  var header2 = document.querySelector(".js-header");
   var mv = document.querySelector(".mv");
-  if (header && mv) {
+  if (header2 && mv) {
     const updateHeader = () => {
       const mvBottom = mv.getBoundingClientRect().bottom + window.scrollY;
       if (window.scrollY > mvBottom) {
-        header.classList.add("scrolled");
+        header2.classList.add("scrolled");
       } else {
-        header.classList.remove("scrolled");
+        header2.classList.remove("scrolled");
       }
     };
     window.addEventListener("scroll", updateHeader, { passive: true });
     updateHeader();
-  }
-
-  // ハンバーガーメニュー
-  const hamburger = document.getElementById("hamburger");
-  const headerBg = document.querySelector(".header__background");
-  const navLinks = document.querySelectorAll(".header__nav-link, .header__contact");
-
-  const closeMenu = () => {
-    hamburger.classList.remove("active");
-    header.classList.remove("active");
-    if (headerBg) headerBg.classList.remove("active");
-    document.body.style.overflow = "";
-  };
-
-  if (hamburger && header) {
-    hamburger.addEventListener("click", () => {
-      const isOpen = hamburger.classList.toggle("active");
-      header.classList.toggle("active", isOpen);
-      if (headerBg) headerBg.classList.toggle("active", isOpen);
-      document.body.style.overflow = isOpen ? "hidden" : "";
-    });
-  }
-
-  // ナビリンククリックで閉じる
-  navLinks.forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  // オーバーレイクリックで閉じる
-  if (headerBg) {
-    headerBg.addEventListener("click", closeMenu);
   }
 })();

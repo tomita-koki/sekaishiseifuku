@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 24px;
+    padding: 14px 25px;
     max-width: 100%;
 
     @media screen and (min-width: 768px) {
@@ -26,7 +26,7 @@
     }
     
     @media screen and (min-width: 1100px) {
-      padding: 20px 144px 20px;
+      padding: 20px 108px 20px;
     }
   }
 
@@ -48,7 +48,6 @@
       font-weight: 700;
       line-height: 1.84rem;
       letter-spacing: 0.15rem;
-      margin-bottom: 5px;
 
       @include media-query {
         font-size: px-to-rem(20);
@@ -61,10 +60,10 @@
       font-size: px-to-rem(10);
       font-weight: 400;
       line-height: 1rem;
-      letter-spacing: 0.15rem;
+      letter-spacing: 0.17rem;
       
       @include media-query {
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.22rem;
       }
     }
   }
@@ -137,6 +136,7 @@
 
     @include media-query($_range: below) {
       font-size: px-to-rem(18);
+      letter-spacing: 0.1em;
     }
 
     @include hover {
@@ -162,9 +162,9 @@
     white-space: nowrap;
     transition: opacity 0.2s;
 
-    @include media-query($_range: below) {
+    @include media-query {
       font-size: px-to-rem(16);
-      padding: px-to-rem(12) px-to-rem(40);
+      padding: px-to-rem(9) px-to-rem(22);
     }
 
     @include hover {
@@ -173,20 +173,26 @@
   }
 
   &__social {
-    display: none;
+    display: flex;
     align-items: center;
     gap: px-to-rem(12);
 
     @include media-query {
-      display: flex;
       padding-left: 18px;
     }
 
     &-link {
-      width: 14px;
-      height: 14px;
-      min-width: 14px;
-      min-height: 14px;
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      min-height: 36px;
+
+      @include media-query {
+        width: 14px;
+        height: 14px;
+        min-width: 14px;
+        min-height: 14px;
+      }
 
       @include hover {
         color: var(--color-red);
@@ -200,12 +206,17 @@
     justify-content: center;
 
     & i {
-      color: var(--color-white);
-      font-size: 18px;
+      color: var(--color-black);
+      font-size: px-to-rem(36);
       line-height: 1;
 
       header.scrolled & {
         color: var(--color-black);
+      }
+
+      @include media-query {
+        font-size: px-to-rem(18);
+        color: var(--color-white);
       }
     }
   }
@@ -387,24 +398,28 @@
 // サイドバー
 // =============================================================================
 .sidebar {
-  display: none;
+    position: fixed;
+    right: 0;
+    top: 100%;
+    transform: translateY(-100%);
+    z-index: 50;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 
-    @include media-query {
-      position: fixed;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 50;
-      display: flex;
-      flex-direction: column;
-    }
+  @include media-query {
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
   &__item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: px-to-rem(40);
+    width: 50%;
     padding: px-to-rem(18) 0;
     color: var(--color-white);
     text-decoration: none;
@@ -418,8 +433,18 @@
     span {
       font-family: var(--font-family-03);
       font-size: px-to-rem(10);
-      writing-mode: vertical-rl;
       letter-spacing: 0.05em;
+    }
+
+    @include media-query {
+      padding: px-to-rem(24);
+      width: px-to-rem(40);
+      flex-direction: column;
+
+      span {
+        writing-mode: vertical-rl;
+        font-size: px-to-rem(13);
+      }
     }
 
     @include hover {
