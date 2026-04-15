@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-block: 57px 63px;
+    margin-top: 57px;
 }
 
 .news-pagination__box {
@@ -21,6 +21,23 @@
     color: var(--color-black);
     transition: all var(--transition);
 }
+
+.news-pagination__wrap {
+    i {
+        font-size: 1.1rem;
+
+        @media (min-width: 769px) {
+            padding-top: 3px;
+        }
+    }
+
+    li:last-child {
+        i {
+            padding-right: 2px;
+        }
+    }
+}
+
 
 .news-pagination__box--num {
     padding-bottom: 4px;
