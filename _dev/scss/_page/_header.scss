@@ -247,9 +247,31 @@
 .header.header-type2 {
   background-color:var(--color-beige4);
 
+  .header__inner {
+    @media screen and (min-width: 768px) {
+      padding: 20px 10px 20px;
+    }
+
+    @media screen and (min-width: 900px) {
+      padding: 20px 100px 20px;
+    }
+    
+    @media screen and (min-width: 1100px) {
+      padding: 16px 132px 16px;
+    }
+  }
+
   .header__logo-link{
     display: block;
     color: var(--color-black2);
+  }
+
+  .header__logo-text {
+    font-size: 1.7rem;
+  }
+
+  .header__logo-subtext {
+    letter-spacing: 0.11rem;
   }
 
   .header__nav-link {
@@ -258,6 +280,20 @@
     @include hover {
       color: var(--color-red);
     }
+  }
+
+  .header__nav {
+    gap: 2rem;
+  }
+
+  .header__nav-list {
+    gap: 2.8rem;
+  }
+
+  .header__contact {
+    padding: 0.8rem 1.8rem;
+    font-size: px-to-rem(13);
+    margin-top: -0.5rem;
   }
 
   .x-icon {
@@ -292,36 +328,45 @@
   }
 }
 
-  .header__heading {
-    background-color:var(--color-beige4);
-    padding-top: px-to-rem(128);
-    padding-bottom: px-to-rem(56);
-    text-align: center;
-  }
+// H1
+// =============================================================================
+.header__heading {
+  background-color:var(--color-beige4);
+  padding-top: px-to-rem(93);
+  padding-bottom: px-to-rem(48);
+  text-align: center;
 
-  .header__heading-en {
-    font-family: var(--font-family-01);
-    font-size: px-to-rem(12);
-    font-weight: 700;
-    line-height: 2.16rem;
-    letter-spacing: 0.24em;
-    color: var(--color-red);
+  @include media-query {
+    padding-top: px-to-rem(110);
+    padding-bottom: px-to-rem(66);
   }
+}
 
-  .header__heading-ja {
-    font-family: var(--font-family-02);
+.header__heading-en {
+  font-family: var(--font-family-01);
+  font-size: px-to-rem(12);
+  font-weight: 700;
+  line-height: 2.16rem;
+  letter-spacing: 0.24em;
+  color: var(--color-red);
+}
+
+.header__heading-ja {
+  font-family: var(--font-family-02);
+  font-size: px-to-rem(28);
+  font-weight: 700;
+  color: var(--color-black2);
+  line-height: 3rem;
+  letter-spacing: 0.08em;
+  margin-top: px-to-rem(22);
+
+  @include media-query {
     font-size: px-to-rem(24);
-    font-weight: 700;
-    color: var(--color-black2);
-    line-height: 3rem;
-    letter-spacing: 0.08em;
-
-    @include media-query {
-      font-size: 3.2rem;
-      line-height: 4.58rem;
-      letter-spacing: 0.3rem;
-    }
+    font-size: 4rem;
+    line-height: 4.58rem;
+    letter-spacing: 0.3rem;
   }
+}
 
 // ハンバーガー
 // =============================================================================
@@ -473,10 +518,10 @@
 .breadcrumbs {
   border-top: 3px solid var(--color-red);
   background-color: var(--color-beige3);
-  padding: 10px 0 10px 18px;
+  padding: 10px 0 10px 24px;
   
   @include media-query {
-    padding: 10px 0 10px 194px;
+    padding: 8px 0 8px 178px;
   }
 
   &__text {
