@@ -16,15 +16,20 @@
             <li><a href="/#anc04" class="header__nav-link header__text">YouTube</a></li>
             <li><a href="/#anc05" class="header__nav-link header__text">プロフィール</a></li>
           </ul>
-          <a href="/contact" class="header__contact header__text">お問い合わせ</a>
+          <a href="/contact/" class="header__contact header__text">お問い合わせ</a>
           <div class="header__social">
-            <a href="#" class="header__social-link">
-              <span class="x-icon x-icon--type2">
+            <a href="" class="header__social-link">
+              <span class="x-icon">
+                <i class="fa-brands fa-x-twitter"></i>
+              </span>
+            </a>
+            <a href="" class="header__social-link">
+              <span class="x-icon">
                 <i class="fa-brands fa-instagram"></i>
               </span>
             </a>
             <a href="#" class="header__social-link">
-              <span class="x-icon x-icon--type2">
+              <span class="x-icon">
                 <i class="fa-brands fa-youtube"></i>
               </span>
             </a>
@@ -34,6 +39,7 @@
           <span id="hamburger__btn" aria-hidden="true"></span>
         </button>
       </div>
+      <div class="header__background"></div>
     </header>
 
     <!-- サイドバー -->
@@ -65,19 +71,19 @@
       </div>
       <div class="contact-description__image">
         <div class="contact-description__image-item">
-          <img class="contact-description__image-img" src="/asset/images/contact-icon-01.png" alt="">
+          <img class="contact-description__image-img" src="/wp-content/uploads/2026/04/contact-icon-01.png" alt="">
           <p class="contact-description__caption">お仕事の依頼</p>
         </div>
         <div class="contact-description__image-item">
-          <img class="contact-description__image-img" src="/asset/images/contact-icon-02.png" alt="">
+          <img class="contact-description__image-img" src="/wp-content/uploads/2026/04/contact-icon-02.png" alt="">
           <p class="contact-description__caption">YouTube関連</p>
         </div>
         <div class="contact-description__image-item">
-          <img class="contact-description__image-img" src="/asset/images/contact-icon-03.png" alt="">
+          <img class="contact-description__image-img" src="/wp-content/uploads/2026/04/contact-icon-03.png" alt="">
           <p class="contact-description__caption">書籍について</p>
         </div>
         <div class="contact-description__image-item">
-          <img class="contact-description__image-img" src="/asset/images/contact-icon-04.png" alt="">
+          <img class="contact-description__image-img" src="/wp-content/uploads/2026/04/contact-icon-04.png" alt="">
           <p class="contact-description__caption">その他</p>
         </div>
       </div>
@@ -117,14 +123,19 @@
         </div>
         <nav class="footer__nav">
           <ul class="footer__nav-list">
-            <li><a href="#anc01" class="footer__nav-link">NEWS</a></li>
-            <li><a href="#anc02" class="footer__nav-link">著書</a></li>
-            <li><a href="#anc03" class="footer__nav-link">メディア</a></li>
-            <li><a href="#anc04" class="footer__nav-link">YouTube</a></li>
-            <li><a href="#anc05" class="footer__nav-link">プロフィール</a></li>
+            <li><a href="/#anc01" class="footer__nav-link">NEWS</a></li>
+            <li><a href="/#anc02" class="footer__nav-link">著書</a></li>
+            <li><a href="/#anc03" class="footer__nav-link">メディア</a></li>
+            <li><a href="/#anc04" class="footer__nav-link">YouTube</a></li>
+            <li><a href="/#anc05" class="footer__nav-link">プロフィール</a></li>
           </ul>
         </nav>
         <div class="footer__social">
+            <a href="#">
+              <span class="x-icon">
+                <i class="fa-brands fa-x-twitter"></i>
+              </span>
+            </a>
             <a href="#">
               <span class="x-icon">
                 <i class="fa-brands fa-instagram"></i>

@@ -519,11 +519,19 @@
   border-top: 3px solid var(--color-red);
   background-color: var(--color-beige3);
   padding: 10px 0 10px 24px;
-  
-  @include media-query {
-    padding: 8px 0 8px 178px;
-  }
 
+    @media screen and (min-width: 768px) {
+      padding: 20px 10px 20px;
+    }
+
+    @media screen and (min-width: 900px) {
+      padding: 20px 100px 20px;
+    }
+    
+    @media screen and (min-width: 1100px) {
+      padding: 8px 0 8px 178px;
+    }
+    
   &__text {
     font-family: var(--font-family-03);
     font-weight: 400;

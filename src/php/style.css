@@ -30,6 +30,7 @@
   --color-beige2: #E0D8D0;
   --color-beige3: #F4F1ED;
   --color-beige4: #F3EBDB;
+  --color-beige5: #E0D9D0;
   --color-gold: #B8965A;
   --color-black: #6B5E52;
   --color-black2: #2C2116;
@@ -993,7 +994,7 @@ li {
 }
 
 .youtube {
-  background-image: url("/wp-content/uploads/2026/04/youtube-channel.png");
+  background-image: url(/wp-content/uploads/2026/04/youtube-channel.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1839,9 +1840,30 @@ header.scrolled .header__social .x-icon i {
 .header.header-type2 {
   background-color: var(--color-beige4);
 }
+@media screen and (min-width: 768px) {
+  .header.header-type2 .header__inner {
+    padding: 20px 10px 20px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .header.header-type2 .header__inner {
+    padding: 20px 100px 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header.header-type2 .header__inner {
+    padding: 16px 132px 16px;
+  }
+}
 .header.header-type2 .header__logo-link {
   display: block;
   color: var(--color-black2);
+}
+.header.header-type2 .header__logo-text {
+  font-size: 1.7rem;
+}
+.header.header-type2 .header__logo-subtext {
+  letter-spacing: 0.11rem;
 }
 .header.header-type2 .header__nav-link {
   color: var(--color-black2);
@@ -1856,6 +1878,17 @@ header.scrolled .header__social .x-icon i {
 }
 .header.header-type2 .header__nav-link:active {
   color: var(--color-red);
+}
+.header.header-type2 .header__nav {
+  gap: 2rem;
+}
+.header.header-type2 .header__nav-list {
+  gap: 2.8rem;
+}
+.header.header-type2 .header__contact {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.3rem;
+  margin-top: -0.5rem;
 }
 .header.header-type2 .x-icon {
   border-radius: 4px;
@@ -1881,9 +1914,15 @@ header.scrolled .header__social .x-icon i {
 
 .header__heading {
   background-color: var(--color-beige4);
-  padding-top: 12.8rem;
-  padding-bottom: 5.6rem;
+  padding-top: 9.3rem;
+  padding-bottom: 4.8rem;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .header__heading {
+    padding-top: 11rem;
+    padding-bottom: 6.6rem;
+  }
 }
 
 .header__heading-en {
@@ -1897,15 +1936,17 @@ header.scrolled .header__social .x-icon i {
 
 .header__heading-ja {
   font-family: var(--font-family-02);
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: var(--color-black2);
   line-height: 3rem;
   letter-spacing: 0.08em;
+  margin-top: 2.2rem;
 }
 @media screen and (min-width: 768px) {
   .header__heading-ja {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
+    font-size: 4rem;
     line-height: 4.58rem;
     letter-spacing: 0.3rem;
   }
@@ -2041,11 +2082,21 @@ header.scrolled .hamburger.active #hamburger__btn {
 .breadcrumbs {
   border-top: 3px solid var(--color-red);
   background-color: var(--color-beige3);
-  padding: 10px 0 10px 18px;
+  padding: 10px 0 10px 24px;
 }
 @media screen and (min-width: 768px) {
   .breadcrumbs {
-    padding: 10px 0 10px 194px;
+    padding: 20px 10px 20px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .breadcrumbs {
+    padding: 20px 100px 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .breadcrumbs {
+    padding: 8px 0 8px 178px;
   }
 }
 .breadcrumbs__text {
@@ -2267,27 +2318,27 @@ header.scrolled .hamburger.active #hamburger__btn {
 }
 
 .contact-description {
-  border-top: 2px solid var(--color-beige3);
-  border-bottom: 2px solid var(--color-beige3);
-  background-color: var(--color-beige);
+  border-top: 2px solid var(--color-beige5);
+  border-bottom: 2px solid var(--color-beige5);
+  background-color: var(--color-beige3);
 }
 .contact-description__content {
   margin: 0;
-  padding: 48px 24px 0;
+  padding: 46px 24px 0;
   max-width: 700px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
   .contact-description__content {
     padding: 0;
-    margin: 48px auto 0;
+    margin: 40px auto 0;
   }
 }
 .contact-description__text {
   font-family: var(--font-family-03);
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: var(--color-black2);
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--color-black);
   text-align: center;
 }
 .contact-description__strong {
@@ -2301,8 +2352,13 @@ header.scrolled .hamburger.active #hamburger__btn {
   white-space: nowrap;
   min-width: 84px;
 }
+@media screen and (min-width: 768px) {
+  .contact-description__image-item {
+    min-width: auto;
+  }
+}
 .contact-description__image {
-  margin: 22px 54px 48px;
+  margin: 30px 54px 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2312,14 +2368,14 @@ header.scrolled .hamburger.active #hamburger__btn {
 }
 @media screen and (min-width: 768px) {
   .contact-description__image {
-    margin: 32px 0 48px;
-    gap: 32px;
+    margin: 28px 0 40px;
+    gap: 27px;
   }
 }
 .contact-description__image-img {
-  width: 32px;
+  width: 24px;
   height: auto;
-  min-width: 32px;
+  min-width: 24px;
   min-height: auto;
 }
 .contact-description__caption {
@@ -2327,18 +2383,24 @@ header.scrolled .hamburger.active #hamburger__btn {
   font-weight: 700;
   font-size: 1.3rem;
   line-height: 2;
-  color: var(--color-black2);
+  color: var(--color-black);
   text-align: center;
   margin-top: 8px;
+}
+@media screen and (min-width: 768px) {
+  .contact-description__caption {
+    margin-top: 4px;
+  }
 }
 
 .wpcf7 {
   background-color: var(--color-beige);
-  padding: 68px 24px 80px;
+  border-bottom: 3px solid var(--color-red);
+  padding: 60px 24px 36px;
 }
 @media screen and (min-width: 768px) {
   .wpcf7 {
-    padding: 96px 24px 80px;
+    padding: 86px 24px 65px;
   }
 }
 .wpcf7 .wpcf7-form {
@@ -2350,8 +2412,9 @@ header.scrolled .hamburger.active #hamburger__btn {
 }
 @media screen and (min-width: 768px) {
   .wpcf7 .wpcf7-form {
+    max-width: 645px;
     grid-template-columns: 1fr 1fr;
-    gap: 28px 16px;
+    gap: 21px 16px;
   }
 }
 .wpcf7 .wpcf7-form fieldset {
@@ -2376,6 +2439,7 @@ header.scrolled .hamburger.active #hamburger__btn {
 }
 @media screen and (min-width: 768px) {
   .wpcf7 label.your-email {
+    letter-spacing: 0.06em;
     padding-top: 0;
   }
 }
@@ -2398,8 +2462,18 @@ header.scrolled .hamburger.active #hamburger__btn {
   outline: none;
   letter-spacing: 0.1em;
 }
+@media screen and (min-width: 768px) {
+  .wpcf7 .wpcf7-form-control {
+    padding: 10px 14px;
+  }
+}
 .wpcf7 .wpcf7-form-control.wpcf7-select {
-  padding: 17px 14px;
+  padding: 18px 20px;
+}
+@media screen and (min-width: 768px) {
+  .wpcf7 .wpcf7-form-control.wpcf7-select {
+    padding: 16px 14px;
+  }
 }
 .wpcf7 .wpcf7-form-control:focus {
   border-color: var(--color-black2);
@@ -2410,6 +2484,11 @@ header.scrolled .hamburger.active #hamburger__btn {
 .wpcf7 .wpcf7-textarea {
   resize: vertical;
   height: 200px;
+}
+@media screen and (min-width: 768px) {
+  .wpcf7 .wpcf7-textarea {
+    height: 182px;
+  }
 }
 .wpcf7 .wpcf7-select {
   appearance: none;
@@ -2426,6 +2505,11 @@ header.scrolled .hamburger.active #hamburger__btn {
   color: var(--color-black2);
   margin-top: -18px;
   letter-spacing: 0.06em;
+}
+@media screen and (min-width: 768px) {
+  .wpcf7 .privacy-policy-wrap {
+    margin-top: -14px;
+  }
 }
 .wpcf7 .privacy-policy-wrap input[type=checkbox] {
   width: 14px;
@@ -2458,8 +2542,9 @@ header.scrolled .hamburger.active #hamburger__btn {
 }
 @media screen and (min-width: 768px) {
   .wpcf7 .wpcf7-submit {
-    margin-top: 0;
-    padding: 16px 56px;
+    margin: 30px auto 0;
+    padding: 14px 36px;
+    max-width: 141px;
   }
   .wpcf7 .wpcf7-submit:hover {
     opacity: 0.85;
@@ -2483,7 +2568,9 @@ html {
 
 
 
+
 /* ここからつゆき */
+
 
 
 @charset "UTF-8";
@@ -2949,7 +3036,7 @@ li {
 */
 /* 記事詳細 */
 .article__wrap {
-  padding-block: 64px;
+  padding-block: 60px 65px;
   padding-inline: 24px;
   max-width: 500px;
   margin: 0 auto;
@@ -2957,7 +3044,7 @@ li {
 @media (min-width: 769px) {
   .article__wrap {
     padding-inline: 0;
-    padding-block: 92px;
+    padding-block: 92px 95px;
     width: clamp(650px, 52.7777777778vw, 2000px);
     max-width: 2000px;
   }
@@ -2974,7 +3061,7 @@ li {
 }
 @media (min-width: 769px) {
   .article-heading__inner {
-    padding-bottom: 16px;
+    padding-bottom: 17px;
   }
 }
 
@@ -2986,6 +3073,12 @@ li {
 .article-heading__category {
   grid-column: 2;
   grid-row: 1;
+  margin-top: 3px;
+}
+@media (min-width: 769px) {
+  .article-heading__category {
+    margin-top: 2px;
+  }
 }
 
 .article-heading__title {
@@ -3051,6 +3144,7 @@ li {
 @media (min-width: 769px) {
   .article-share__wrap {
     margin-block: 17px 24px;
+    padding-block: 31px 24px;
   }
 }
 
@@ -3105,7 +3199,7 @@ li {
   border-radius: 4px;
   background-color: var(--color-red);
   border: 2px solid var(--color-red);
-  padding: 8px 13px 9px 18px;
+  padding: 8px 13px 10px 18px;
   transition: all var(--transition);
 }
 .article-btn__inner i {
@@ -3149,7 +3243,13 @@ li {
     margin-bottom: 16px;
   }
 }
+.article-nav__wrap > li {
+  display: flex;
+}
 
+.article-nav-btn {
+  width: 100%;
+}
 .article-nav-btn__wrap {
   display: flex;
   flex-direction: column;
@@ -3159,6 +3259,7 @@ li {
   padding-inline: 16px;
   padding-block: 16px 12px;
   transition: all var(--transition);
+  height: 100%;
 }
 .article-nav-btn__wrap:hover {
   border-color: var(--color-red);
@@ -3186,9 +3287,19 @@ li {
 .article-nav-btn__guide--next {
   margin-left: 0;
 }
+@media (min-width: 769px) {
+  .article-nav-btn__guide--next {
+    text-align: right;
+  }
+}
 .article-nav-btn__guide--next span {
   margin-left: 0;
   margin-right: 3px;
+}
+@media (min-width: 769px) {
+  .article-nav-btn__guide--next span {
+    margin-right: 1px;
+  }
 }
 .article-nav-btn__text {
   font-size: 1.36rem;
@@ -3200,6 +3311,11 @@ li {
 .article-nav-btn__text--next {
   margin-top: 5px;
 }
+@media (min-width: 769px) {
+  .article-nav-btn__text--next {
+    text-align: right;
+  }
+}
 
 .privacy-policy__wrap {
   padding-block: 64px;
@@ -3207,7 +3323,7 @@ li {
 }
 @media (min-width: 769px) {
   .privacy-policy__wrap {
-    padding-block: 96px;
+    padding-block: 96px 17px;
     padding-inline: 0;
     width: clamp(0px, 52.7777777778vw, 2000px);
     margin: 0 auto;
@@ -3218,6 +3334,11 @@ li {
   border-bottom: 1px solid var(--color-beige2);
   padding-bottom: 39px;
   margin-bottom: 40px;
+}
+@media (min-width: 769px) {
+  .privacy-policy-container__wrap {
+    padding-bottom: 55px;
+  }
 }
 .privacy-policy-container__title {
   font-size: 1.84rem;
@@ -3255,10 +3376,8 @@ li {
   border-radius: 50%;
 }
 
-@media (min-width: 769px) {
-  .privacy-policy-container:last-child .privacy-policy-container__wrap {
-    border-bottom: none;
-  }
+.privacy-policy-container:last-child .privacy-policy-container__wrap {
+  border-bottom: none;
 }
 
 /* ダミーテキストのレイアウト */

@@ -2072,6 +2072,16 @@ header.scrolled .hamburger.active #hamburger__btn {
 }
 @media screen and (min-width: 768px) {
   .breadcrumbs {
+    padding: 20px 10px 20px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .breadcrumbs {
+    padding: 20px 100px 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .breadcrumbs {
     padding: 8px 0 8px 178px;
   }
 }
