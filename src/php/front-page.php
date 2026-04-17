@@ -46,10 +46,39 @@
 
     <!-- メインビジュアル -->
     <section class="mv">
-      <div class="mv__bg">
-        <img src="/wp-content/uploads/2026/04/index-img-01.png" alt="">
+      <div class="mv__carousel">
+        <div class="mv__slide is-active">
+          <img src="/wp-content/uploads/2026/04/index-img-01.png" alt="">
+        </div>
+        <div class="mv__slide">
+          <img src="/wp-content/uploads/2026/04/index-img-02.png" alt="">
+        </div>
+        <div class="mv__slide">
+          <img src="/wp-content/uploads/2026/04/index-img-03.png" alt="">
+        </div>
+        <div class="mv__slide">
+          <img src="/wp-content/uploads/2026/04/index-img-04.png" alt="">
+        </div>
+        <div class="mv__slide">
+          <img src="/wp-content/uploads/2026/04/index-img-05.png" alt="">
+        </div>
+        <div class="mv__slide">
+          <img src="/wp-content/uploads/2026/04/index-img-06.png" alt="">
+        </div>
+        <div class="mv__slide">
+          <img src="/wp-content/uploads/2026/04/index-img-07.png" alt="">
+        </div>
       </div>
       <div class="mv__background"></div>
+      <div class="mv__indicators">
+        <button class="mv__indicator is-active" data-index="0" aria-label="スライド1"></button>
+        <button class="mv__indicator" data-index="1" aria-label="スライド2"></button>
+        <button class="mv__indicator" data-index="2" aria-label="スライド3"></button>
+        <button class="mv__indicator" data-index="3" aria-label="スライド4"></button>
+        <button class="mv__indicator" data-index="4" aria-label="スライド5"></button>
+        <button class="mv__indicator" data-index="5" aria-label="スライド6"></button>
+        <button class="mv__indicator" data-index="6" aria-label="スライド7"></button>
+      </div>
       <div class="mv__content">
         <p class="mv__role">予備校講師 / 著者 / YouTuber</p>
         <h1 class="mv__name">土井 昭</h1>
@@ -59,9 +88,9 @@
           点と点の繋がりを知れば、世界はもっと面白くなる。
         </p>
         <div class="mv__buttons">
-          <a href="/contact/" class="mv__btn mv__btn--contact">お問い合わせ</a>
+          <a href="#" class="mv__btn mv__btn--contact">お問い合わせ</a>
           <a href="#" class="mv__btn mv__btn--youtube">
-            YouTube を見る <i class="fab fa-youtube"></i>
+            YouTube を見る<i class="fab fa-youtube"></i>
           </a>
         </div>
       </div>
@@ -76,25 +105,33 @@
           <span class="top-news__heading-bar"></span>
         </div>
         <ul class="top-news__list">
-          <li class="top-news__item">
-            <time class="top-news__date" datetime="2026-03-19">2026.03.19</time>
-            <span class="top-news__tag">メディア</span>
-            <p class="top-news__text">集英社オンラインに掲載されました</p>
+          <li>
+            <a href="" class="top-news__item">
+              <time class="top-news__date" datetime="2026-03-19">2026.03.19</time>
+              <span class="top-news__tag">メディア</span>
+              <p class="top-news__text">集英社オンラインに掲載されました</p>
+            </a>
           </li>
-          <li class="top-news__item">
+          <li>
+            <a href="" class="top-news__item">
             <time class="top-news__date" datetime="2026-03-10">2026.03.10</time>
             <span class="top-news__tag">出版情報</span>
             <p class="top-news__text">最新刊『〈書籍タイトル〉』発売記念 特典のお知らせ【ダミー】</p>
+            </a>
           </li>
-          <li class="top-news__item">
+          <li>
+            <a href="" class="top-news__item">
             <time class="top-news__date" datetime="2026-02-20">2026.02.20</time>
             <span class="top-news__tag">書籍</span>
             <p class="top-news__text">第1作『〈書籍タイトル〉』重版決定のご報告【ダミー】</p>
+            </a>
           </li>
-          <li class="top-news__item">
+          <li>
+            <a href="" class="top-news__item">
             <time class="top-news__date" datetime="2026-01-15">2026.01.15</time>
             <span class="top-news__tag">YouTube</span>
             <p class="top-news__text">チャンネル登録者数〇〇万人を突破いたしました！【ダミー】</p>
+            </a>
           </li>
         </ul>
         <div class="top-news__btn-wrap">
@@ -155,17 +192,17 @@
           <p class="media__lead">各種メディアへの掲載・出演実績です。</p>
         </div>
         <div class="media__grid">
-          <article class="media__item">
+          <a href="" class="media__item">
             <div class="media__item-body">
-              <div class="zmedia__item-icon"></div>
+              <div class="media__item-icon"></div>
               <div class="media__item-content">
                 <p class="media__item-source">集英社オンライン</p>
                 <h3 class="media__item-title">掲載記事</h3>
                 <p class="media__item-date">2026年3月</p>
               </div>
             </div>
-          </article>
-          <article class="media__item">
+          </a href="">
+          <a href="" class="media__item">
             <div class="media__item-body">
               <div class="media__item-icon media__item-icon--02"></div>
               <div class="media__item-content">
@@ -174,8 +211,8 @@
                 <p class="media__item-date">掲載号確認中【ダミー】</p>
               </div>
             </div>
-          </article>
-          <article class="media__item">
+          </a href="">
+          <a href="" class="media__item">
             <div class="media__item-body">
               <div class="media__item-icon media__item-icon--03"></div>
               <div class="media__item-content">
@@ -184,8 +221,8 @@
                 <p class="media__item-date">掲載日確認中【ダミー】</p>
               </div>
             </div>
-          </article>
-          <article class="media__item">
+          </a href="">
+          <a href="" class="media__item">
             <div class="media__item-body">
               <div class="media__item-icon media__item-icon--03"></div>
               <div class="media__item-content">
@@ -194,8 +231,8 @@
                 <p class="media__item-date">掲載日確認中【ダミー】</p>
               </div>
             </div>
-          </article>
-          <article class="media__item">
+          </a href="">
+          <a href="" class="media__item">
             <div class="media__item-body">
               <div class="media__item-icon media__item-icon--03"></div>
               <div class="media__item-content">
@@ -204,7 +241,7 @@
                 <p class="media__item-date">掲載日確認中【ダミー】</p>
               </div>
             </div>
-          </article>
+          </a href="">
         </div>
       </div>
     </section>
