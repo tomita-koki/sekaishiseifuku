@@ -1,4 +1,3 @@
-<!-- ヘッダー -->
 <header class="header header-type2 js-header">
   <div class="header__inner">
     <div class="header__logo">

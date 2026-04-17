@@ -1,4 +1,3 @@
-<!-- サイドバー -->
 <aside class="sidebar">
   <a href="#" class="sidebar__item sidebar__item--contact">
     <i class="far fa-envelope"></i>

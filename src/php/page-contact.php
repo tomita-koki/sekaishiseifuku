@@ -1,17 +1,33 @@
 <?php get_header(); ?>
+    <!-- ヘッター -->
     <?php get_header('custom'); ?>
 
+    <!-- サイドバー -->
     <?php get_sidebar(); ?>
 
     <!-- メインエリア -->
-    <div class="header__heading">
-    <p class="header__heading-en">CONTACT</p>
-    <h1 class="header__heading-ja">お問い合わせ</h1>
-    </div>
-    <div class="breadcrumbs">
-      <a href="/" class="breadcrumbs__text">TOP</a>
-      <a href="/contact/" class="breadcrumbs__text">お問い合わせ</a>
-    </div>
+    <!-- 見出し -->
+    <?php
+    get_template_part(
+      'template-parts/components/page-heading',
+      null,
+      [
+        'en' => 'CONTACT',
+        'ja' => 'お問い合わせ'
+      ]
+    );
+    ?>
+    <!-- パンクズ -->
+    <?php
+    get_template_part(
+      'template-parts/components/breadcrumbs',
+      null,
+      [
+        'current_url'   => home_url('/contact/'),
+        'current_label' => 'お問い合わせ',
+      ]
+    );
+    ?>
 
     <div class="contact-description">
       <div class="contact-description__content">
@@ -61,5 +77,6 @@
     </form>
     </div>
 
+    <!-- フッター -->
     <?php get_footer('custom'); ?>
 <?php get_footer(); ?>

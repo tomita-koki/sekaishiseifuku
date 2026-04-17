@@ -1,4 +1,3 @@
-<!-- フッター -->
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__logo">
