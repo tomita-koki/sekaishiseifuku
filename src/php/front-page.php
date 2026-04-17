@@ -10,20 +10,20 @@
         </div>
         <nav class="header__nav" id="header-nav" aria-label="メインナビゲーション">
           <ul class="header__nav-list">
-            <li><a href="#anc01" class="header__nav-link header__text">NEWS</a></li>
-            <li><a href="#anc02" class="header__nav-link header__text">著書</a></li>
-            <li><a href="#anc03" class="header__nav-link header__text">メディア</a></li>
-            <li><a href="#anc04" class="header__nav-link header__text">YouTube</a></li>
-            <li><a href="#anc05" class="header__nav-link header__text">プロフィール</a></li>
+            <li><a href="/#anc01" class="header__nav-link header__text">NEWS</a></li>
+            <li><a href="/#anc02" class="header__nav-link header__text">著書</a></li>
+            <li><a href="/#anc03" class="header__nav-link header__text">メディア</a></li>
+            <li><a href="/#anc04" class="header__nav-link header__text">YouTube</a></li>
+            <li><a href="/#anc05" class="header__nav-link header__text">プロフィール</a></li>
           </ul>
           <a href="/contact/" class="header__contact header__text">お問い合わせ</a>
           <div class="header__social">
-            <a href="" class="header__social-link">
+            <a href="#" class="header__social-link">
               <span class="x-icon">
                 <i class="fa-brands fa-x-twitter"></i>
               </span>
             </a>
-            <a href="" class="header__social-link">
+            <a href="#" class="header__social-link">
               <span class="x-icon">
                 <i class="fa-brands fa-instagram"></i>
               </span>
@@ -59,7 +59,7 @@
           点と点の繋がりを知れば、世界はもっと面白くなる。
         </p>
         <div class="mv__buttons">
-          <a href="#" class="mv__btn mv__btn--contact">お問い合わせ</a>
+          <a href="/contact/" class="mv__btn mv__btn--contact">お問い合わせ</a>
           <a href="#" class="mv__btn mv__btn--youtube">
             YouTube を見る <i class="fab fa-youtube"></i>
           </a>

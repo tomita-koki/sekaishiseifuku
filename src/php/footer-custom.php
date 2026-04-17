@@ -33,11 +33,11 @@
         </a>
     </div>
     <ul class="footer__links">
-      <li><a href="/contact" class="footer__link">お問い合わせ</a></li>
+      <li><a href="/contact/" class="footer__link">お問い合わせ</a></li>
       <li><a href="/" class="footer__link footer__link--underline">オンライン授業はこちら</a></li>
     </ul>
     <ul class="footer__privacy">
-      <li><a href="/privacy-policy" class="footer__link footer__link--underline">プライバシーポリシー</a></li>
+      <li><a href="/privacy-policy/" class="footer__link footer__link--underline">プライバシーポリシー</a></li>
     </ul>
     <p class="footer__copy">© 2026 Akira Doi. All Rights Reserved.</p>
   </div>

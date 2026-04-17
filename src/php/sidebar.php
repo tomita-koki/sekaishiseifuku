@@ -1,5 +1,5 @@
 <aside class="sidebar">
-  <a href="#" class="sidebar__item sidebar__item--contact">
+  <a href="/contact/" class="sidebar__item sidebar__item--contact">
     <i class="far fa-envelope"></i>
     <span>お問い合わせ</span>
   </a>
