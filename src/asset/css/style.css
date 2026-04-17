@@ -400,7 +400,7 @@ li {
 @media screen and (min-width: 768px) {
   .mv__btn {
     line-height: 2.7rem;
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.06rem;
   }
 }
 .mv__btn--contact {
@@ -487,15 +487,17 @@ li {
 }
 .top-news__item {
   display: grid;
-  grid-template-columns: auto auto 1fr;
-  align-items: start;
-  gap: 1.2rem 1.8rem;
+  grid-template-columns: 70px auto;
+  justify-content: start;
+  align-items: center;
+  gap: 0.9rem 1.8rem;
   padding: 2.3rem 0;
   border-bottom: 1px solid #D8D0C8;
 }
 @media screen and (min-width: 768px) {
   .top-news__item {
-    align-items: center;
+    grid-template-columns: auto auto 1fr;
+    justify-content: normal;
     gap: 1.2rem 2.6rem;
     padding: 1.4rem 0;
   }
@@ -509,7 +511,7 @@ li {
   line-height: 2.3rem;
   white-space: nowrap;
   margin-left: -3px;
-  width: 69px;
+  width: 70px;
 }
 @media screen and (min-width: 768px) {
   .top-news__date {
@@ -530,7 +532,7 @@ li {
   white-space: nowrap;
   border-radius: 2px;
   background: var(--color-red);
-  min-width: 67px;
+  width: 70px;
 }
 .top-news__text {
   font-family: var(--font-family-03);
@@ -539,10 +541,11 @@ li {
   color: var(--color-black2);
   line-height: 1.7;
   letter-spacing: 0.15em;
-  margin-left: -8px;
+  grid-column: 1/-1;
 }
 @media screen and (min-width: 768px) {
   .top-news__text {
+    grid-column: auto;
     font-size: 1.5rem;
     line-height: 2.7;
   }
@@ -1003,6 +1006,7 @@ li {
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.04em;
+  color: var(--color-black2);
 }
 @media screen and (min-width: 768px) {
   .media__item-title {
@@ -1014,6 +1018,7 @@ li {
   font-size: 1.2rem;
   letter-spacing: 0.03em;
   line-height: 1.5;
+  color: var(--color-black2);
 }
 
 .youtube {
@@ -1070,6 +1075,7 @@ li {
   color: var(--color-white);
   line-height: 3rem;
   letter-spacing: 0.05em;
+  text-shadow: 2px 4px 4px #000;
 }
 @media screen and (min-width: 768px) {
   .youtube__heading-ja {
@@ -1094,10 +1100,12 @@ li {
   font-family: var(--font-family-03);
   font-size: 1.4rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
   line-height: 1.8;
   margin-bottom: 2.2rem;
   letter-spacing: 0.12em;
+  font-weight: 700;
+  text-shadow: 2px 4px 4px #000;
 }
 @media screen and (min-width: 768px) {
   .youtube__text {
@@ -1226,7 +1234,7 @@ li {
 .profile__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 4.6rem;
   margin: 4rem 2.4rem 0;
 }
@@ -1267,6 +1275,7 @@ li {
   background: var(--color-white);
   padding: 16px 12px;
   border-radius: 50px;
+  align-items: center;
 }
 .profile__social .x-icon {
   border-radius: 4px;
