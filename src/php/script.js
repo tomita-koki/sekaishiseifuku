@@ -86,4 +86,3 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.js-fade')
     .forEach(el => observer.observe(el));
-

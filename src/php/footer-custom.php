@@ -9,14 +9,19 @@
     </div>
     <nav class="footer__nav">
       <ul class="footer__nav-list">
-        <li><a href="#anc01" class="footer__nav-link">NEWS</a></li>
-        <li><a href="#anc02" class="footer__nav-link">著書</a></li>
-        <li><a href="#anc03" class="footer__nav-link">メディア</a></li>
-        <li><a href="#anc04" class="footer__nav-link">YouTube</a></li>
-        <li><a href="#anc05" class="footer__nav-link">プロフィール</a></li>
+        <li><a href="/#anc01" class="footer__nav-link">NEWS</a></li>
+        <li><a href="/#anc02" class="footer__nav-link">著書</a></li>
+        <li><a href="/#anc03" class="footer__nav-link">メディア</a></li>
+        <li><a href="/#anc04" class="footer__nav-link">YouTube</a></li>
+        <li><a href="/#anc05" class="footer__nav-link">プロフィール</a></li>
       </ul>
     </nav>
     <div class="footer__social">
+        <a href="#">
+          <span class="x-icon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </span>
+        </a>
         <a href="#">
           <span class="x-icon">
             <i class="fa-brands fa-instagram"></i>
