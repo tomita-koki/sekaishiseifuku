@@ -104,36 +104,47 @@
           <h2 class="top-news__heading-ja">新着情報</h2>
           <span class="top-news__heading-bar"></span>
         </div>
-        <ul class="top-news__list">
-          <li>
-            <a href="" class="top-news__item">
-              <time class="top-news__date" datetime="2026-03-19">2026.03.19</time>
-              <span class="top-news__tag">メディア</span>
-              <p class="top-news__text">集英社オンラインに掲載されました</p>
-            </a>
-          </li>
-          <li>
-            <a href="" class="top-news__item">
-            <time class="top-news__date" datetime="2026-03-10">2026.03.10</time>
-            <span class="top-news__tag">出版情報</span>
-            <p class="top-news__text">最新刊『〈書籍タイトル〉』発売記念 特典のお知らせ【ダミー】</p>
-            </a>
-          </li>
-          <li>
-            <a href="" class="top-news__item">
-            <time class="top-news__date" datetime="2026-02-20">2026.02.20</time>
-            <span class="top-news__tag">書籍</span>
-            <p class="top-news__text">第1作『〈書籍タイトル〉』重版決定のご報告【ダミー】</p>
-            </a>
-          </li>
-          <li>
-            <a href="" class="top-news__item">
-            <time class="top-news__date" datetime="2026-01-15">2026.01.15</time>
-            <span class="top-news__tag">YouTube</span>
-            <p class="top-news__text">チャンネル登録者数〇〇万人を突破いたしました！【ダミー】</p>
-            </a>
-          </li>
-        </ul>
+        <?php
+        $news_query = new WP_Query([
+          'post_type'      => 'post',
+          'posts_per_page' => 4,
+          'category_name'  => 'news',
+          'post_status'    => 'publish',
+        ]);
+        ?>
+
+        <?php if ($news_query->have_posts()) : ?>
+          <ul class="top-news__list">
+            <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+              <?php $tags = get_the_tags(); ?>
+
+              <li>
+                <a href="<?php the_permalink(); ?>" class="top-news__item">
+                  <time class="top-news__date" datetime="<?php echo esc_attr(get_the_date('Y-m-d')); ?>">
+                    <?php echo esc_html(get_the_date('Y.m.d')); ?>
+                  </time>
+
+                  <?php if ($tags) : ?>
+                    <div class="top-news__tags">
+                      <?php foreach ($tags as $tag) : ?>
+                        <span class="top-news__tag">
+                          <?php echo esc_html($tag->name); ?>
+                        </span>
+                      <?php endforeach; ?>
+                    </div>
+                  <?php endif; ?>
+
+                  <p class="top-news__text"><?php the_title(); ?></p>
+                </a>
+              </li>
+
+            <?php endwhile; ?>
+          </ul>
+
+          <?php wp_reset_postdata(); ?>
+        <?php else : ?>
+          <p>お知らせはまだありません。</p>
+        <?php endif; ?>
         <div class="top-news__btn-wrap">
           <a href="/news/" class="top-news__btn">すべてのNEWSを見る</a>
         </div>
@@ -248,6 +259,7 @@
     
     <!-- YouTube -->
     <section class="youtube" id="anc04">
+      <div class="youtube__background"></div>
       <div class="youtube__inner">
         <div class="youtube__heading">
           <p class="youtube__heading-en">YOUTUBE</p>

@@ -1040,13 +1040,26 @@ li {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: transparent;
   padding: 4.8rem 0 6.4rem;
   position: relative;
+  z-index: 10;
 }
 @media screen and (min-width: 768px) {
   .youtube {
     padding: 7.6rem 2.4rem 10rem;
   }
+}
+.youtube__background {
+  background-color: #333333;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
 }
 .youtube__inner {
   max-width: 90rem;
