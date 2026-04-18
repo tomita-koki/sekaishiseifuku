@@ -668,7 +668,13 @@ li {
     margin-bottom: 16px;
   }
 }
+.article-nav__wrap > li {
+  display: flex;
+}
 
+.article-nav-btn {
+  width: 100%;
+}
 .article-nav-btn__wrap {
   display: flex;
   flex-direction: column;
@@ -678,6 +684,7 @@ li {
   padding-inline: 16px;
   padding-block: 16px 12px;
   transition: all var(--transition);
+  height: 100%;
 }
 .article-nav-btn__wrap:hover {
   border-color: var(--color-red);
