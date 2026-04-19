@@ -202,64 +202,72 @@
         <div class="media__intro">
           <p class="media__lead">各種メディアへの掲載・出演実績です。</p>
         </div>
-        <div class="media__grid">
-          <a href="" class="media__item">
-            <div class="media__item-body">
-              <div class="media__item-icon"></div>
-              <div class="media__item-content">
-                <p class="media__item-source">集英社オンライン</p>
-                <h3 class="media__item-title">掲載記事</h3>
-                <p class="media__item-date">2026年3月</p>
-              </div>
-            </div>
-          </a href="">
-          <a href="" class="media__item">
-            <div class="media__item-body">
-              <div class="media__item-icon media__item-icon--02"></div>
-              <div class="media__item-content">
-                <p class="media__item-source">月刊誌『WiLL』</p>
-                <h3 class="media__item-title">掲載</h3>
-                <p class="media__item-date">掲載号確認中【ダミー】</p>
-              </div>
-            </div>
-          </a href="">
-          <a href="" class="media__item">
-            <div class="media__item-body">
-              <div class="media__item-icon media__item-icon--03"></div>
-              <div class="media__item-content">
-                <p class="media__item-source">扶桑社</p>
-                <h3 class="media__item-title">プレスリリース</h3>
-                <p class="media__item-date">掲載日確認中【ダミー】</p>
-              </div>
-            </div>
-          </a href="">
-          <a href="" class="media__item">
-            <div class="media__item-body">
-              <div class="media__item-icon media__item-icon--03"></div>
-              <div class="media__item-content">
-                <p class="media__item-source">扶桑社</p>
-                <h3 class="media__item-title">プレスリリース</h3>
-                <p class="media__item-date">掲載日確認中【ダミー】</p>
-              </div>
-            </div>
-          </a href="">
-          <a href="" class="media__item">
-            <div class="media__item-body">
-              <div class="media__item-icon media__item-icon--03"></div>
-              <div class="media__item-content">
-                <p class="media__item-source">扶桑社</p>
-                <h3 class="media__item-title">プレスリリース</h3>
-                <p class="media__item-date">掲載日確認中【ダミー】</p>
-              </div>
-            </div>
-          </a href="">
-        </div>
+        <?php
+        $media_query = new WP_Query([
+          'post_type'      => 'media',
+          'posts_per_page' => 6,
+          'post_status'    => 'publish',
+        ]);
+        ?>
+
+        <?php if ($media_query->have_posts()) : ?>
+          <div class="media__grid">
+
+            <?php while ($media_query->have_posts()) : $media_query->the_post(); ?>
+
+              <?php
+              $source = get_field('media_source');
+              $url    = get_field('media_url');
+              $date   = get_field('media_date');
+              $icon   = get_field('media_icon_type');
+
+              $icon_class = 'media__item-icon';
+              if ($icon) {
+                $icon_class .= ' media__item-icon--' . $icon;
+              }
+
+              $link = $url ? $url : '#';
+              ?>
+
+              <a href="<?php echo esc_url($link); ?>" class="media__item" target="_blank">
+
+                <div class="media__item-body">
+
+                  <div class="<?php echo esc_attr($icon_class); ?>"></div>
+
+                  <div class="media__item-content">
+
+                    <?php if ($source) : ?>
+                      <p class="media__item-source"><?php echo esc_html($source); ?></p>
+                    <?php endif; ?>
+
+                    <h3 class="media__item-title"><?php the_title(); ?></h3>
+
+                    <?php if ($date) : ?>
+                      <p class="media__item-date"><?php echo esc_html($date); ?></p>
+                    <?php endif; ?>
+
+                  </div>
+
+                </div>
+
+              </a>
+
+            <?php endwhile; ?>
+
+          </div>
+
+          <?php wp_reset_postdata(); ?>
+
+        <?php else : ?>
+          <p>掲載情報はまだありません。</p>
+        <?php endif; ?>
       </div>
     </section>
     
     <!-- YouTube -->
     <section class="youtube" id="anc04">
-      <div class="youtube__background"></div>
+	  <div class="youtube__background"></div>
       <div class="youtube__inner">
         <div class="youtube__heading">
           <p class="youtube__heading-en">YOUTUBE</p>
