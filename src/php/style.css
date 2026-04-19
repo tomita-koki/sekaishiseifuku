@@ -507,6 +507,8 @@ li {
   gap: 0.9rem 1.8rem;
   padding: 2.3rem 0;
   border-bottom: 1px solid #D8D0C8;
+  color: var(--color-black2);
+  transition: background-color ease 0.3s, color ease 0.3s;
 }
 @media screen and (min-width: 768px) {
   .top-news__item {
@@ -515,6 +517,20 @@ li {
     gap: 1.2rem 2.6rem;
     padding: 1.4rem 0;
   }
+}
+@media (any-hover: hover) {
+  .top-news__item:hover {
+    background-color: var(--color-beige3);
+    color: var(--color-red);
+  }
+}
+.top-news__item:focus-visible {
+  background-color: var(--color-beige3);
+  color: var(--color-red);
+}
+.top-news__item:active {
+  background-color: var(--color-beige3);
+  color: var(--color-red);
 }
 .top-news__date {
   font-family: var(--font-family-01);
@@ -552,7 +568,6 @@ li {
   font-family: var(--font-family-03);
   font-size: 1.4rem;
   font-weight: 400;
-  color: var(--color-black2);
   line-height: 1.7;
   letter-spacing: 0.15em;
   grid-column: 1/-1;
@@ -692,6 +707,8 @@ li {
   align-items: center;
   background-color: var(--color-beige3);
   position: relative;
+  transform: scale(1);
+  transition: transform ease 0.3s;
 }
 @media screen and (min-width: 768px) {
   .books__item {
@@ -699,6 +716,17 @@ li {
     align-items: flex-start;
     background-color: var(--color-white);
   }
+}
+@media (any-hover: hover) {
+  .books__item:hover {
+    transform: scale(1.03);
+  }
+}
+.books__item:focus-visible {
+  transform: scale(1.03);
+}
+.books__item:active {
+  transform: scale(1.03);
 }
 .books__item-img {
   flex-shrink: 0;
@@ -958,6 +986,19 @@ li {
   padding: 2.4rem 2rem;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
   border-radius: 1.4rem;
+  transform: scale(1);
+  transition: transform ease 0.3s;
+}
+@media (any-hover: hover) {
+  .media__item:hover {
+    transform: scale(1.03);
+  }
+}
+.media__item:focus-visible {
+  transform: scale(1.03);
+}
+.media__item:active {
+  transform: scale(1.03);
 }
 @media screen and (min-width: 768px) {
   .media__item {
@@ -1053,7 +1094,7 @@ li {
 }
 .youtube__background {
   background-color: #333333;
-  opacity: 0.7;
+  opacity: 0.4;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1531,7 +1572,7 @@ li {
 }
 
 .contact {
-  background: #0D1B2E;
+  background: linear-gradient(to bottom, #1E2D4E, #0D1929);
   padding: 4.2rem 0 6.4rem;
   position: relative;
   margin-top: 64px;
@@ -2627,7 +2668,10 @@ html {
 
 
 
+
 /* ここからつゆき */
+
+
 
 
 
@@ -2696,6 +2740,8 @@ button:not([disabled]) {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -2896,12 +2942,12 @@ li {
 
 .article-list__box {
   display: grid;
-  grid-template-columns: 80px auto auto;
+  grid-template-columns: 80px auto;
+  grid-template-rows: auto auto;
+  gap: 8px;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 8px;
-  margin-block: 20px 21px;
-  padding: 15px 16px 16px 8px;
+  padding: 35px 16px 37px 8px;
   border-radius: 4px;
   transition: all var(--transition);
 }
@@ -2909,9 +2955,29 @@ li {
   .article-list__box {
     grid-template-columns: 80px auto auto;
     gap: 16px;
-    margin-block: 19px 23px;
-    padding-block: 20px 16px;
+    padding-block: 39px 39px;
     padding-inline: 16px;
+    grid-template-rows: auto;
+  }
+}
+.article-list__box .article-date {
+  grid-column: 1;
+  grid-row: 1;
+}
+.article-list__box .article-category {
+  grid-column: 2;
+  grid-row: 1;
+}
+.article-list__box .article-list__title {
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+@media (min-width: 769px) {
+  .article-list__box .article-date,
+  .article-list__box .article-category,
+  .article-list__box .article-list__title {
+    grid-column: auto;
+    grid-row: 1;
   }
 }
 
@@ -2994,7 +3060,7 @@ li {
   align-items: center;
   padding-block: 2px;
   margin-top: 4px;
-  width: 67px;
+  width: 71px;
 }
 
 .article-category__text {
@@ -3007,20 +3073,11 @@ li {
 }
 
 /* 出版情報 */
-.article-category--print {
-  background-color: var(--color-blue2);
-}
-
 .article-category__text--print {
   letter-spacing: 0.01rem;
 }
 
 /* YouTube */
-.article-category--youtube {
-  width: 71px;
-  background-color: var(--color-red2);
-}
-
 .article-category__text--youtube {
   letter-spacing: 0.07rem;
 }
