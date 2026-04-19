@@ -69,31 +69,22 @@
 
 /* 記事内容 */
 
-.article__content p,
-.article__main-text p,
-.article__show {
-    font-size: 1.55rem;
-    font-weight: 400;
-    line-height: 2;
-    letter-spacing: .1rem;
-    color: var(--color-black2);
-}
-
 .article__content {
-    margin-block: 31px 19px;
+    margin-block: 31px;
 }
 
-.article__main-text p {
-    @media (min-width: 769px) {
-        letter-spacing: 0;
+.single-post {
+    p {
+        font-size: 1.55rem;
+        font-weight: 400;
+        line-height: 2;
+        letter-spacing: .1rem;
+        color: var(--color-black2);
+        margin-top: 19px;
     }
-}
 
-.article__show {
-    margin-block: 19px 36px;
-
-    @media (min-width: 769px) {
-        margin-bottom: 37px;
+    p:first-child {
+        margin-top: 0;
     }
 }
 

@@ -35,3 +35,12 @@
 .news-category__btn--ls2 {
     letter-spacing: 0.15rem;
 }
+
+
+/* 表示中のタブスタイル */
+
+.news-category__active {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border-color: var(--color-red);
+}

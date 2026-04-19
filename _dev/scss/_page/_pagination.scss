@@ -48,10 +48,11 @@
     color: var(--color-red);
 }
 
-/* 表示中の hover CSS
-.news-pagination__box:hover {
+
+/* 表示中のページスタイル */
+
+.news-pagination__active {
     border-color: var(--color-red);
     background-color: var(--color-red);
     color: var(--color-white);
 }
-*/
