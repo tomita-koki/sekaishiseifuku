@@ -1774,7 +1774,7 @@ header.scrolled .header__logo-link {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
   padding: 5px 0 14px 5px;
 }
 @media screen and (min-width: 768px) {
@@ -1827,11 +1827,11 @@ header.scrolled .header__nav-link:active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 2rem;
+  padding: 1.8rem 3.6rem;
   background: var(--color-red);
   color: var(--color-white);
   font-family: var(--font-family-03);
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 500;
   border-radius: 0.4rem;
   white-space: nowrap;
@@ -1923,9 +1923,6 @@ header.scrolled .header__social .x-icon i {
   pointer-events: auto;
 }
 
-.header.header-type2 {
-  background-color: var(--color-beige4);
-}
 @media screen and (min-width: 768px) {
   .header.header-type2 .header__inner {
     padding: 20px 10px 20px;
@@ -2202,6 +2199,7 @@ header.scrolled .hamburger.active #hamburger__btn {
   background: var(--color-beige);
   padding: 5.7rem 0 4rem;
   color: var(--color-black);
+  border-top: 3px solid var(--color-red);
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -2481,7 +2479,6 @@ header.scrolled .hamburger.active #hamburger__btn {
 
 .wpcf7 {
   background-color: var(--color-beige);
-  border-bottom: 3px solid var(--color-red);
   padding: 60px 24px 36px;
 }
 @media screen and (min-width: 768px) {
@@ -2521,12 +2518,10 @@ header.scrolled .hamburger.active #hamburger__btn {
 }
 .wpcf7 label.your-email {
   letter-spacing: 0.15em;
-  padding-top: 22px;
 }
 @media screen and (min-width: 768px) {
   .wpcf7 label.your-email {
     letter-spacing: 0.06em;
-    padding-top: 0;
   }
 }
 .wpcf7 .required-mark {

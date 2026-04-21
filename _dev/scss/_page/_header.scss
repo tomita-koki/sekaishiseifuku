@@ -118,7 +118,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 12px;
     padding: 5px 0 14px 5px;
 
     @include media-query {
@@ -158,11 +158,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: px-to-rem(8) px-to-rem(20);
+    padding: px-to-rem(18) px-to-rem(36);
     background: var(--color-red);
     color: var(--color-white);
     font-family: var(--font-family-03);
-    font-size: px-to-rem(13);
+    font-size: px-to-rem(18);
     font-weight: 500;
     border-radius: px-to-rem(4);
     white-space: nowrap;
@@ -245,8 +245,6 @@
 }
 
 .header.header-type2 {
-  background-color:var(--color-beige4);
-
   .header__inner {
     @media screen and (min-width: 768px) {
       padding: 20px 10px 20px;

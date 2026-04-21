@@ -83,7 +83,6 @@
 
 .wpcf7 {
   background-color: var(--color-beige);
-  border-bottom: 3px solid var(--color-red);
   padding: 60px 24px 36px;
 
   @include media-query {
@@ -128,11 +127,9 @@
   }
   label.your-email {
     letter-spacing: 0.15em;
-    padding-top: 22px;
 
     @include media-query {
       letter-spacing: 0.06em;
-      padding-top: 0;
     }
   }
 
