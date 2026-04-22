@@ -38,6 +38,42 @@
       height: 100%;
     }
   }
+  &__slide:nth-child(2) {
+    img {
+      object-position: -500px center;
+
+      @include media-query {
+        object-position: center;
+      }
+    }
+  }
+  &__slide:nth-child(3) {
+    img {
+      object-position: -270px center;
+
+      @include media-query {
+        object-position: center;
+      }
+    }
+  }
+  &__slide:nth-child(4) {
+    img {
+      object-position: center left;
+
+      @include media-query {
+        object-position: center;
+      }
+    }
+  }
+  &__slide:nth-child(6) {
+    img {
+      object-position: center left;
+
+      @include media-query {
+        object-position: center;
+      }
+    }
+  }
 
   &__indicators {
     position: absolute;

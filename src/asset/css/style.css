@@ -247,6 +247,38 @@ li {
   width: 100%;
   height: 100%;
 }
+.mv__slide:nth-child(2) img {
+  object-position: -500px center;
+}
+@media screen and (min-width: 768px) {
+  .mv__slide:nth-child(2) img {
+    object-position: center;
+  }
+}
+.mv__slide:nth-child(3) img {
+  object-position: -270px center;
+}
+@media screen and (min-width: 768px) {
+  .mv__slide:nth-child(3) img {
+    object-position: center;
+  }
+}
+.mv__slide:nth-child(4) img {
+  object-position: center left;
+}
+@media screen and (min-width: 768px) {
+  .mv__slide:nth-child(4) img {
+    object-position: center;
+  }
+}
+.mv__slide:nth-child(6) img {
+  object-position: center left;
+}
+@media screen and (min-width: 768px) {
+  .mv__slide:nth-child(6) img {
+    object-position: center;
+  }
+}
 .mv__indicators {
   position: absolute;
   bottom: 6.4rem;
