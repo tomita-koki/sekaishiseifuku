@@ -18,17 +18,17 @@
           </ul>
           <a href="/contact/" class="header__contact header__text">お問い合わせ</a>
           <div class="header__social">
-            <a href="#" class="header__social-link">
+            <a href="https://x.com/dooooooui" class="header__social-link" target="_blank">
               <span class="x-icon">
                 <i class="fa-brands fa-x-twitter"></i>
               </span>
             </a>
-            <a href="#" class="header__social-link">
+            <a href="" class="header__social-link" target="_blank">
               <span class="x-icon">
                 <i class="fa-brands fa-instagram"></i>
               </span>
             </a>
-            <a href="#" class="header__social-link">
+            <a href="https://www.youtube.com/channel/UC3PqI0Ed5kvqReIJIYRYu-Q" class="header__social-link" target="_blank">
               <span class="x-icon">
                 <i class="fa-brands fa-youtube"></i>
               </span>
@@ -91,8 +91,8 @@
           点と点の繋がりを知れば、世界はもっと面白くなる。
         </p>
         <div class="mv__buttons">
-          <a href="#" class="mv__btn mv__btn--contact">お問い合わせ</a>
-          <a href="#" class="mv__btn mv__btn--youtube">
+          <a href="/contact/" class="mv__btn mv__btn--contact">お問い合わせ</a>
+          <a href="https://www.youtube.com/channel/UC3PqI0Ed5kvqReIJIYRYu-Q" target="_blank" class="mv__btn mv__btn--youtube">
             YouTube を見る<i class="fab fa-youtube"></i>
           </a>
         </div>
@@ -172,7 +172,7 @@
               <p class="books__item-date">202X年XX月発売【ダミー】</p>
               <h3 class="books__item-title">（書籍タイトル 最新刊）【ダミー】</h3>
               <p class="books__item-text">単なる暗記にとどまらない「歴史の因果関係」を丁寧に紐解いた一冊。幅広い世代から支持を集め、発売即重版を達成。【ダミー文 ー 実データに差し替え】</p>
-              <a href="#" class="books__item-btn">
+              <a href="https://www.amazon.co.jp/%E6%96%B0%E8%A3%85%E7%89%88-%E6%95%99%E7%A7%91%E6%9B%B8%E3%81%8B%E3%82%89%E6%B6%88%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C%E5%8F%B2-%E6%89%B6%E6%A1%91%E7%A4%BE%EF%BC%A2%EF%BC%AF%EF%BC%AF%EF%BC%AB%EF%BC%B3%E6%96%B0%E6%9B%B8-%E5%9C%9F%E4%BA%95-%E6%98%AD-ebook/dp/B0GMPS762M?ref_=ast_author_dp" target="_blank" class="books__item-btn">
                 <i class="fab fa-amazon"></i>Amazonで購入
               </a>
             </div>
@@ -185,7 +185,7 @@
               <p class="books__item-date">202X年XX月発売【ダミー】</p>
               <h3 class="books__item-title">（書籍タイトル 第1作）【ダミー】</h3>
               <p class="books__item-text">歴史の流れを「点と点の繋がり」で捉える新しいアプローチ。受験生から社会人まで幅広く読まれるベストセラー。【ダミー文 ー 実データに差し替え】</p>
-              <a href="#" class="books__item-btn">
+              <a href="https://www.amazon.co.jp/9%E5%89%B2%E3%81%AE%E6%97%A5%E6%9C%AC%E4%BA%BA%E3%81%8C%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84-%E6%95%99%E7%A7%91%E6%9B%B8%E3%81%8B%E3%82%89%E6%B6%88%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C%E5%8F%B2-%E5%9C%9F%E4%BA%95-%E6%98%AD/dp/4046072180?ref_=ast_author_dp&th=1&psc=1" target="_blank" class="books__item-btn">
                 <i class="fab fa-amazon"></i>Amazonで購入
               </a>
             </div>
@@ -293,7 +293,7 @@
       </div>
       <div class="youtube__inner">
         <div class="youtube__btn-wrap">
-          <a href="#" class="youtube__btn">
+          <a href="https://www.youtube.com/channel/UC3PqI0Ed5kvqReIJIYRYu-Q" target="_blank" class="youtube__btn">
             <span class="x-icon">
               <i class="fa-brands fa-youtube"></i>
             </span>
@@ -314,17 +314,17 @@
           <div class="profile__img">
             <img src="/wp-content/uploads/2026/04/profile.png" alt="土井昭のプロフィール写真">
             <div class="profile__social">
-            <a href="#" class="profile__social-link">
+            <a href="https://x.com/dooooooui" target="_blank" class="profile__social-link">
               <span class="x-icon">
                 <i class="fa-brands fa-x-twitter"></i>
               </span>
             </a>
-            <a href="#" class="profile__social-link">
+            <a href="" target="_blank" class="profile__social-link">
               <span class="x-icon">
                 <i class="fa-brands fa-instagram"></i>
               </span>
             </a>
-            <a href="#" class="profile__social-link">
+            <a href="https://www.youtube.com/channel/UC3PqI0Ed5kvqReIJIYRYu-Q" target="_blank" class="profile__social-link">
               <span class="x-icon">
                 <i class="fa-brands fa-youtube"></i>
               </span>

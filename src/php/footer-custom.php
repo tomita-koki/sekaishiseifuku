@@ -16,17 +16,17 @@
       </ul>
     </nav>
     <div class="footer__social">
-        <a href="#">
+        <a href="https://x.com/dooooooui" target="_blank">
           <span class="x-icon">
             <i class="fa-brands fa-x-twitter"></i>
           </span>
         </a>
-        <a href="#">
+        <a href="">
           <span class="x-icon">
             <i class="fa-brands fa-instagram"></i>
           </span>
         </a>
-        <a href="#">
+        <a href="https://www.youtube.com/channel/UC3PqI0Ed5kvqReIJIYRYu-Q" target="_blank">
           <span class="x-icon">
             <i class="fa-brands fa-youtube"></i>
           </span>
@@ -34,7 +34,7 @@
     </div>
     <ul class="footer__links">
       <li><a href="/contact/" class="footer__link">お問い合わせ</a></li>
-      <li><a href="/" class="footer__link footer__link--underline">オンライン授業はこちら</a></li>
+      <li><a href="https://fincs.jp/plan/69310633151364478" target="_blank" class="footer__link footer__link--underline">オンライン授業はこちら</a></li>
     </ul>
     <ul class="footer__privacy">
       <li><a href="/privacy-policy/" class="footer__link footer__link--underline">プライバシーポリシー</a></li>

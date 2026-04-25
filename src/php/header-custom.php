@@ -16,17 +16,17 @@
       </ul>
       <a href="/contact/" class="header__contact header__text">お問い合わせ</a>
       <div class="header__social">
-        <a href="" class="header__social-link">
+        <a href="https://x.com/dooooooui" class="header__social-link" target="_blank">
           <span class="x-icon">
             <i class="fa-brands fa-x-twitter"></i>
           </span>
         </a>
-        <a href="" class="header__social-link">
+        <a href="" class="header__social-link" target="_blank">
           <span class="x-icon">
             <i class="fa-brands fa-instagram"></i>
           </span>
         </a>
-        <a href="#" class="header__social-link">
+        <a href="https://www.youtube.com/channel/UC3PqI0Ed5kvqReIJIYRYu-Q" class="header__social-link" target="_blank">
           <span class="x-icon">
             <i class="fa-brands fa-youtube"></i>
           </span>

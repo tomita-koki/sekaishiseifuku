@@ -9,23 +9,27 @@
     <!-- 見出し -->
     <?php
     get_template_part(
-      'template-parts/components/page-heading',
-      null,
-      [
+    'template-parts/components/page-heading',
+    null,
+    [
         'en' => 'NEWS',
         'ja' => 'メディア記事'
-      ]
+    ]
     );
     ?>
+
 	<?php
-	get_template_part(
-	  'template-parts/components/breadcrumbs',
-	  null,
+	set_query_var('breadcrumb_items', [
 	  [
-		'current_url'   => home_url('/news/'),
-		'current_label' => 'お知らせ',
-	  ]
-	);
+		'label' => 'お知らせ',
+		'url'   => home_url('/news/'),
+	  ],
+	  [
+		'label' => get_the_title(),
+	  ],
+	]);
+
+	get_template_part('template-parts/components/breadcrumbs');
 	?>
 
     <section class="article section-bg">
