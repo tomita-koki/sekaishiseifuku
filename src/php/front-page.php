@@ -23,7 +23,7 @@
                 <i class="fa-brands fa-x-twitter"></i>
               </span>
             </a>
-            <a href="" class="header__social-link" target="_blank">
+            <a href="https://www.instagram.com/akiradoooui/" target="_blank" class="header__social-link" target="_blank">
               <span class="x-icon">
                 <i class="fa-brands fa-instagram"></i>
               </span>
@@ -282,13 +282,13 @@
       </div>
       <div class="youtube__grid">
         <div class="youtube__item">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/rGh5jHQg37w?si=y46kDpUCUSFMddYG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dauhYSdMKQA?si=XpMorEP3JVlQqNEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="youtube__item">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/rGh5jHQg37w?si=y46kDpUCUSFMddYG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/l9my8lfgWSw?si=hil5NmbRsAy3ysfD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="youtube__item">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/rGh5jHQg37w?si=y46kDpUCUSFMddYG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BfscKwQuv34?si=0hlLJs-icnMmlKJq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
       <div class="youtube__inner">
@@ -319,7 +319,7 @@
                 <i class="fa-brands fa-x-twitter"></i>
               </span>
             </a>
-            <a href="" target="_blank" class="profile__social-link">
+            <a href="https://www.instagram.com/akiradoooui/" target="_blank" class="profile__social-link">
               <span class="x-icon">
                 <i class="fa-brands fa-instagram"></i>
               </span>

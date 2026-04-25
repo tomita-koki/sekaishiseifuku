@@ -21,7 +21,7 @@
             <i class="fa-brands fa-x-twitter"></i>
           </span>
         </a>
-        <a href="" class="header__social-link" target="_blank">
+        <a href="https://www.instagram.com/akiradoooui/" target="_blank" class="header__social-link" target="_blank">
           <span class="x-icon">
             <i class="fa-brands fa-instagram"></i>
           </span>

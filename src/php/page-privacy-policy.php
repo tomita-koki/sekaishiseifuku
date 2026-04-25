@@ -1,164 +1,208 @@
 <?php get_header(); ?>
-    <!-- ヘッダー -->
-    <header class="header header-type2 js-header">
-      <div class="header__inner">
-        <div class="header__logo">
-          <a href="/" class="header__logo-link">
-            <p class="header__logo-text">世界史解体新書</p>
-            <p class="header__logo-subtext">SEKAISHI KAITAI SHINSHO</p>
-          </a>
-        </div>
-        <nav class="header__nav" id="header-nav" aria-label="メインナビゲーション">
-          <ul class="header__nav-list">
-            <li><a href="/#anc01" class="header__nav-link header__text">NEWS</a></li>
-            <li><a href="/#anc02" class="header__nav-link header__text">著書</a></li>
-            <li><a href="/#anc03" class="header__nav-link header__text">メディア</a></li>
-            <li><a href="/#anc04" class="header__nav-link header__text">YouTube</a></li>
-            <li><a href="/#anc05" class="header__nav-link header__text">プロフィール</a></li>
-          </ul>
-          <a href="/contact" class="header__contact header__text">お問い合わせ</a>
-          <div class="header__social">
-            <a href="#" class="header__social-link">
-              <span class="x-icon x-icon--type2">
-                <i class="fa-brands fa-instagram"></i>
-              </span>
-            </a>
-            <a href="#" class="header__social-link">
-              <span class="x-icon x-icon--type2">
-                <i class="fa-brands fa-youtube"></i>
-              </span>
-            </a>
-          </div>
-        </nav>
-        <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="header-nav" aria-label="メニューを開く">
-          <span id="hamburger__btn" aria-hidden="true"></span>
-        </button>
-      </div>
-    </header>
+    <!-- ヘッター -->
+    <?php get_header('custom'); ?>
 
     <!-- サイドバー -->
-    <aside class="sidebar">
-      <a href="#" class="sidebar__item sidebar__item--contact">
-        <i class="far fa-envelope"></i>
-        <span>お問い合わせ</span>
-      </a>
-      <a href="#" class="sidebar__item sidebar__item--youtube">
-        <i class="fab fa-youtube"></i>
-        <span>オンライン授業</span>
-      </a>
-    </aside>
+    <?php get_sidebar(); ?>
 
     <!-- メインエリア -->
-    <div class="header__heading">
-    <p class="header__heading-en"></p>
-    <h1 class="header__heading-ja">プライバシーポリシー</h1>
-    </div>
-    <div class="breadcrumbs">
-      <a href="/" class="breadcrumbs__text">PRIVACY</a>
-      <a href="/contact/" class="breadcrumbs__text">プライバシーポリシー</a>
-    </div>
+    <!-- 見出し -->
+    <?php
+    get_template_part(
+      'template-parts/components/page-heading',
+      null,
+      [
+        'en' => 'PRIVACY',
+        'ja' => 'プライバシーポリシー'
+      ]
+    );
+    ?>
+	<?php
+	set_query_var('breadcrumb_items', [
+	  [
+		'label' => get_the_title(),
+	  ],
+	]);
+
+	get_template_part('template-parts/components/breadcrumbs');
+	?>
 
     <section class="privacy-policy section-bg">
-        <ul class="privacy-policy__wrap">
-            <li class="privacy-policy-container">
+        <div class="privacy-policy__wrap">
+            <p class="privacy-policy-container__text">
+                合同会社リヨンカンパニー（以下、弊社）が取り扱う全ての個人情報の保護について、社会的使命を十分に認識し、本人の権利の保護、個人情報に関する法規制等を遵守します。また、以下に示す方針を具現化するための体制を構築し、最新のIT技術の動向、社会的要請の変化、経営環境の変動等を常に認識しながらその継続的改善に全社を挙げて取り組むことをここに宣言します。
+            </p>
+            <p class="privacy-policy-container__text">
+                個人情報は、業務における弊社の正当な事業遂行上並びに従業員の雇用、人事管理上必要な範囲に限定して、取得・利用及び提供をし、特定された利用目的の達成に必要な範囲を超えた個人情報の取扱い（目的外利用）を行いません。また、目的外利用を行わないための措置を講じます。
+            </p>
+            <p class="privacy-policy-container__text">
+                個人情報保護に関する法令、国が定める指針及びその他の規範を遵守致します。<br>
+                個人情報（弊社が取得し、又は取得しようとしている個人情報を含む。）の漏えい、滅失、き損などのリスクに対しては、合理的な安全対策を講じて防止すべく事業の実情に合致した経営資源を注入し個人情報セキュリティ体制を継続的に向上させます。また、万一の際には速やかに是正措置を講じます。<br>
+                個人情報取扱いに関する苦情及び相談に対しては、迅速かつ誠実に、適切な対応をさせていただきます。
+            </p>
+            <p class="privacy-policy-container__text">
+                本方針は、全ての従業者に配付して周知させるとともに、弊社のホームページなどに掲載することにより、いつでもどなたにも入手可能な措置を取るものとします。</p>
+
+            <dl class="privacy-policy-container">
                 <div class="privacy-policy-container__wrap">
-                    <h3 class="privacy-policy-container__title">個人情報の取り扱いについて</h3>
-                    <p class="privacy-policy-container__text">
-                        世界史解体新書（以下「当サイト」）は、お問い合わせフォームを通じてご提供いただいた個人情報（氏名・メールアドレス等）を、以下の目的にのみ使用します。</p>
-                    <ul class="privacy-policy-container__list">
-                        <li>
-                            <span class="privacy-policy-container__text">お問い合わせへの返信</span>
-                        </li>
-                        <li>
-                            <span class="privacy-policy-container__text">ご依頼・ご相談への対応</span>
-                        </li>
-                    </ul>
+                    <dt class="privacy-policy-container__title"> 人情報の取得 </dt>
+                    <dd class="privacy-policy-container__text">
+                        本方針において、「個人情報」とは、個人情報保護法第2条第1項に定める個人情報を意味し、お客様から提供いただく氏名、住所、生年月日、電話番号、電子メールアドレス、LINE等のアカウント等の情報を含みます。
+                    </dd>
                 </div>
-            </li>
-            <li class="privacy-policy-container">
                 <div class="privacy-policy-container__wrap">
-                    <h3 class="privacy-policy-container__title">個人情報の第三者提供</h3>
-                    <p class="privacy-policy-container__text">当サイトは、法令に基づく場合を除き、ご提供いただいた個人情報を第三者に提供・開示することはありません。</p>
+                    <dt class="privacy-policy-container__title">個人情報の利用目的</dt>
+                    <dd class="privacy-policy-container__text">
+                        <ol class="privacy-policy-container__list">
+                            <li class="privacy-policy-container__num">
+                                <p class="privacy-policy-container__text">
+                                    ご本人より書面等（ホームページや電子メール等によるものを含む。以下「書面」という）に記載された個人情報を直接取得する場合の利用目的</p>
+                                <dl class="privacy-policy-table">
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">お客様情報</dt>
+                                        <dd class="privacy-policy-table__text">
+                                            弊社サービスにおける商品の発送、関連するカスタマーサポート、新商品・サービスの案内及び提供、お客様情報の管理のため</dd>
+                                    </div>
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">取引先情報</dt>
+                                        <dd class="privacy-policy-table__text">商談及び業務上の諸連絡、受発注業務、請求支払業務のため</dd>
+                                    </div>
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">従業者情報</dt>
+                                        <dd class="privacy-policy-table__text">従業者の人事労務管理、業務管理、健康管理、セキュリティ管理のため
+                                        </dd>
+                                    </div>
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">採用応募者</dt>
+                                        <dd class="privacy-policy-table__text">採用応募者への連絡と弊社の採用業務管理のため</dd>
+                                    </div>
+                                </dl>
+                            </li>
+                            <li class="privacy-policy-container__num">
+                                <p>ご本人より書面以外で直接個人情報を取得する際の利用目的</p>
+                                <dl class="privacy-policy-table">
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">分類</dt>
+                                        <dd class="privacy-policy-table__text">利用目的</dd>
+                                    </div>
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">個人のお客様情報</dt>
+                                        <dd class="privacy-policy-table__text">
+                                            <ul>
+                                                <li>ユーザー様サポートのため</li>
+                                                <li>ご利用履歴管理のため</li>
+                                                <li>弊社サービスの案内及び提供のため</li>
+                                                <li>お問合せ対応のため</li>
+                                            </ul>
+                                        </dd>
+                                    </div>
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">お取引先担当者様情報</dt>
+                                        <dd class="privacy-policy-container__text">発注内容確認のため（通信記録等）</dd>
+                                    </div>
+                                    <div class="privacy-policy-table__wrap">
+                                        <dt class="privacy-policy-table__title">業務の受託に伴いお預かりする個人情報</dt>
+                                        <dd class="privacy-policy-table__text">委託された当該業務を適切に遂行するため</dd>
+                                    </div>
+                                </dl>
+                            </li>
+                        </ol>
+                    </dd>
                 </div>
-            </li>
-            <li class="privacy-policy-container">
                 <div class="privacy-policy-container__wrap">
-                    <h3 class="privacy-policy-container__title">Cookie（クッキー）について</h3>
-                    <p class="privacy-policy-container__text">当サイトでは、アクセス解析のためにGoogleAnalyticsを使用しています。Google
-                        Analyticsはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。</p>
-                    <p class="privacy-policy-container__text privacy-policy-container__text--mt">Google Analyticsのデータ収集を拒否する場合は、ブラウザの設定でCookieを無効にしてください。
-                    </p>
+                    <dt class="privacy-policy-container__title">事業者、管理者、連絡先</dt>
+                    <dd class="privacy-policy-container__text">
+                        <dl class="privacy-policy-table">
+                            <div class="privacy-policy-table__wrap">
+                                <dt class="privacy-policy-table__title">事業者の名称</dt>
+                                <dd class="privacy-policy-table__text">合同会社リヨンカンパニー</dd>
+                            </div>
+                            <div class="privacy-policy-table__wrap">
+                                <dt class="privacy-policy-table__title">個人情報保護管理者</dt>
+                                <dd class="privacy-policy-table__text">土井昭</dd>
+                            </div>
+                            <div class="privacy-policy-table__wrap">
+                                <dt class="privacy-policy-table__title">連絡先</dt>
+                                <dd class="privacy-policy-table__text">
+                                    <address>東京都渋谷区神宮前6-23-4桑野ビル2F</address><br>
+                                    ※弊社に関する問い合わせは、電話では行っておりません。<a href="<?php echo esc_url(home_url('/')); ?>contact/"
+                                        target="_blank">こちらのWebサイト</a>よりDMで連絡してください。
+                                </dd>
+                            </div>
+                        </dl>
+                    </dd>
                 </div>
-            </li>
-            <li class="privacy-policy-container">
                 <div class="privacy-policy-container__wrap">
-                    <h3 class="privacy-policy-container__title">免責事項</h3>
-                    <p class="privacy-policy-container__text">
-                        当サイトのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、誤情報が入り込んだり、情報が古くなったりすることもございます。当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。
-                    </p>
+                    <dt class="privacy-policy-container__title">個人情報の第三者提供</dt>
+                    <dd class="privacy-policy-container__text">
+                        <p class="privacy-policy-container__text">
+                            弊社は、原則として第三者に個人情報を開示・提供することはありませんが、以下の場合には開示・提供することができるものとします。</p>
+                        <ol class="privacy-policy-container__list">
+                            <li class="privacy-policy-container__num">法令に基づく場合又は法令で認められる場合</li>
+                            <li class="privacy-policy-container__num">人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難である場合
+                            </li>
+                            <li class="privacy-policy-container__num">
+                                公衆衛生の向上又は児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難である場合</li>
+                            <li class="privacy-policy-container__num">
+                                国の機関若しくは地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要があって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合
+                            </li>
+                            <li class="privacy-policy-container__num">
+                                弊社サービスの利用規約への同意その他の方法により、お客様が個人情報の第三者提供に同意している場合に該当する場合</li>
+                        </ol>
+                    </dd>
                 </div>
-            </li>
-            <li class="privacy-policy-container">
                 <div class="privacy-policy-container__wrap">
-                    <h3 class="privacy-policy-container__title">著作権について</h3>
-                    <p class="privacy-policy-container__text">
-                        当サイトに掲載されているコンテンツ（テキスト・画像・動画等）の著作権は、土井昭または正当な権利者に帰属します。無断転載・複製を禁じます。</p>
+                    <dt class="privacy-policy-container__title">個人情報取扱いの委託</dt>
+                    <dd class="privacy-policy-container__text">
+                        弊社は事業運営上、お客様により良いサービスを提供するために業務の一部を外部に委託しています。業務委託先に対しては、個人情報を預けることがあります。この場合、個人情報を適切に取り扱っていると認められる委託先を選定し、契約等において個人情報の適正管理・機密保持などによりお客様の個人情報の漏洩防止に必要な事項を取決め、適切な管理を実施させます。
+                    </dd>
                 </div>
-            </li>
-            <li class="privacy-policy-container">
                 <div class="privacy-policy-container__wrap">
-                    <h3 class="privacy-policy-container__title">プライバシーポリシーの変更</h3>
-                    <p class="privacy-policy-container__text">
-                        当サイトは、必要に応じてプライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、本ページに掲載した時点で効力を生じるものとします。</p>
+                    <dt class="privacy-policy-container__title">個人情報の開示等の請求</dt>
+                    <dd class="privacy-policy-container__text">
+                        <p class="privacy-policy-container__text">
+                            お客様は、弊社に対してご自身の個人情報の開示等（利用目的の通知、開示、内容の訂正・追加・削除、利用の停止または消去、第三者への提供の停止）に関して、弊社問合わせ窓口に申し出ることができます。その際、弊社はお客様ご本人を確認させていただいたうえで、合理的な期間内に対応いたします（当該個人情報が存在しないときにはその旨を通知いたします。）。但し、次のいずれかに該当する場合は、その全部又は一部を開示しないことがあります。開示しない決定をした場合には、その旨を遅滞なく通知します。
+                        </p>
+                        <ol>
+                            <li>個人情報保護法その他の法令により、弊社が開示の義務を負わない場合</li>
+                            <li>開示することにより、ご本人又は第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
+                            <li>開示することにより、弊社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
+                        </ol>
+                    </dd>
                 </div>
-            </li>
-            <li class="privacy-policy-container">
                 <div class="privacy-policy-container__wrap">
-                    <h3 class="privacy-policy-container__title">お問い合わせ</h3>
-                    <p class="privacy-policy-container__text">プライバシーポリシーに関するお問い合わせは、<a href="#" class="privacy-policy-container__text-link">お問い合わせフォーム</a>よりご連絡ください。</p>
+                    <dt class="privacy-policy-container__title">安全管理について</dt>
+                    <dd class="privacy-policy-container__text">
+                        弊社は、取り扱う個人情報のリスクに応じて、漏えい、滅失又はき損の防止その他の個人情報（弊社が取得し、又は取得しようとしている個人情報を含む。）の安全管理のために、法令に基づく必要かつ適切な措置を講じます。
+                    </dd>
                 </div>
-            </li>
-        </ul>
+                <div class="privacy-policy-container__wrap">
+                    <dt class="privacy-policy-container__title">個人情報を提供されることの任意性について</dt>
+                    <dd class="privacy-policy-container__text">
+                        お客様が弊社に個人情報を提供されるかどうかは、お客様の任意によるものです。ただし、必要な項目をいただけない場合、各サービス等が適切な状態で提供できない場合があります。</dd>
+                </div>
+                <div class="privacy-policy-container__wrap">
+                    <dt class="privacy-policy-container__title">ご本人が容易に認識できない方法による取得する場合について</dt>
+                    <dd class="privacy-policy-container__text">
+                        クッキー（Cookies）は、お客さまが弊社のサイトに再度訪問された際、より便利に当サイトを閲覧していただくためのものであり、お客さまのプライバシーを侵害するものではなく、またお客さまのコンピューターへ悪影響を及ぼすことはありません。また弊社のサイトでは個人情報を入力していただく部分にはすべてSSL（Secure
+                        Sockets
+                        Layer）のデータ暗号化システムを利用しております。さらに、サイト内における情報の保護にもファイアウォールを設置するなどの方策を採っております。ただし、インターネット通信の性格上、セキュリティを完全に保証するものではありません。予めご了承ください。
+                    </dd>
+                </div>
+                <div class="privacy-policy-container__wrap">
+                    <dt class="privacy-policy-container__title">認定個人情報保護団体について</dt>
+                    <dd class="privacy-policy-container__text">弊社が加入する認定個人情報保護団体は、ありません。</dd>
+                </div>
+                <div class="privacy-policy-container__wrap">
+                    <dt class="privacy-policy-container__title">保有個人データに関する事項の周知</dt>
+                    <dd class="privacy-policy-container__text">
+                        弊社で保有している開示対象個人情報に関して、ご本人様又はその代理人様からの利用目的の通知、開示、内容の訂正、追加又は削除、利用の停止、消去及び第三者への提供の停止の請求につきましては、お電話または、メールフォームからご連絡ください。
+                    </dd>
+                </div>
+            </dl>
+        </div>
     </section>
 
     <!-- フッター -->
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__logo">
-          <a href="/" class="footer__logo-link">
-            <p class="footer__logo-text">世界史解体新書</p>
-            <p class="footer__logo-subtext">AKIRA DOI OFFICIAL</p>
-          </a>
-        </div>
-        <nav class="footer__nav">
-          <ul class="footer__nav-list">
-            <li><a href="#anc01" class="footer__nav-link">NEWS</a></li>
-            <li><a href="#anc02" class="footer__nav-link">著書</a></li>
-            <li><a href="#anc03" class="footer__nav-link">メディア</a></li>
-            <li><a href="#anc04" class="footer__nav-link">YouTube</a></li>
-            <li><a href="#anc05" class="footer__nav-link">プロフィール</a></li>
-          </ul>
-        </nav>
-        <div class="footer__social">
-            <a href="#">
-              <span class="x-icon">
-                <i class="fa-brands fa-instagram"></i>
-              </span>
-            </a>
-            <a href="#">
-              <span class="x-icon">
-                <i class="fa-brands fa-youtube"></i>
-              </span>
-            </a>
-        </div>
-        <ul class="footer__links">
-          <li><a href="/contact" class="footer__link">お問い合わせ</a></li>
-          <li><a href="/" class="footer__link footer__link--underline">オンライン授業はこちら</a></li>
-        </ul>
-        <ul class="footer__privacy">
-          <li><a href="/privacy-policy" class="footer__link footer__link--underline">プライバシーポリシー</a></li>
-        </ul>
-        <p class="footer__copy">© 2026 Akira Doi. All Rights Reserved.</p>
-      </div>
-    </footer>
+    <?php get_footer('custom'); ?>
 <?php get_footer(); ?>

@@ -18,16 +18,15 @@
     );
     ?>
     <!-- パンクズ -->
-    <?php
-    get_template_part(
-      'template-parts/components/breadcrumbs',
-      null,
-      [
-        'current_url'   => home_url('/contact/'),
-        'current_label' => 'お問い合わせ',
-      ]
-    );
-    ?>
+	<?php
+	set_query_var('breadcrumb_items', [
+	  [
+		'label' => get_the_title(),
+	  ],
+	]);
+
+	get_template_part('template-parts/components/breadcrumbs');
+	?>
 
     <div class="contact-description">
       <div class="contact-description__content">
