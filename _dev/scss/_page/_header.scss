@@ -265,10 +265,20 @@
   }
 
   .header__logo-text {
+      font-family: var(--font-family-02);
     font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1.84rem;
+      letter-spacing: 0.15rem;
   }
 
   .header__logo-subtext {
+    font-family: var(--font-family-01);
+    font-size: px-to-rem(10);
+    font-weight: 400;
+    line-height: 1rem;
+    opacity: 0.7;
+    padding-top: 3px;
     letter-spacing: 0.11rem;
   }
 
@@ -328,7 +338,7 @@
 
 // H1
 // =============================================================================
-.header__heading {
+div#content .header__heading {
   background-color:var(--color-beige4);
   padding-top: px-to-rem(93);
   padding-bottom: px-to-rem(48);
@@ -340,7 +350,7 @@
   }
 }
 
-.header__heading-en {
+div#content .header__heading-en {
   font-family: var(--font-family-01);
   font-size: px-to-rem(12);
   font-weight: 700;
@@ -349,7 +359,7 @@
   color: var(--color-red);
 }
 
-.header__heading-ja {
+div#content .header__heading-ja {
   font-family: var(--font-family-02);
   font-size: px-to-rem(28);
   font-weight: 700;

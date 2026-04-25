@@ -49,7 +49,7 @@
   }
   &__slide:nth-child(3) {
     img {
-      object-position: -270px center;
+      object-position: -100px center;
 
       @include media-query {
         object-position: center;
@@ -68,6 +68,15 @@
   &__slide:nth-child(6) {
     img {
       object-position: center left;
+
+      @include media-query {
+        object-position: center;
+      }
+    }
+  }
+  &__slide:nth-child(7) {
+    img {
+      object-position: -250px center;
 
       @include media-query {
         object-position: center;

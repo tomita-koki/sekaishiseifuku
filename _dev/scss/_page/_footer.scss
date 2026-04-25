@@ -3,7 +3,7 @@
 
 // フッター
 // =============================================================================
-.footer {
+div#body_wrap .footer {
   background: var(--color-beige);
   padding: px-to-rem(57) 0 px-to-rem(40);
   color: var(--color-black);
@@ -173,6 +173,8 @@
 
   &__copy {
     font-family: var(--font-family-01);
+    color: var(--color-black);
+    letter-spacing: 0;
     font-size: px-to-rem(12);
     font-weight: 400;
     line-height: 2;

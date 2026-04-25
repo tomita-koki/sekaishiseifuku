@@ -270,7 +270,7 @@ li {
   }
 }
 .mv__slide:nth-child(3) img {
-  object-position: -270px center;
+  object-position: -100px center;
 }
 @media screen and (min-width: 768px) {
   .mv__slide:nth-child(3) img {
@@ -290,6 +290,14 @@ li {
 }
 @media screen and (min-width: 768px) {
   .mv__slide:nth-child(6) img {
+    object-position: center;
+  }
+}
+.mv__slide:nth-child(7) img {
+  object-position: -200px center;
+}
+@media screen and (min-width: 768px) {
+  .mv__slide:nth-child(7) img {
     object-position: center;
   }
 }
@@ -1989,9 +1997,19 @@ header.scrolled .header__social .x-icon i {
   color: var(--color-black2);
 }
 .header.header-type2 .header__logo-text {
+  font-family: var(--font-family-02);
   font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.84rem;
+  letter-spacing: 0.15rem;
 }
 .header.header-type2 .header__logo-subtext {
+  font-family: var(--font-family-01);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  opacity: 0.7;
+  padding-top: 3px;
   letter-spacing: 0.11rem;
 }
 .header.header-type2 .header__nav-link {
@@ -2040,21 +2058,20 @@ header.scrolled .header__social .x-icon i {
 .header.header-type2 .hamburger.active #hamburger__btn {
   background: transparent;
 }
-
-.header__heading {
+div#content .header__heading {
   background-color: var(--color-beige4);
   padding-top: 9.3rem;
   padding-bottom: 4.8rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .header__heading {
+  div#content .header__heading {
     padding-top: 11rem;
     padding-bottom: 6.6rem;
   }
 }
 
-.header__heading-en {
+div#content .header__heading-en {
   font-family: var(--font-family-01);
   font-size: 1.2rem;
   font-weight: 700;
@@ -2063,7 +2080,7 @@ header.scrolled .header__social .x-icon i {
   color: var(--color-red);
 }
 
-.header__heading-ja {
+div#content .header__heading-ja {
   font-family: var(--font-family-02);
   font-size: 2.8rem;
   font-weight: 700;
@@ -2073,7 +2090,7 @@ header.scrolled .header__social .x-icon i {
   margin-top: 2.2rem;
 }
 @media screen and (min-width: 768px) {
-  .header__heading-ja {
+  div#content .header__heading-ja {
     font-size: 2.4rem;
     font-size: 4rem;
     line-height: 4.58rem;
@@ -2241,18 +2258,18 @@ header.scrolled .hamburger.active #hamburger__btn {
   padding: 0 6px;
 }
 
-.footer {
+div#body_wrap .footer {
   background: var(--color-beige);
   padding: 5.7rem 0 4rem;
   color: var(--color-black);
   border-top: 3px solid var(--color-red);
 }
 @media screen and (min-width: 768px) {
-  .footer {
+  div#body_wrap .footer {
     padding: 5.2rem 0 3.2rem;
   }
 }
-.footer__inner {
+div#body_wrap .footer__inner {
   max-width: 90rem;
   margin: 0 auto;
   padding: 0;
@@ -2262,19 +2279,19 @@ header.scrolled .hamburger.active #hamburger__btn {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .footer__inner {
+  div#body_wrap .footer__inner {
     padding: 0 14.4rem;
   }
 }
-.footer__logo {
+div#body_wrap .footer__logo {
   margin-bottom: 1.8rem;
 }
-.footer__logo-link {
+div#body_wrap .footer__logo-link {
   display: block;
   color: #1a1a1a;
   text-decoration: none;
 }
-.footer__logo-text {
+div#body_wrap .footer__logo-text {
   font-family: var(--font-family-02);
   font-size: 1.8rem;
   font-weight: 700;
@@ -2283,11 +2300,11 @@ header.scrolled .hamburger.active #hamburger__btn {
   color: var(--color-black);
 }
 @media screen and (min-width: 768px) {
-  .footer__logo-text {
+  div#body_wrap .footer__logo-text {
     font-size: 1.8rem;
   }
 }
-.footer__logo-subtext {
+div#body_wrap .footer__logo-subtext {
   font-family: var(--font-family-01);
   font-size: 1rem;
   font-weight: 400;
@@ -2295,15 +2312,15 @@ header.scrolled .hamburger.active #hamburger__btn {
   line-height: 1.7;
   margin-top: 0.4rem;
 }
-.footer__nav {
+div#body_wrap .footer__nav {
   margin-bottom: 4.8rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__nav {
+  div#body_wrap .footer__nav {
     margin-bottom: 3.6rem;
   }
 }
-.footer__nav-list {
+div#body_wrap .footer__nav-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -2311,11 +2328,11 @@ header.scrolled .hamburger.active #hamburger__btn {
   list-style: none;
 }
 @media screen and (min-width: 768px) {
-  .footer__nav-list {
+  div#body_wrap .footer__nav-list {
     gap: 0.8rem 2.2rem;
   }
 }
-.footer__nav-link {
+div#body_wrap .footer__nav-link {
   font-family: var(--font-family-03);
   font-size: 1.4rem;
   font-weight: 500;
@@ -2324,28 +2341,28 @@ header.scrolled .hamburger.active #hamburger__btn {
   color: var(--color-black);
 }
 @media (any-hover: hover) {
-  .footer__nav-link:hover {
+  div#body_wrap .footer__nav-link:hover {
     color: var(--color-red);
   }
 }
-.footer__nav-link:focus-visible {
+div#body_wrap .footer__nav-link:focus-visible {
   color: var(--color-red);
 }
-.footer__nav-link:active {
+div#body_wrap .footer__nav-link:active {
   color: var(--color-red);
 }
-.footer__social {
+div#body_wrap .footer__social {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-bottom: 3.5rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__social {
+  div#body_wrap .footer__social {
     margin-bottom: 4rem;
   }
 }
-.footer__social-link {
+div#body_wrap .footer__social-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2353,23 +2370,23 @@ header.scrolled .hamburger.active #hamburger__btn {
   height: 1.6rem;
   transition: opacity 0.2s;
 }
-.footer__social-link img {
+div#body_wrap .footer__social-link img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 @media (any-hover: hover) {
-  .footer__social-link:hover {
+  div#body_wrap .footer__social-link:hover {
     opacity: 0.7;
   }
 }
-.footer__social-link:focus-visible {
+div#body_wrap .footer__social-link:focus-visible {
   opacity: 0.7;
 }
-.footer__social-link:active {
+div#body_wrap .footer__social-link:active {
   opacity: 0.7;
 }
-.footer__links {
+div#body_wrap .footer__links {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -2378,11 +2395,11 @@ header.scrolled .hamburger.active #hamburger__btn {
   margin-bottom: 3.2rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__links {
+  div#body_wrap .footer__links {
     margin-bottom: 3.2rem;
   }
 }
-.footer__link {
+div#body_wrap .footer__link {
   font-family: var(--font-family-03);
   font-size: 1.3rem;
   font-weight: 400;
@@ -2390,31 +2407,31 @@ header.scrolled .hamburger.active #hamburger__btn {
   transition: color 0.2s;
   color: var(--color-black);
 }
-.footer__link--underline {
+div#body_wrap .footer__link--underline {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 @media (any-hover: hover) {
-  .footer__link:hover {
+  div#body_wrap .footer__link:hover {
     color: var(--color-red);
   }
-  .footer__link:hover--underline {
+  div#body_wrap .footer__link:hover--underline {
     color: var(--color-red);
   }
 }
-.footer__link:focus-visible {
+div#body_wrap .footer__link:focus-visible {
   color: var(--color-red);
 }
-.footer__link:focus-visible--underline {
+div#body_wrap .footer__link:focus-visible--underline {
   color: var(--color-red);
 }
-.footer__link:active {
+div#body_wrap .footer__link:active {
   color: var(--color-red);
 }
-.footer__link:active--underline {
+div#body_wrap .footer__link:active--underline {
   color: var(--color-red);
 }
-.footer__privacy {
+div#body_wrap .footer__privacy {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -2424,29 +2441,30 @@ header.scrolled .hamburger.active #hamburger__btn {
   color: var(--color-black);
 }
 @media screen and (min-width: 768px) {
-  .footer__privacy {
+  div#body_wrap .footer__privacy {
     margin-bottom: 1.6rem;
   }
 }
-.footer__copy {
+div#body_wrap .footer__copy {
   font-family: var(--font-family-01);
+  color: var(--color-black);
+  letter-spacing: 0;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 2;
   opacity: 0.5;
 }
-.footer .x-icon {
+div#body_wrap .footer .x-icon {
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-.footer .x-icon i {
+div#body_wrap .footer .x-icon i {
   color: var(--color-black);
   font-size: 18px;
   line-height: 1;
 }
-
 .contact-description {
   border-top: 2px solid var(--color-beige5);
   border-bottom: 2px solid var(--color-beige5);

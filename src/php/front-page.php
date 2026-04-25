@@ -54,7 +54,10 @@
           <img src="/wp-content/uploads/2026/04/index-img-02.png" alt="">
         </div>
         <div class="mv__slide">
-          <img src="/wp-content/uploads/2026/04/index-img-03.png" alt="">
+          <picture>
+            <source srcset="/wp-content/uploads/2026/04/index-img-03-sp-scaled.jpg" media="(max-width: 768px)">
+            <img src="/wp-content/uploads/2026/04/index-img-03.png" alt="">
+          </picture>
         </div>
         <div class="mv__slide">
           <img src="/wp-content/uploads/2026/04/index-img-04.png" alt="">
