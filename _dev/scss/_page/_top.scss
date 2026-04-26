@@ -40,7 +40,7 @@
   }
   &__slide:nth-child(2) {
     img {
-      object-position: -500px center;
+      object-position: -400px center;
 
       @include media-query {
         object-position: center;
@@ -49,7 +49,7 @@
   }
   &__slide:nth-child(3) {
     img {
-      object-position: -100px center;
+      object-position: -70px center;
 
       @include media-query {
         object-position: center;
@@ -76,7 +76,7 @@
   }
   &__slide:nth-child(7) {
     img {
-      object-position: -250px center;
+      object-position: -150px center;
 
       @include media-query {
         object-position: center;
@@ -1050,15 +1050,12 @@
 // Profile
 // =============================================================================
 .profile {
-  &__inner {
-    max-width: px-to-rem(1052);
-    margin: 53px auto;
-    padding: 0;
+  max-width: px-to-rem(1052);
+  margin: 0 auto;
+  padding: 53px 0;
 
-    @include media-query {
-      margin: 76px auto;
-      padding: 0 px-to-rem(24);
-    }
+  @include media-query {
+    padding: 76px px-to-rem(24);
   }
 
   &__heading {
@@ -1218,6 +1215,7 @@
   }
 
   &__text {
+    font-weight: var(--font-family-03);
     font-size: px-to-rem(14);
     line-height: 2.1;
     color: var(--color-black2);

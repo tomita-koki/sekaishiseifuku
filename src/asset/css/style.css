@@ -64,7 +64,6 @@ button:not([disabled]) {
 html {
   height: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
 }
 
 body {
@@ -248,7 +247,7 @@ li {
   height: 100%;
 }
 .mv__slide:nth-child(2) img {
-  object-position: -500px center;
+  object-position: -400px center;
 }
 @media screen and (min-width: 768px) {
   .mv__slide:nth-child(2) img {
@@ -256,7 +255,7 @@ li {
   }
 }
 .mv__slide:nth-child(3) img {
-  object-position: -100px center;
+  object-position: -70px center;
 }
 @media screen and (min-width: 768px) {
   .mv__slide:nth-child(3) img {
@@ -280,7 +279,7 @@ li {
   }
 }
 .mv__slide:nth-child(7) img {
-  object-position: -250px center;
+  object-position: -150px center;
 }
 @media screen and (min-width: 768px) {
   .mv__slide:nth-child(7) img {
@@ -1270,15 +1269,14 @@ li {
   opacity: 0.8;
 }
 
-.profile__inner {
+.profile {
   max-width: 105.2rem;
-  margin: 53px auto;
-  padding: 0;
+  margin: 0 auto;
+  padding: 53px 0;
 }
 @media screen and (min-width: 768px) {
-  .profile__inner {
-    margin: 76px auto;
-    padding: 0 2.4rem;
+  .profile {
+    padding: 76px 2.4rem;
   }
 }
 .profile__heading {
@@ -1431,6 +1429,7 @@ li {
   }
 }
 .profile__text {
+  font-weight: var(--font-family-03);
   font-size: 1.4rem;
   line-height: 2.1;
   color: var(--color-black2);
