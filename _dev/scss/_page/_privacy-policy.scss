@@ -8,6 +8,10 @@
         width: clamp(0px, calc(100vw/1440*760), 2000px);
         margin: 0 auto;
     }
+
+    >p {
+        margin-bottom: 30px;
+    }
 }
 
 .privacy-policy-container {
@@ -15,6 +19,10 @@
         border-bottom: 1px solid var(--color-beige2);
         padding-bottom: 39px;
         margin-bottom: 40px;
+
+        &:last-child {
+            border-bottom: none;
+        }
 
         @media (min-width: 769px) {
             padding-bottom: 55px;
@@ -37,6 +45,10 @@
         font-weight: 400;
         color: var(--color-black);
         line-height: 2;
+
+        >p {
+            margin-bottom: 30px;
+        }
     }
 
     &__list {
@@ -48,56 +60,67 @@
             position: relative;
             margin-bottom: 7px;
         }
-
-        li::before {
-            position: absolute;
-            content: "";
-            top: 16px;
-            left: -13px;
-            background-color: var(--color-black);
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-        }
     }
 }
 
-.privacy-policy-container:last-child {
-    .privacy-policy-container__wrap {
-        border-bottom: none;
-    }
+address {
+    font-style: normal;
 }
 
 
-/* ダミーテキストのレイアウト */
+/* 番号スタイル */
 
 .privacy-policy-container__list {
-    padding-left: 24px;
-    color: var(--color-black);
-    margin-top: 12px;
+    list-style: none;
+    padding: 0;
+    counter-reset: my-counter;
 
-    li {
+    .privacy-policy-container__num {
+        counter-increment: my-counter;
+        padding-left: 2em;
         position: relative;
-        margin-bottom: 7px;
     }
 
-    li::before {
+    .privacy-policy-container__num::before {
+        content: counter(my-counter) ".";
         position: absolute;
-        content: "";
-        top: 16px;
-        left: -13px;
-        background-color: var(--color-black);
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
+        left: 0;
     }
 }
 
-.privacy-policy-container__text--mt {
-    margin-top: 11px;
-}
 
-.privacy-policy-container__text-link {
-    color: var(--color-red);
-    text-decoration: underline;
+
+.privacy-policy-table {
+    &__wrap {
+        //display: flex;
+        //flex-direction: column;
+        
+
+        @media (min-width: 769px) {
+            display: flex;
+            flex-direction: row;
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__title {
+        background-color: var(--color-red);
+        color: var(--color-white);
+        padding-left: 15px;
+
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 200px;
+            margin-right: 20px;
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+    }
 }

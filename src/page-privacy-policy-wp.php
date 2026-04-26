@@ -110,8 +110,9 @@
                                 <dt class="privacy-policy-table__title">連絡先</dt>
                                 <dd class="privacy-policy-table__text">
                                     <address>東京都渋谷区神宮前6-23-4桑野ビル2F</address><br>
-                                    ※弊社に関する問い合わせは、電話では行っておりません。<a href="<?php echo esc_url(home_url('/')); ?>contact/"
-                                        target="_blank">こちらのWebサイト</a>よりDMで連絡してください。
+                                    ※弊社に関する問い合わせは、電話では行っておりません。こちらのWebサイトよりDMで連絡してください。<br>
+                                    <a href="https://sekaishiseifuku.com/company/"
+                                        target="_blank">https://sekaishiseifuku.com/company/</a>
                                 </dd>
                             </div>
                         </dl>
@@ -148,10 +149,10 @@
                         <p class="privacy-policy-container__text">
                             お客様は、弊社に対してご自身の個人情報の開示等（利用目的の通知、開示、内容の訂正・追加・削除、利用の停止または消去、第三者への提供の停止）に関して、弊社問合わせ窓口に申し出ることができます。その際、弊社はお客様ご本人を確認させていただいたうえで、合理的な期間内に対応いたします（当該個人情報が存在しないときにはその旨を通知いたします。）。但し、次のいずれかに該当する場合は、その全部又は一部を開示しないことがあります。開示しない決定をした場合には、その旨を遅滞なく通知します。
                         </p>
-                        <ol>
-                            <li>個人情報保護法その他の法令により、弊社が開示の義務を負わない場合</li>
-                            <li>開示することにより、ご本人又は第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
-                            <li>開示することにより、弊社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
+                        <ol class="privacy-policy-container__list">
+                            <li class="privacy-policy-container__num">個人情報保護法その他の法令により、弊社が開示の義務を負わない場合</li>
+                            <li class="privacy-policy-container__num">開示することにより、ご本人又は第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
+                            <li class="privacy-policy-container__num">開示することにより、弊社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
                         </ol>
                     </dd>
                 </div>

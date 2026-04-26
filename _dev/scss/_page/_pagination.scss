@@ -51,8 +51,10 @@
 
 /* 表示中のページスタイル */
 
-.news-pagination__active {
-    border-color: var(--color-red);
-    background-color: var(--color-red);
-    color: var(--color-white);
+.news-pagination__box {
+    .news-pagination__active {
+        border-color: var(--color-red);
+        background-color: var(--color-red);
+        color: var(--color-white);
+    }
 }

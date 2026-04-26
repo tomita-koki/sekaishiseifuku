@@ -265,7 +265,7 @@ li {
 
 .article-list__box {
   display: grid;
-  grid-template-columns: 80px auto;
+  grid-template-columns: 80px 71px auto;
   grid-template-rows: auto auto;
   gap: 8px;
   align-items: flex-start;
@@ -318,11 +318,6 @@ li {
 }
 
 /* 各セル共通 */
-.article-list__box > * {
-  display: flex;
-  align-items: center;
-}
-
 /* カテゴリーボタン */
 .news-category__btn {
   display: inline-block;
@@ -468,7 +463,7 @@ li {
 }
 
 /* 表示中のページスタイル */
-.news-pagination__active {
+.news-pagination__box .news-pagination__active {
   border-color: var(--color-red);
   background-color: var(--color-red);
   color: var(--color-white);
@@ -493,8 +488,8 @@ li {
 /* 記事詳細見出し 配置設定 */
 .article-heading__inner {
   display: grid;
-  grid-template-columns: 80px auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: 80px 71px auto;
+  grid-template-rows: auto;
   gap: 15px 12px;
   border-bottom: 2px solid var(--color-red);
   padding-bottom: 41px;
@@ -756,11 +751,17 @@ li {
     margin: 0 auto;
   }
 }
+.privacy-policy__wrap > p {
+  margin-bottom: 30px;
+}
 
 .privacy-policy-container__wrap {
   border-bottom: 1px solid var(--color-beige2);
   padding-bottom: 39px;
   margin-bottom: 40px;
+}
+.privacy-policy-container__wrap:last-child {
+  border-bottom: none;
 }
 @media (min-width: 769px) {
   .privacy-policy-container__wrap {
@@ -783,6 +784,9 @@ li {
   color: var(--color-black);
   line-height: 2;
 }
+.privacy-policy-container__text > p {
+  margin-bottom: 30px;
+}
 .privacy-policy-container__list {
   padding-left: 24px;
   color: var(--color-black);
@@ -792,49 +796,54 @@ li {
   position: relative;
   margin-bottom: 7px;
 }
-.privacy-policy-container__list li::before {
-  position: absolute;
-  content: "";
-  top: 16px;
-  left: -13px;
-  background-color: var(--color-black);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
+
+address {
+  font-style: normal;
 }
 
-.privacy-policy-container:last-child .privacy-policy-container__wrap {
-  border-bottom: none;
-}
-
-/* ダミーテキストのレイアウト */
+/* 番号スタイル */
 .privacy-policy-container__list {
-  padding-left: 24px;
-  color: var(--color-black);
-  margin-top: 12px;
+  list-style: none;
+  padding: 0;
+  counter-reset: my-counter;
 }
-.privacy-policy-container__list li {
+.privacy-policy-container__list .privacy-policy-container__num {
+  counter-increment: my-counter;
+  padding-left: 2em;
   position: relative;
-  margin-bottom: 7px;
 }
-.privacy-policy-container__list li::before {
+.privacy-policy-container__list .privacy-policy-container__num::before {
+  content: counter(my-counter) ".";
   position: absolute;
-  content: "";
-  top: 16px;
-  left: -13px;
-  background-color: var(--color-black);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
+  left: 0;
 }
 
-.privacy-policy-container__text--mt {
-  margin-top: 11px;
+@media (min-width: 769px) {
+  .privacy-policy-table__wrap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
 }
-
-.privacy-policy-container__text-link {
-  color: var(--color-red);
-  text-decoration: underline;
+.privacy-policy-table__title {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding-left: 15px;
+}
+@media (min-width: 769px) {
+  .privacy-policy-table__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 200px;
+    margin-right: 20px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+.privacy-policy-table__text {
+  color: var(--color-black);
 }
 
 /* フェードイン */

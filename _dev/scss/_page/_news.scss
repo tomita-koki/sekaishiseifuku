@@ -39,7 +39,7 @@
 
 .article-list__box {
     display: grid;
-    grid-template-columns: 80px auto;
+    grid-template-columns: 80px 71px auto;
     grid-template-rows: auto auto;
     gap: 8px;
     align-items: flex-start;
@@ -102,6 +102,6 @@
 /* 各セル共通 */
 
 .article-list__box>* {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
 }
