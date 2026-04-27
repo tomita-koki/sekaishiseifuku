@@ -75,7 +75,7 @@
             <ol class="article-list js-fade" data-delay="150">
                 <div class="article-list__wrap">
                     <?php
-                    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+                    $paged = get_query_var('paged') ?: get_query_var('page') ?: 1;
                     $args = array(
                         'post_type'      => 'post',
                         'posts_per_page' => 10,

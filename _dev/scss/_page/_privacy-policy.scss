@@ -92,10 +92,6 @@ address {
 
 .privacy-policy-table {
     &__wrap {
-        //display: flex;
-        //flex-direction: column;
-        
-
         @media (min-width: 769px) {
             display: flex;
             flex-direction: row;

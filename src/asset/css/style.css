@@ -14,14 +14,12 @@
   --color-beige: #FAF9F7;
   --color-beige2: #E0D8D0;
   --color-beige3: #F4F1ED;
-  /* つゆき追加 color */
   --color-black: #6B5E52;
   --color-black2: #2C2116;
   --color-blue2: #1A4E8A;
   --color-black3: #000000;
   --color-blue3: #1877F2;
   --color-red3: #7A0323;
-  /* つゆき追加 hover */
   --transition: .3s ease;
   /* font-size */
   --font-size: px-to-rem(16);
@@ -265,7 +263,7 @@ li {
 
 .article-list__box {
   display: grid;
-  grid-template-columns: 80px 71px auto;
+  grid-template-columns: 8rem 7.1rem auto;
   grid-template-rows: auto auto;
   gap: 8px;
   align-items: flex-start;
@@ -317,7 +315,6 @@ li {
   border-top: 1px solid var(--color-beige2);
 }
 
-/* 各セル共通 */
 /* カテゴリーボタン */
 .news-category__btn {
   display: inline-block;
@@ -368,6 +365,7 @@ li {
 .article-date {
   font-size: 1.28rem;
   font-weight: 400;
+  font-family: var(--font-family-01);
   color: var(--color-black);
   white-space: nowrap;
   margin-top: 6px;
@@ -463,7 +461,7 @@ li {
 }
 
 /* 表示中のページスタイル */
-.news-pagination__box .news-pagination__active {
+.news-pagination__box.news-pagination__active {
   border-color: var(--color-red);
   background-color: var(--color-red);
   color: var(--color-white);
@@ -521,7 +519,7 @@ li {
   grid-row: 2;
 }
 
-/* 記事詳細タイトル（日付とカテゴリーはお知らせと共通） */
+/* 記事詳細タイトル */
 .article-heading__title {
   font-size: 2.24rem;
   font-family: var(--font-family-02);
